@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17303ADE22AFE9D90060A4BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17303ADD22AFE9D90060A4BC /* AppDelegate.swift */; };
+		17303AE022AFE9D90060A4BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17303ADF22AFE9D90060A4BC /* ViewController.swift */; };
+		17303AE322AFE9D90060A4BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17303AE122AFE9D90060A4BC /* Main.storyboard */; };
+		17303AE522AFE9DA0060A4BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17303AE422AFE9DA0060A4BC /* Assets.xcassets */; };
+		17303AE822AFE9DA0060A4BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17303AE622AFE9DA0060A4BC /* LaunchScreen.storyboard */; };
+		17303AF322AFE9DA0060A4BC /* DinnergyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17303AF222AFE9DA0060A4BC /* DinnergyTests.swift */; };
+		17303AFE22AFE9DA0060A4BC /* DinnergyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17303AFD22AFE9DA0060A4BC /* DinnergyUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17303AEF22AFE9DA0060A4BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17303AD222AFE9D90060A4BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17303AD922AFE9D90060A4BC;
+			remoteInfo = Dinnergy;
+		};
+		17303AFA22AFE9DA0060A4BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17303AD222AFE9D90060A4BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17303AD922AFE9D90060A4BC;
+			remoteInfo = Dinnergy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		17303ADA22AFE9D90060A4BC /* Dinnergy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dinnergy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17303ADD22AFE9D90060A4BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		17303ADF22AFE9D90060A4BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		17303AE222AFE9D90060A4BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		17303AE422AFE9DA0060A4BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17303AE722AFE9DA0060A4BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		17303AE922AFE9DA0060A4BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17303AEE22AFE9DA0060A4BC /* DinnergyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DinnergyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17303AF222AFE9DA0060A4BC /* DinnergyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnergyTests.swift; sourceTree = "<group>"; };
+		17303AF422AFE9DA0060A4BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17303AF922AFE9DA0060A4BC /* DinnergyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DinnergyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17303AFD22AFE9DA0060A4BC /* DinnergyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnergyUITests.swift; sourceTree = "<group>"; };
+		17303AFF22AFE9DA0060A4BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17303AD722AFE9D90060A4BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17303AEB22AFE9DA0060A4BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17303AF622AFE9DA0060A4BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17303AD122AFE9D90060A4BC = {
+			isa = PBXGroup;
+			children = (
+				17303ADC22AFE9D90060A4BC /* Dinnergy */,
+				17303AF122AFE9DA0060A4BC /* DinnergyTests */,
+				17303AFC22AFE9DA0060A4BC /* DinnergyUITests */,
+				17303ADB22AFE9D90060A4BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		17303ADB22AFE9D90060A4BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17303ADA22AFE9D90060A4BC /* Dinnergy.app */,
+				17303AEE22AFE9DA0060A4BC /* DinnergyTests.xctest */,
+				17303AF922AFE9DA0060A4BC /* DinnergyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17303ADC22AFE9D90060A4BC /* Dinnergy */ = {
+			isa = PBXGroup;
+			children = (
+				17303ADD22AFE9D90060A4BC /* AppDelegate.swift */,
+				17303ADF22AFE9D90060A4BC /* ViewController.swift */,
+				17303AE122AFE9D90060A4BC /* Main.storyboard */,
+				17303AE422AFE9DA0060A4BC /* Assets.xcassets */,
+				17303AE622AFE9DA0060A4BC /* LaunchScreen.storyboard */,
+				17303AE922AFE9DA0060A4BC /* Info.plist */,
+			);
+			path = Dinnergy;
+			sourceTree = "<group>";
+		};
+		17303AF122AFE9DA0060A4BC /* DinnergyTests */ = {
+			isa = PBXGroup;
+			children = (
+				17303AF222AFE9DA0060A4BC /* DinnergyTests.swift */,
+				17303AF422AFE9DA0060A4BC /* Info.plist */,
+			);
+			path = DinnergyTests;
+			sourceTree = "<group>";
+		};
+		17303AFC22AFE9DA0060A4BC /* DinnergyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				17303AFD22AFE9DA0060A4BC /* DinnergyUITests.swift */,
+				17303AFF22AFE9DA0060A4BC /* Info.plist */,
+			);
+			path = DinnergyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17303AD922AFE9D90060A4BC /* Dinnergy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17303B0222AFE9DA0060A4BC /* Build configuration list for PBXNativeTarget "Dinnergy" */;
+			buildPhases = (
+				17303AD622AFE9D90060A4BC /* Sources */,
+				17303AD722AFE9D90060A4BC /* Frameworks */,
+				17303AD822AFE9D90060A4BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dinnergy;
+			productName = Dinnergy;
+			productReference = 17303ADA22AFE9D90060A4BC /* Dinnergy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		17303AED22AFE9DA0060A4BC /* DinnergyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17303B0522AFE9DA0060A4BC /* Build configuration list for PBXNativeTarget "DinnergyTests" */;
+			buildPhases = (
+				17303AEA22AFE9DA0060A4BC /* Sources */,
+				17303AEB22AFE9DA0060A4BC /* Frameworks */,
+				17303AEC22AFE9DA0060A4BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17303AF022AFE9DA0060A4BC /* PBXTargetDependency */,
+			);
+			name = DinnergyTests;
+			productName = DinnergyTests;
+			productReference = 17303AEE22AFE9DA0060A4BC /* DinnergyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		17303AF822AFE9DA0060A4BC /* DinnergyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17303B0822AFE9DA0060A4BC /* Build configuration list for PBXNativeTarget "DinnergyUITests" */;
+			buildPhases = (
+				17303AF522AFE9DA0060A4BC /* Sources */,
+				17303AF622AFE9DA0060A4BC /* Frameworks */,
+				17303AF722AFE9DA0060A4BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17303AFB22AFE9DA0060A4BC /* PBXTargetDependency */,
+			);
+			name = DinnergyUITests;
+			productName = DinnergyUITests;
+			productReference = 17303AF922AFE9DA0060A4BC /* DinnergyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17303AD222AFE9D90060A4BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Edgy Eats";
+				TargetAttributes = {
+					17303AD922AFE9D90060A4BC = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					17303AED22AFE9DA0060A4BC = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 17303AD922AFE9D90060A4BC;
+					};
+					17303AF822AFE9DA0060A4BC = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 17303AD922AFE9D90060A4BC;
+					};
+				};
+			};
+			buildConfigurationList = 17303AD522AFE9D90060A4BC /* Build configuration list for PBXProject "Dinnergy" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 17303AD122AFE9D90060A4BC;
+			productRefGroup = 17303ADB22AFE9D90060A4BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17303AD922AFE9D90060A4BC /* Dinnergy */,
+				17303AED22AFE9DA0060A4BC /* DinnergyTests */,
+				17303AF822AFE9DA0060A4BC /* DinnergyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17303AD822AFE9D90060A4BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17303AE822AFE9DA0060A4BC /* LaunchScreen.storyboard in Resources */,
+				17303AE522AFE9DA0060A4BC /* Assets.xcassets in Resources */,
+				17303AE322AFE9D90060A4BC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17303AEC22AFE9DA0060A4BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17303AF722AFE9DA0060A4BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17303AD622AFE9D90060A4BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17303AE022AFE9D90060A4BC /* ViewController.swift in Sources */,
+				17303ADE22AFE9D90060A4BC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17303AEA22AFE9DA0060A4BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17303AF322AFE9DA0060A4BC /* DinnergyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17303AF522AFE9DA0060A4BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17303AFE22AFE9DA0060A4BC /* DinnergyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17303AF022AFE9DA0060A4BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17303AD922AFE9D90060A4BC /* Dinnergy */;
+			targetProxy = 17303AEF22AFE9DA0060A4BC /* PBXContainerItemProxy */;
+		};
+		17303AFB22AFE9DA0060A4BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17303AD922AFE9D90060A4BC /* Dinnergy */;
+			targetProxy = 17303AFA22AFE9DA0060A4BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		17303AE122AFE9D90060A4BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17303AE222AFE9D90060A4BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		17303AE622AFE9DA0060A4BC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17303AE722AFE9DA0060A4BC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		17303B0022AFE9DA0060A4BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		17303B0122AFE9DA0060A4BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17303B0322AFE9DA0060A4BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Dinnergy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Edgy-Eats.Dinnergy";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		17303B0422AFE9DA0060A4BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Dinnergy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Edgy-Eats.Dinnergy";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		17303B0622AFE9DA0060A4BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DinnergyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Edgy-Eats.DinnergyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dinnergy.app/Dinnergy";
+			};
+			name = Debug;
+		};
+		17303B0722AFE9DA0060A4BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DinnergyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Edgy-Eats.DinnergyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dinnergy.app/Dinnergy";
+			};
+			name = Release;
+		};
+		17303B0922AFE9DA0060A4BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DinnergyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Edgy-Eats.DinnergyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Dinnergy;
+			};
+			name = Debug;
+		};
+		17303B0A22AFE9DA0060A4BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DinnergyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Edgy-Eats.DinnergyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Dinnergy;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17303AD522AFE9D90060A4BC /* Build configuration list for PBXProject "Dinnergy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17303B0022AFE9DA0060A4BC /* Debug */,
+				17303B0122AFE9DA0060A4BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17303B0222AFE9DA0060A4BC /* Build configuration list for PBXNativeTarget "Dinnergy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17303B0322AFE9DA0060A4BC /* Debug */,
+				17303B0422AFE9DA0060A4BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17303B0522AFE9DA0060A4BC /* Build configuration list for PBXNativeTarget "DinnergyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17303B0622AFE9DA0060A4BC /* Debug */,
+				17303B0722AFE9DA0060A4BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17303B0822AFE9DA0060A4BC /* Build configuration list for PBXNativeTarget "DinnergyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17303B0922AFE9DA0060A4BC /* Debug */,
+				17303B0A22AFE9DA0060A4BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17303AD222AFE9D90060A4BC /* Project object */;
+}
