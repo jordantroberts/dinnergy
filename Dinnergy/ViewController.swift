@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
     let instance = DinnergyDB()
+
+class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
