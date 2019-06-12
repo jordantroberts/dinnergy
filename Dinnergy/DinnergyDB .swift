@@ -104,9 +104,26 @@ class DinnergyDB {
             
             //adding values to list
             stock.append(Ingredient(id: Int(id), name: name, quntity: Int(quntity), unit: String(cString: unit!)))
-//            dump(stock)
+            dump(stock)
         }
+    }
+    
+    
+    func updateStock(name: String, quntity: Int32){
         
+        let updateStatementString = "UPDATE Ingredients SET Quntity = " + String(quntity) + " WHERE Name = '" + name + "';"
+        
+        var updateStatement: OpaquePointer? = nil
+        if sqlite3_prepare_v2(db, updateStatementString, -1, &updateStatement, nil) == SQLITE_OK {
+            if sqlite3_step(updateStatement) == SQLITE_DONE {
+                print("Successfully updated row.")
+            } else {
+                print("Could not update row.")
+            }
+        } else {
+            print("UPDATE statement could not be prepared")
+        }
+        sqlite3_finalize(updateStatement)
     }
     
 }
