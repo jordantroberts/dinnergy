@@ -1,6 +1,11 @@
-
 language: objective-c
 osx_image: xcode10.2
 xcode_project: Dinnergy.xcodeproj # path to your xcodeproj folder
 xcode_scheme: Dinnergy
 xcode_destination: platform=iOS Simulator,OS=12.2,name=iPhone 7
+
+install:
+  - ./install_swiftlint.sh
+
+script:
+  - swiftlint
