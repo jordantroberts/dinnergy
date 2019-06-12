@@ -24,7 +24,7 @@ class DinnergyDB {
         }
         
         createTable()
-//        insertIngredients(name: "Egg", quantity: 2 , unit: "unit")
+        
     }
     
     func createTable() {
@@ -36,6 +36,34 @@ class DinnergyDB {
         }
         print("Table Created")
 
+        let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        print("App Path: \(dirPaths)")
+        
+    }
+    
+    func createRecipeTable(){
+        let createTableQuery = "CREATE TABLE IF NOT EXISTS Recipes (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, method TEXT , attachment TEXT)"
+        
+        if sqlite3_exec(db,createTableQuery, nil, nil, nil) != SQLITE_OK{
+            print("Error Creating Table")
+            return
+        }
+        print("Table Created")
+        
+        let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        print("App Path: \(dirPaths)")
+        
+    }
+    
+    func createRecipeIngredientsTable(){
+        let createTableQuery = "CREATE TABLE IF NOT EXISTS Recipe_Ingredients (id INTEGER PRIMARY KEY AUTOINCREMENT, recipe_id REFERENCES Recipes(id), quantity INTEGER , unit TEXT)"
+        
+        if sqlite3_exec(db,createTableQuery, nil, nil, nil) != SQLITE_OK{
+            print("Error Creating Table")
+            return
+        }
+        print("Table Created")
+        
         let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         print("App Path: \(dirPaths)")
         
@@ -79,6 +107,46 @@ class DinnergyDB {
         }
         
         print("Ingredients saved successfully")
+    }
+    
+    func insertRecipe(name: String, method: String, attachment: String) {
+        
+        var stmt: OpaquePointer?
+        let SQLITETRANSIENT = unsafeBitCast(OpaquePointer(bitPattern: -1), to: sqlite3_destructor_type.self)
+        
+        let queryString = "INSERT INTO Recipe (name, method, attachment) VALUES (?,?,?)"
+        
+        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("error preparing insert: \(errmsg)")
+            return
+        }
+        
+        if sqlite3_bind_text(stmt, 1, name, -1, SQLITETRANSIENT) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("failure binding name: \(errmsg)")
+            return
+        }
+        
+        if sqlite3_bind_text(stmt, 2, method, -1, SQLITETRANSIENT) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("failure binding quantity: \(errmsg)")
+            return
+        }
+        
+        if sqlite3_bind_text(stmt, 3, attachment, -1, SQLITETRANSIENT ) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("failure binding unit \(errmsg)")
+            return
+        }
+        
+        if sqlite3_step(stmt) != SQLITE_DONE {
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("failure inserting hero: \(errmsg)")
+            return
+        }
+        
+        print("Recipe saved successfully")
     }
     
     
@@ -126,7 +194,6 @@ class DinnergyDB {
         sqlite3_finalize(updateStatement)
     }
     
-    
     func deleteItem(name: String) {
         let deleteStatementStirng = "DELETE FROM Ingredients WHERE Name = '" + name + "';"
         var deleteStatement: OpaquePointer? = nil
@@ -142,14 +209,6 @@ class DinnergyDB {
         
         sqlite3_finalize(deleteStatement)
     }
-    
-    
-    
-    
-    
-    
-    
+
 }
-
-
 
