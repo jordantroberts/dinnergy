@@ -191,6 +191,51 @@ class DinnergyDB {
         print("Recipe saved successfully")
     }
     
+    func insertRecipeIngredients(recipe_id: Int32, item: String, quantity: Int32, unit: String) {
+        
+        var stmt: OpaquePointer?
+        let SQLITETRANSIENT = unsafeBitCast(OpaquePointer(bitPattern: -1), to: sqlite3_destructor_type.self)
+        
+        let queryString = "INSERT INTO Ingredients (recipe_id, item, quantity, unit) VALUES (?,?,?,?)"
+        
+        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("error preparing insert: \(errmsg)")
+            return
+        }
+        
+        if sqlite3_bind_int(stmt, 1, recipe_id ) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("failure binding quantity: \(errmsg)")
+            return
+        }
+        
+        if sqlite3_bind_text(stmt, 2, item, -1, SQLITETRANSIENT) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("failure binding name: \(errmsg)")
+            return
+        }
+        
+        if sqlite3_bind_int(stmt, 3, quantity ) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("failure binding quantity: \(errmsg)")
+            return
+        }
+        
+        if sqlite3_bind_text(stmt, 4, unit, -1, SQLITETRANSIENT ) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("failure binding unit \(errmsg)")
+            return
+        }
+        
+        if sqlite3_step(stmt) != SQLITE_DONE {
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("failure inserting hero: \(errmsg)")
+            return
+        }
+        
+        print("Recipe Ingredients saved successfully")
+    }
     
     func checkStock(){
         var stock = [Ingredient]()
