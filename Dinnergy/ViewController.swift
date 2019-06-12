@@ -11,7 +11,7 @@ import SQLite3
 
 class ViewController: UIViewController {
     
-    var dinnergyDB = DinnergyDB() 
+    var instanceDB = DinnergyDB()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +28,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var textFieldUnit: UITextField!
     
     @IBAction func buttonTap(_ sender: UIButton) {
+        
+       let str  = textFieldQuantity.text ?? ""
+       let number:Int32 = Int32(str) ?? 0
+      
+        
+        instanceDB.insertIngredients(name: "\(textFieldIngredient)", quantity: number, unit: "\(textFieldUnit)")
+        
     }
     
 }
