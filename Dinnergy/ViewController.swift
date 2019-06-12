@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import SQLite3
 
 class ViewController: UIViewController {
+    
+    var dinnergyDB = DinnergyDB() 
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +23,12 @@ class ViewController: UIViewController {
         
     }
 
-
+    @IBOutlet weak var textFieldIngredient: UITextField!
+    @IBOutlet weak var textFieldQuantity: UITextField!
+    @IBOutlet weak var textFieldUnit: UITextField!
+    
+    @IBAction func buttonTap(_ sender: UIButton) {
+    }
+    
 }
 
