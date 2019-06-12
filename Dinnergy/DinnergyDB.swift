@@ -35,8 +35,6 @@ class DinnergyDB {
         
         insertRecipe(name: "Prawn & leek frittata", method: "1. Heat 2 tbsp olive oil in a medium frying pan. Slice the leeks and add to the pan, cooking for 5 mins. Add the prawns and cook for 1 min more. Beat the eggs and whisk through half the cream cheese. Season to taste. Pour the mixture over the prawns and leeks, dot over the remaining cheese and cook on a medium heat for 5-8 mins. Finish under a medium-hot grill for 2 mins until just set with a slight wobble." , attachment: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/10/leek-frittata.jpg?itok=V-h2BoSg")
         
-        insertRecipe(name: "Vegan mac 'n' cheese", method: "1. The night before, soak the cashew nuts in water and leave overnight. 2. Heat the oven to 180C/160C fan/gas 4. Steam the carrots and potatoes together for 5 mins, until completely softened. Transfer to a food processor. Drain the cashews and add these with 60ml of the oil, then blitz to break down the nuts. Tip in the other ingredients – apart from the macaroni, breadcrumbs and the remaining oil – then blitz again until the mixture is smooth and season well. Add a splash of water and just a drizzle of olive oil if it looks too stiff, then set aside. 3. Cook the macaroni in a large pan of salted water for 1 min less than packet instructions, drain then stir through the sauce. Transfer the mix to an ovenproof dish, stir the breadcrumbs with the remaining oil and some seasoning. Scatter over the top of the macaroni and bake for 20-25 mins until piping hot and crisp." , attachment: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2017/08/vegan-mac-n-cheese.jpg?itok=hwaTy-3H")
-        
         insertRecipe(name: "Vegetable Pasta", method: "1.Heat the grill and pop the peppers, skin-side up, underneath for 10 mins or until beginning to char. Transfer to a bowl, cover and set aside. When cool enough to handle, peel off the skin and cut the flesh into strips. 2. Heat the oil in a large saucepan and cook the fennel, onion and carrot for 8-10 mins until softened. Stir in the garlic, crushed chillies, fennel seeds and tomato purée, cook for 2 mins, then add the canned tomatoes, stock and sugar. Simmer, uncovered, for 15 mins or until the vegetables are completely soft. 3. Take out a couple of spoonfuls of the sauce (this will later add texture), then blend the rest in the saucepan until almost smooth with a stick blender. Simmer for 5 mins to thicken, then stir in the reserved sauce, shredded basil and peppers. Serve with the pasta." , attachment: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--265467_12.jpg?itok=U8zV5RNL")
         
         insertRecipe(name: "Thai Prawn Curry", method: "1. Heat the oil in a medium saucepan. Tip in the onion and ginger, then cook for a few mins until softened. Stir in the curry paste, then cook for 1 min more. Pour over the chopped tomatoes and coconut cream. Bring to the boil, then leave to simmer for 5 mins, adding a little boiling water if the mixture gets too thick. 2. Tip in the prawns, then cook for 5-10 mins more, depending on how large they are. Serve alongside some plain rice and sprinkle with a little chopped coriander, if you like." , attachment: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--338576_12.jpg?itok=slZMomjp")
@@ -52,6 +50,94 @@ class DinnergyDB {
         insertRecipe(name: "Garlic chicken parcels", method: "1. Heat oven to 220C/200C Fan/gas 7. Cut a slit halfway in each chicken breast, then put each one between two pieces of baking parchment and bash with a rolling pin to flatten slightly. 2. Cut your sheet of pastry in half widthways and put both halves on a baking tray. Sit a chicken breast on top of each half, then cram the cavities with the Boursin (don’t worry if a bit of cheese oozes out). Season, scatter over the lemon zest then fold the edges of the pastry in to the centre and pinch shut. Flip each parcel over so the seal is on the bottom. Brush with a little oil, then bake for 30 mins until deep golden. 3. About 10 mins before your parcels are ready, steam or boil the greens until tender. Toss in the oil and season. Serve alongside your chicken parcels with lemon wedges for squeezing over.", attachment: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2018/01/garlic-chicken-parcels.jpg?itok=JOIicVC1")
         
         insertRecipe(name: "Sausages with pesto mash", method: "1. Peel and quarter the potatoes, then cook in a large pan of salted, boiling water for 15 mins. Drain and set aside. 2. Pour a glug of olive oil into a large frying pan over a medium heat and cook the sausages for 15 mins. Add the tomatoes to the pan for the final 5 mins. Mash the potatoes well and mix in the pesto. Season and serve with the sausages and tomatoes.", attachment: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/08/sausage-with-pesto-mash.jpg?itok=jR-OBzrF")
+        
+        insertRecipeIngredients(recipe_id: 1, item: "2 Cans of chopped tomatoes", quantity: 800, unit: "g")
+        
+        insertRecipeIngredients(recipe_id: 1, item: "Chorizo", quantity: 200, unit: "g")
+        
+        insertRecipeIngredients(recipe_id: 1, item: "2 cans of drained butter beans", quantity: 800, unit: "g")
+        
+        insertRecipeIngredients(recipe_id: 1, item: "Pesto", quantity: 1, unit: "tub")
+        
+        insertRecipeIngredients(recipe_id: 2, item: "Frozen grilled vegetables", quantity: 325, unit: "g")
+        
+        insertRecipeIngredients(recipe_id: 2, item: "Mexican seasoning", quantity: 1, unit: "tsp")
+        
+        insertRecipeIngredients(recipe_id: 2, item: "Avocado", quantity: 1, unit: "small")
+        
+        insertRecipeIngredients(recipe_id: 2, item: "lime", quantity: 1, unit: "")
+        
+        insertRecipeIngredients(recipe_id: 2, item: "Cherry tomatoes", quantity: 75, unit: "g")
+        
+        insertRecipeIngredients(recipe_id: 2, item: "Flour tortillas", quantity: 2, unit: "small")
+        
+        insertRecipeIngredients(recipe_id: 2, item: "Rocket", quantity: 2, unit: "handfuls")
+        
+        insertRecipeIngredients(recipe_id: 2, item: "Feta cheese", quantity: 2, unit: "tbsp")
+        
+        insertRecipeIngredients(recipe_id: 3, item: "Bananas", quantity: 3, unit: "large")
+        
+        insertRecipeIngredients(recipe_id: 3, item: "Vegetable oil", quantity: 75, unit: "g")
+        
+        insertRecipeIngredients(recipe_id: 3, item: "Brown sugar", quantity: 100, unit: "g")
+        
+        insertRecipeIngredients(recipe_id: 3, item: "Plain flour", quantity: 225, unit: "g")
+        
+        insertRecipeIngredients(recipe_id: 3, item: "Baking powder", quantity: 3, unit: "tsp")
+        
+        insertRecipeIngredients(recipe_id: 3, item: "Cinnamon", quantity: 3, unit: "tsp")
+        
+        insertRecipeIngredients(recipe_id: 3, item: "Dried Fruit/nuts", quantity: 50, unit: "g")
+        
+        insertRecipeIngredients(recipe_id: 4, item: "Leeks", quantity: 3, unit: "large")
+        
+        insertRecipeIngredients(recipe_id: 4, item: "King prawns", quantity: 150, unit: "g")
+        
+        insertRecipeIngredients(recipe_id: 4, item: "Garlic and herb cream cheese", quantity: 120, unit: "g")
+        
+        insertRecipeIngredients(recipe_id: 5, item: "Red pepper", quantity: 2, unit: "medium")
+        
+        insertRecipeIngredients(recipe_id: 5, item: "Olive oil", quantity: 2, unit: "tbsp")
+        
+        insertRecipeIngredients(recipe_id: 5, item: "Fennel", quantity: 1, unit: "bulb")
+        
+        insertRecipeIngredients(recipe_id: 5, item: "Onion", quantity: 1, unit: "medium")
+        
+        insertRecipeIngredients(recipe_id: 5, item: "Carrot", quantity: 1, unit: "large")
+        
+        insertRecipeIngredients(recipe_id: 5, item: "Garlic", quantity: 2, unit: "cloves")
+        
+        insertRecipeIngredients(recipe_id: 5, item: "Chilli flakes", quantity: 1, unit: "tsp")
+        
+        insertRecipeIngredients(recipe_id: 5, item: "Fennel seeds", quantity: 1, unit: "tsp")
+        
+        insertRecipeIngredients(recipe_id: 5, item: "Tomato puree", quantity: 2, unit: "tbsp")
+        
+        insertRecipeIngredients(recipe_id: 5, item: "Can of chopped tomatoes", quantity: 400, unit: "g")
+        
+        insertRecipeIngredients(recipe_id: 5, item: "Vegetable stock", quantity: 600, unit: "ml")
+        
+        insertRecipeIngredients(recipe_id: 5, item: "Caster sugar", quantity: 1, unit: "tsp")
+        
+        insertRecipeIngredients(recipe_id: 5, item: "Basil leaves", quantity: 1, unit: "handful")
+        
+        insertRecipeIngredients(recipe_id: 5, item: "Egg pasta", quantity: 500, unit: "g")
+        
+        insertRecipeIngredients(recipe_id: 6, item: "Vegetable oil", quantity: 1, unit: "tbsp")
+        
+        insertRecipeIngredients(recipe_id: 6, item: "Onion", quantity: 1, unit: "medium")
+        
+        insertRecipeIngredients(recipe_id: 6, item: "Root ginger", quantity: 1, unit: "tsp")
+        
+        insertRecipeIngredients(recipe_id: 6, item: "Can of chopped tomatoes", quantity: 400, unit: "g")
+        
+        insertRecipeIngredients(recipe_id: 6, item: "Thai red curry paste", quantity: 2, unit: "tsp")
+        
+        insertRecipeIngredients(recipe_id: 6, item: "Coconut cream", quantity: 50, unit: "g")
+        
+        insertRecipeIngredients(recipe_id: 6, item: "Prawns", quantity: 400, unit: "g")
+        
+        insertRecipeIngredients(recipe_id: 6, item: "Chopped coriander (optional)", quantity: 1, unit: "handful")
     }
     
     func createTable() {
@@ -196,7 +282,7 @@ class DinnergyDB {
         var stmt: OpaquePointer?
         let SQLITETRANSIENT = unsafeBitCast(OpaquePointer(bitPattern: -1), to: sqlite3_destructor_type.self)
         
-        let queryString = "INSERT INTO Ingredients (recipe_id, item, quantity, unit) VALUES (?,?,?,?)"
+        let queryString = "INSERT INTO Recipe_Ingredients (recipe_id, item, quantity, unit) VALUES (?,?,?,?)"
         
         if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(db)!)
