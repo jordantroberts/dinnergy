@@ -81,7 +81,33 @@ class DinnergyDB {
         print("Ingredients saved successfully")
     }
     
-
+    
+    func checkStock(){
+        var stock = [Ingredient]()
+        stock.removeAll()
+        
+        let queryString = "SELECT * FROM Ingredients"
+        var stmt:OpaquePointer?
+        
+        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("error preparing insert: \(errmsg)")
+            return
+        }
+        
+        //traversing through all the records
+        while(sqlite3_step(stmt) == SQLITE_ROW){
+            let id = sqlite3_column_int(stmt, 0)
+            let name = String(cString: sqlite3_column_text(stmt, 1))
+            let quntity = sqlite3_column_int(stmt, 2)
+            let unit = sqlite3_column_text(stmt, 3)
+            
+            //adding values to list
+            stock.append(Ingredient(id: Int(id), name: name, quntity: Int(quntity), unit: String(cString: unit!)))
+//            dump(stock)
+        }
+        
+    }
     
 }
 
