@@ -24,7 +24,9 @@ class DinnergyDB {
         }
         
         createTable()
-        
+        createRecipeTable()
+        createRecipeIngredientsTable()
+        insertRecipe(name: "Butter bean & chorizo stew", method: "1. Slice the chorizo and tip into a large saucepan over a medium heat. Fry gently for 5 mins or until starting to turn dark brown. Add the tomatoes and butter beans, bring to the boil, then simmer for 10 mins. Swirl through the pesto, season lightly and ladle into four bowls." , attachment: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/08/butter-bean-chorizo-stew.jpg?itok=8gg1NtD3")
     }
     
     func createTable() {
@@ -114,7 +116,7 @@ class DinnergyDB {
         var stmt: OpaquePointer?
         let SQLITETRANSIENT = unsafeBitCast(OpaquePointer(bitPattern: -1), to: sqlite3_destructor_type.self)
         
-        let queryString = "INSERT INTO Recipe (name, method, attachment) VALUES (?,?,?)"
+        let queryString = "INSERT INTO Recipes (name, method, attachment) VALUES (?,?,?)"
         
         if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(db)!)
