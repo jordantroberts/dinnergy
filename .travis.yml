@@ -4,8 +4,5 @@ xcode_project: Dinnergy.xcodeproj # path to your xcodeproj folder
 xcode_scheme: Dinnergy
 xcode_destination: platform=iOS Simulator,OS=12.2,name=iPhone 7
 
-install:
-  - ./install_swiftlint.sh
-
-script:
-  - swiftlint
+before_install:
+  - brew update && brew install swiftlint
