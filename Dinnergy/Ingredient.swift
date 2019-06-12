@@ -12,13 +12,13 @@ class Ingredient {
     
     var id: Int
     var name: String
-    var quntity: Int
+    var quantity: Int
     var unit: String
     
-    init(id: Int, name: String, quntity: Int, unit: String){
+    init(id: Int, name: String, quantity: Int, unit: String){
         self.id = id
         self.name = name
-        self.quntity = quntity
+        self.quantity = quantity
         self.unit = unit
     }
 }

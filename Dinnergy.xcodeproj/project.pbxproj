@@ -15,7 +15,7 @@
 		17303AF322AFE9DA0060A4BC /* DinnergyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17303AF222AFE9DA0060A4BC /* DinnergyTests.swift */; };
 		17303AFE22AFE9DA0060A4BC /* DinnergyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17303AFD22AFE9DA0060A4BC /* DinnergyUITests.swift */; };
 		C61526D622B0722C00FF644A /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61526D522B0722C00FF644A /* Ingredient.swift */; };
-		C65FDBCF22B0574A00970C0B /* DinnergyDB .swift in Sources */ = {isa = PBXBuildFile; fileRef = C65FDBCE22B0574A00970C0B /* DinnergyDB .swift */; };
+		C65FDBCF22B0574A00970C0B /* DinnergyDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		17303AFD22AFE9DA0060A4BC /* DinnergyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnergyUITests.swift; sourceTree = "<group>"; };
 		17303AFF22AFE9DA0060A4BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C61526D522B0722C00FF644A /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
-		C65FDBCE22B0574A00970C0B /* DinnergyDB .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DinnergyDB .swift"; sourceTree = "<group>"; };
+		C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnergyDB.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 				17303AE422AFE9DA0060A4BC /* Assets.xcassets */,
 				17303AE622AFE9DA0060A4BC /* LaunchScreen.storyboard */,
 				17303AE922AFE9DA0060A4BC /* Info.plist */,
-				C65FDBCE22B0574A00970C0B /* DinnergyDB .swift */,
+				C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */,
 				C61526D522B0722C00FF644A /* Ingredient.swift */,
 			);
 			path = Dinnergy;
@@ -274,7 +274,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelseecho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -284,7 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C61526D622B0722C00FF644A /* Ingredient.swift in Sources */,
-				C65FDBCF22B0574A00970C0B /* DinnergyDB .swift in Sources */,
+				C65FDBCF22B0574A00970C0B /* DinnergyDB.swift in Sources */,
 				17303AE022AFE9D90060A4BC /* ViewController.swift in Sources */,
 				17303ADE22AFE9D90060A4BC /* AppDelegate.swift in Sources */,
 			);

@@ -13,22 +13,22 @@ var db: OpaquePointer?
 class DinnergyDB {
     
      init()  {
-        let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("dinnergy.sqlite")
+        let fileURL = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("dinnergy.sqlite")
         
         
-        if sqlite3_open(fileURL.path, &db) != SQLITE_OK {
-            print("error opening database")
+        if sqlite3_open(fileURL!.path, &db) != SQLITE_OK {
+            print("ERROR opening database")
             return
         }else{
-            print("SUCESS opening database")
+            print("SUCCESS opening database")
         }
         
         createTable()
-//        insertIngredients(name: "Egg", quntity: 2 , unit: "unit")
+//        insertIngredients(name: "Egg", quantity: 2 , unit: "unit")
     }
     
-    func createTable(){
-        let createTableQuery = "CREATE TABLE IF NOT EXISTS Ingredients (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, quntity INTEGER ,unit TEXT)"
+    func createTable() {
+        let createTableQuery = "CREATE TABLE IF NOT EXISTS Ingredients (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, quantity INTEGER, unit TEXT)"
 
         if sqlite3_exec(db,createTableQuery, nil, nil, nil) != SQLITE_OK{
             print("Error Creating Table")
@@ -41,12 +41,12 @@ class DinnergyDB {
         
     }
     
-    func insertIngredients(name: String, quntity: Int32, unit: String) {
+    func insertIngredients(name: String, quantity: Int32, unit: String) {
         
         var stmt: OpaquePointer?
-        let SQLITE_TRANSIENT = unsafeBitCast(OpaquePointer(bitPattern: -1), to: sqlite3_destructor_type.self)
+        let SQLITETRANSIENT = unsafeBitCast(OpaquePointer(bitPattern: -1), to: sqlite3_destructor_type.self)
         
-        let queryString = "INSERT INTO Ingredients (name, quntity, unit) VALUES (?,?,?)"
+        let queryString = "INSERT INTO Ingredients (name, quantity, unit) VALUES (?,?,?)"
         
         if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(db)!)
@@ -54,19 +54,19 @@ class DinnergyDB {
             return
         }
         
-        if sqlite3_bind_text(stmt, 1, name, -1, SQLITE_TRANSIENT) != SQLITE_OK{
+        if sqlite3_bind_text(stmt, 1, name, -1, SQLITETRANSIENT) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("failure binding name: \(errmsg)")
             return
         }
         
-        if sqlite3_bind_int(stmt, 2, quntity ) != SQLITE_OK{
+        if sqlite3_bind_int(stmt, 2, quantity ) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("failure binding quntity: \(errmsg)")
+            print("failure binding quantity: \(errmsg)")
             return
         }
         
-        if sqlite3_bind_text(stmt, 3, unit, -1, SQLITE_TRANSIENT ) != SQLITE_OK{
+        if sqlite3_bind_text(stmt, 3, unit, -1, SQLITETRANSIENT ) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("failure binding unit \(errmsg)")
             return
@@ -99,19 +99,19 @@ class DinnergyDB {
         while(sqlite3_step(stmt) == SQLITE_ROW){
             let id = sqlite3_column_int(stmt, 0)
             let name = String(cString: sqlite3_column_text(stmt, 1))
-            let quntity = sqlite3_column_int(stmt, 2)
+            let quantity = sqlite3_column_int(stmt, 2)
             let unit = sqlite3_column_text(stmt, 3)
             
             //adding values to list
-            stock.append(Ingredient(id: Int(id), name: name, quntity: Int(quntity), unit: String(cString: unit!)))
+            stock.append(Ingredient(id: Int(id), name: name, quantity: Int(quantity), unit: String(cString: unit!)))
         }
         dump(stock)
     }
     
     
-    func updateStock(name: String, quntity: Int32){
+    func updateStock(name: String, quantity: Int32){
         
-        let updateStatementString = "UPDATE Ingredients SET Quntity = " + String(quntity) + " WHERE Name = '" + name + "';"
+        let updateStatementString = "UPDATE Ingredients SET Quantity = " + String(quantity) + " WHERE Name = '" + name + "';"
         
         var updateStatement: OpaquePointer? = nil
         if sqlite3_prepare_v2(db, updateStatementString, -1, &updateStatement, nil) == SQLITE_OK {

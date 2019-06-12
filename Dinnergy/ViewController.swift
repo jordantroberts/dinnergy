@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let instance = DinnergyDB()
-        instance.updateStock(name: "Egg", quntity: 5 )
+        instance.updateStock(name: "Egg", quantity: 5 )
         instance.deleteItem(name: "uni")
         instance.checkStock()
         
