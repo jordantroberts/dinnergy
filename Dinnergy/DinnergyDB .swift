@@ -104,8 +104,8 @@ class DinnergyDB {
             
             //adding values to list
             stock.append(Ingredient(id: Int(id), name: name, quntity: Int(quntity), unit: String(cString: unit!)))
-            dump(stock)
         }
+        dump(stock)
     }
     
     
@@ -125,6 +125,29 @@ class DinnergyDB {
         }
         sqlite3_finalize(updateStatement)
     }
+    
+    
+    func deleteItem(name: String) {
+        let deleteStatementStirng = "DELETE FROM Ingredients WHERE Name = '" + name + "';"
+        var deleteStatement: OpaquePointer? = nil
+        if sqlite3_prepare_v2(db, deleteStatementStirng, -1, &deleteStatement, nil) == SQLITE_OK {
+            if sqlite3_step(deleteStatement) == SQLITE_DONE {
+                print("Successfully deleted row.")
+            } else {
+                print("Could not delete row.")
+            }
+        } else {
+            print("DELETE statement could not be prepared")
+        }
+        
+        sqlite3_finalize(deleteStatement)
+    }
+    
+    
+    
+    
+    
+    
     
 }
 
