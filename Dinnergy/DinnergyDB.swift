@@ -26,6 +26,7 @@ class DinnergyDB {
         createTable()
         dropRecipeTable()
         createRecipeTable()
+        dropRecipeIngredientTable()
         createRecipeIngredientsTable()
         insertRecipe(name: "Butter bean & chorizo stew", method: "1. Slice the chorizo and tip into a large saucepan over a medium heat. Fry gently for 5 mins or until starting to turn dark brown. Add the tomatoes and butter beans, bring to the boil, then simmer for 10 mins. Swirl through the pesto, season lightly and ladle into four bowls." , attachment: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/08/butter-bean-chorizo-stew.jpg?itok=8gg1NtD3")
         
@@ -266,6 +267,20 @@ class DinnergyDB {
     
     func dropRecipeTable(){
         let dropQuery = "DROP TABLE Recipes"
+        
+        if sqlite3_exec(db,dropQuery, nil, nil, nil) != SQLITE_OK{
+            print("Error Creating Table")
+            return
+        }
+        print("Table Created")
+        
+        let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        print("App Path: \(dirPaths)")
+        
+    }
+    
+    func dropRecipeIngredientTable(){
+        let dropQuery = "DROP TABLE Recipe_Ingredients"
         
         if sqlite3_exec(db,dropQuery, nil, nil, nil) != SQLITE_OK{
             print("Error Creating Table")

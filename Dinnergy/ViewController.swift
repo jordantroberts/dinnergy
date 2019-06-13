@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     @IBAction func buttonTap(_ sender: UIButton) {
 
         let str  = labelQuantity.text ?? ""
-        let number = Int32(str) ?? 0
+        let number = Double(str) ?? 0
         let name = labelIngredient.text ?? ""
         let unit = labelUnit.text ?? ""
 
