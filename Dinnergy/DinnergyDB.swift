@@ -138,10 +138,16 @@ class DinnergyDB {
         insertRecipeIngredients(recipe_id: 6, item: "Prawns", quantity: 400, unit: "g")
         
         insertRecipeIngredients(recipe_id: 6, item: "Chopped coriander (optional)", quantity: 1, unit: "handful")
+        
+        insertRecipeIngredients(recipe_id: 7, item: "oil", quantity: 1, unit: "tbsp")
+        
+        
+        
+        
     }
     
     func createTable() {
-        let createTableQuery = "CREATE TABLE IF NOT EXISTS Ingredients (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, quantity INTEGER, unit TEXT)"
+        let createTableQuery = "CREATE TABLE IF NOT EXISTS Ingredients (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, quantity DOUBLE, unit TEXT)"
 
         if sqlite3_exec(db,createTableQuery, nil, nil, nil) != SQLITE_OK{
             print("Error Creating Table")
@@ -184,7 +190,7 @@ class DinnergyDB {
 
     
     func createRecipeIngredientsTable(){
-        let createTableQuery = "CREATE TABLE IF NOT EXISTS Recipe_Ingredients (id INTEGER PRIMARY KEY AUTOINCREMENT, recipe_id REFERENCES Recipes(id), item TEXT, quantity INTEGER , unit TEXT)"
+        let createTableQuery = "CREATE TABLE IF NOT EXISTS Recipe_Ingredients (id INTEGER PRIMARY KEY AUTOINCREMENT, recipe_id REFERENCES Recipes(id), item TEXT, quantity DOUBLE , unit TEXT)"
         
         if sqlite3_exec(db,createTableQuery, nil, nil, nil) != SQLITE_OK{
             print("Error Creating Table")
@@ -197,7 +203,7 @@ class DinnergyDB {
         
     }
     
-    func insertIngredients(name: String, quantity: Int32, unit: String) {
+    func insertIngredients(name: String, quantity: Double, unit: String) {
         
         var stmt: OpaquePointer?
         let SQLITETRANSIENT = unsafeBitCast(OpaquePointer(bitPattern: -1), to: sqlite3_destructor_type.self)
@@ -216,7 +222,7 @@ class DinnergyDB {
             return
         }
         
-        if sqlite3_bind_int(stmt, 2, quantity ) != SQLITE_OK{
+        if sqlite3_bind_double(stmt, 2, quantity ) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("failure binding quantity: \(errmsg)")
             return
@@ -277,7 +283,7 @@ class DinnergyDB {
         print("Recipe saved successfully")
     }
     
-    func insertRecipeIngredients(recipe_id: Int32, item: String, quantity: Int32, unit: String) {
+    func insertRecipeIngredients(recipe_id: Int32, item: String, quantity: Double, unit: String) {
         
         var stmt: OpaquePointer?
         let SQLITETRANSIENT = unsafeBitCast(OpaquePointer(bitPattern: -1), to: sqlite3_destructor_type.self)
@@ -302,7 +308,7 @@ class DinnergyDB {
             return
         }
         
-        if sqlite3_bind_int(stmt, 3, quantity ) != SQLITE_OK{
+        if sqlite3_bind_double(stmt, 3, quantity ) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("failure binding quantity: \(errmsg)")
             return
@@ -340,17 +346,17 @@ class DinnergyDB {
         while(sqlite3_step(stmt) == SQLITE_ROW){
             let id = sqlite3_column_int(stmt, 0)
             let name = String(cString: sqlite3_column_text(stmt, 1))
-            let quantity = sqlite3_column_int(stmt, 2)
+            let quantity = sqlite3_column_double(stmt, 2)
             let unit = sqlite3_column_text(stmt, 3)
             
             //adding values to list
-            stock.append(Ingredient(id: Int(id), name: name, quantity: Int(quantity), unit: String(cString: unit!)))
+            stock.append(Ingredient(id: Int(id), name: name, quantity: Double(quantity), unit: String(cString: unit!)))
         }
         dump(stock)
     }
     
     
-    func updateStock(name: String, quantity: Int32){
+    func updateStock(name: String, quantity: Double){
         
         let updateStatementString = "UPDATE Ingredients SET Quantity = " + String(quantity) + " WHERE Name = '" + name + "';"
         
