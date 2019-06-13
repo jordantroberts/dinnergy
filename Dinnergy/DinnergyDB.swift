@@ -228,11 +228,11 @@ class DinnergyDB {
         
         insertRecipeIngredients(recipe_id: 12, item: "Pork sausages", quantity: 4, unit: "")
         
-        insertRecipeIngredients(recipe_id: 12, item: "Olive oil", quantity: 1, unit: "")
+        insertRecipeIngredients(recipe_id: 12, item: "Olive oil (for frying)", quantity: 4, unit: "tbsp")
         
         insertRecipeIngredients(recipe_id: 12, item: "Cherry tomatoes", quantity: 200, unit: "g")
         
-        insertRecipeIngredients(recipe_id: 12, item: "Fresh pesto", quantity: 65, unit: "g")
+        insertRecipeIngredients(recipe_id: 12, item: "Fresh pesto", quantity: 0.5, unit: "tub")
         
         
     }
