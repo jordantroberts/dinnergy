@@ -265,6 +265,23 @@ class DinnergyDB {
         
     }
     
+    func dropTable(){
+        let dropQuery = "DROP TABLE Ingredients"
+        
+        if sqlite3_exec(db,dropQuery, nil, nil, nil) != SQLITE_OK{
+            print("Error Creating Table")
+            return
+        }
+        print("Table Created")
+        
+        let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        print("App Path: \(dirPaths)")
+        
+    }
+    
+    
+    
+    
     func dropRecipeTable(){
         let dropQuery = "DROP TABLE Recipes"
         
