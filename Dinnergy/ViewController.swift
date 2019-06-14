@@ -9,9 +9,11 @@
 import UIKit
 import SQLite3
 
+let instanceDB = DinnergyDB()
+
 class ViewController: UIViewController {
 
-    var instanceDB = DinnergyDB()
+ 
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,7 @@ class ViewController: UIViewController {
         let unit = labelUnit.text ?? ""
 
         instanceDB.insertIngredients(name: name, quantity: number, unit: unit)
+        
 
     }
 }

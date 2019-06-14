@@ -265,6 +265,23 @@ class DinnergyDB {
         
     }
     
+    func dropTable(){
+        let dropQuery = "DROP TABLE Ingredients"
+        
+        if sqlite3_exec(db,dropQuery, nil, nil, nil) != SQLITE_OK{
+            print("Error Creating Table")
+            return
+        }
+        print("Table Created")
+        
+        let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        print("App Path: \(dirPaths)")
+        
+    }
+    
+    
+    
+    
     func dropRecipeTable(){
         let dropQuery = "DROP TABLE Recipes"
         
@@ -434,7 +451,7 @@ class DinnergyDB {
         print("Recipe Ingredients saved successfully")
     }
     
-    func checkStock(){
+    func checkStock() -> [Ingredient] {
         var stock = [Ingredient]()
         stock.removeAll()
         
@@ -444,7 +461,7 @@ class DinnergyDB {
         if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("error preparing insert: \(errmsg)")
-            return
+            return []
         }
         
         //traversing through all the records
@@ -457,7 +474,7 @@ class DinnergyDB {
             //adding values to list
             stock.append(Ingredient(id: Int(id), name: name, quantity: Double(quantity), unit: String(cString: unit!)))
         }
-        dump(stock)
+        return stock
     }
     
     

@@ -16,6 +16,7 @@
 		17303AFE22AFE9DA0060A4BC /* DinnergyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17303AFD22AFE9DA0060A4BC /* DinnergyUITests.swift */; };
 		C61526D622B0722C00FF644A /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61526D522B0722C00FF644A /* Ingredient.swift */; };
 		C65FDBCF22B0574A00970C0B /* DinnergyDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */; };
+		C6A0CCA122B2E0C4004BDBF1 /* IngredientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A0CCA022B2E0C4004BDBF1 /* IngredientsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		17303AFF22AFE9DA0060A4BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C61526D522B0722C00FF644A /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnergyDB.swift; sourceTree = "<group>"; };
+		C6A0CCA022B2E0C4004BDBF1 /* IngredientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				17303AE922AFE9DA0060A4BC /* Info.plist */,
 				C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */,
 				C61526D522B0722C00FF644A /* Ingredient.swift */,
+				C6A0CCA022B2E0C4004BDBF1 /* IngredientsTableViewController.swift */,
 			);
 			path = Dinnergy;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				C61526D622B0722C00FF644A /* Ingredient.swift in Sources */,
 				C65FDBCF22B0574A00970C0B /* DinnergyDB.swift in Sources */,
 				17303AE022AFE9D90060A4BC /* ViewController.swift in Sources */,
+				C6A0CCA122B2E0C4004BDBF1 /* IngredientsTableViewController.swift in Sources */,
 				17303ADE22AFE9D90060A4BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
