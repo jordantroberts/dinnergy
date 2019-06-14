@@ -14,7 +14,8 @@ class SingleRecipeViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var myImageView: UIImageView!
-    @IBOutlet weak var methodLabel: UILabel!
+    @IBOutlet weak var methodLabel: UITextView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
