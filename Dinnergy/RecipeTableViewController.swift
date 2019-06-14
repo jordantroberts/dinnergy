@@ -8,6 +8,8 @@
 
 import UIKit
 
+var myIndex = 0
+
 class RecipeTableViewController: UITableViewController {
 
     var stmt:OpaquePointer?
@@ -23,8 +25,7 @@ class RecipeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
-
-         cell.textLabel?.text = recipe[indexPath.row].name
+        cell.textLabel?.text = recipe[indexPath.row].name
         
         return cell
     }
@@ -33,5 +34,9 @@ class RecipeTableViewController: UITableViewController {
         return "Recipes"
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndex = indexPath.row
+        performSegue(withIdentifier: "single", sender: self)
+    }
     
 }
