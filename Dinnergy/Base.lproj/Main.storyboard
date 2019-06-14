@@ -87,7 +87,7 @@
             </objects>
             <point key="canvasLocation" x="-972" y="788"/>
         </scene>
-        <!--Recipes-->
+        <!--Recipe Table View Controller-->
         <scene sceneID="Ihs-I4-ZHe">
             <objects>
                 <tableViewController id="BsX-xX-lcu" customClass="RecipeTableViewController" customModule="Dinnergy" customModuleProvider="target" sceneMemberID="viewController">
@@ -110,7 +110,6 @@
                             <outlet property="delegate" destination="BsX-xX-lcu" id="ZSt-Cr-eMc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Recipes" id="0fp-3t-zYz"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5UE-pr-PUb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
