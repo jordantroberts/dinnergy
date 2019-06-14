@@ -513,7 +513,7 @@ class DinnergyDB {
     
     func showRecipes() -> [Recipe] {
         var recipe = [Recipe]()
-//        recipe.removeAll()
+        recipe.removeAll()
         
         let queryString = "SELECT * FROM Recipes"
         var stmt:OpaquePointer?

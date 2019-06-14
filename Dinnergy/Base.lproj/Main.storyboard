@@ -18,6 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="o0e-QV-hNT">
+                            <rect key="frame" x="0.0" y="72" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Recipes"/>
+                            <connections>
+                                <segue destination="BsX-xX-lcu" kind="show" id="83O-91-1Na"/>
+                            </connections>
+                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LabelCell" id="nub-QT-08G">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
@@ -78,6 +86,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0kO-U9-shm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-972" y="788"/>
+        </scene>
+        <!--Recipes-->
+        <scene sceneID="Ihs-I4-ZHe">
+            <objects>
+                <tableViewController id="BsX-xX-lcu" customClass="RecipeTableViewController" customModule="Dinnergy" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gem-mu-fSz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LabelCell" rowHeight="103" id="DuV-6K-FiN">
+                                <rect key="frame" x="0.0" y="28" width="414" height="103"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DuV-6K-FiN" id="o52-8Z-jTD">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="102.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BsX-xX-lcu" id="kgS-4w-xmf"/>
+                            <outlet property="delegate" destination="BsX-xX-lcu" id="ZSt-Cr-eMc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Recipes" id="0fp-3t-zYz"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5UE-pr-PUb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-110.14492753623189" y="785.49107142857144"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="HxX-eI-fit">

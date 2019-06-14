@@ -15,6 +15,7 @@
 		17303AF322AFE9DA0060A4BC /* DinnergyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17303AF222AFE9DA0060A4BC /* DinnergyTests.swift */; };
 		17303AFE22AFE9DA0060A4BC /* DinnergyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17303AFD22AFE9DA0060A4BC /* DinnergyUITests.swift */; };
 		571B190F22B3A60F00EE2FC9 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B190E22B3A60F00EE2FC9 /* Recipe.swift */; };
+		571B191122B3A9FE00EE2FC9 /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B191022B3A9FE00EE2FC9 /* RecipeTableViewController.swift */; };
 		C61526D622B0722C00FF644A /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61526D522B0722C00FF644A /* Ingredient.swift */; };
 		C65FDBCF22B0574A00970C0B /* DinnergyDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */; };
 		C6A0CCA122B2E0C4004BDBF1 /* IngredientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A0CCA022B2E0C4004BDBF1 /* IngredientsTableViewController.swift */; };
@@ -52,6 +53,7 @@
 		17303AFD22AFE9DA0060A4BC /* DinnergyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnergyUITests.swift; sourceTree = "<group>"; };
 		17303AFF22AFE9DA0060A4BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		571B190E22B3A60F00EE2FC9 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		571B191022B3A9FE00EE2FC9 /* RecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewController.swift; sourceTree = "<group>"; };
 		C61526D522B0722C00FF644A /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnergyDB.swift; sourceTree = "<group>"; };
 		C6A0CCA022B2E0C4004BDBF1 /* IngredientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				C61526D522B0722C00FF644A /* Ingredient.swift */,
 				C6A0CCA022B2E0C4004BDBF1 /* IngredientsTableViewController.swift */,
 				571B190E22B3A60F00EE2FC9 /* Recipe.swift */,
+				571B191022B3A9FE00EE2FC9 /* RecipeTableViewController.swift */,
 			);
 			path = Dinnergy;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				C65FDBCF22B0574A00970C0B /* DinnergyDB.swift in Sources */,
 				17303AE022AFE9D90060A4BC /* ViewController.swift in Sources */,
 				571B190F22B3A60F00EE2FC9 /* Recipe.swift in Sources */,
+				571B191122B3A9FE00EE2FC9 /* RecipeTableViewController.swift in Sources */,
 				C6A0CCA122B2E0C4004BDBF1 /* IngredientsTableViewController.swift in Sources */,
 				17303ADE22AFE9D90060A4BC /* AppDelegate.swift in Sources */,
 			);
