@@ -28,11 +28,11 @@ class DinnergyDB {
         createRecipeTable()
         dropRecipeIngredientTable()
         createRecipeIngredientsTable()
-        insertRecipe(name: "Butter bean & chorizo stew", ingredients: "", method: "1. Slice the chorizo and tip into a large saucepan over a medium heat.\n\n2. Fry gently for 5 mins or until starting to turn dark brown.\n\n3. Add the tomatoes and butter beans, bring to the boil, then simmer for 10 mins.\n\n4. Swirl through the pesto, season lightly and ladle into four bowls." , attachment: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/08/butter-bean-chorizo-stew.jpg?itok=8gg1NtD3")
+        insertRecipe(name: "Butter bean & chorizo stew", ingredients: "2 Cans of chopped tomatoes\n\nChorizo\n\n2 cans of drained butter beans\n\nPesto", method: "1. Slice the chorizo and tip into a large saucepan over a medium heat.\n\n2. Fry gently for 5 mins or until starting to turn dark brown.\n\n3. Add the tomatoes and butter beans, bring to the boil, then simmer for 10 mins.\n\n4. Swirl through the pesto, season lightly and ladle into four bowls." , attachment: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/08/butter-bean-chorizo-stew.jpg?itok=8gg1NtD3")
         
-        insertRecipe(name: "Roasted vegetable & feta tostada", ingredients: "", method: "1. Heat oven to 200C/180C fan/gas 6. In a roasting tin, season the frozen vegetables and toss with the Mexican seasoning, then roast in the oven for 15 mins, until hot. Meanwhile, mix the avocado, lime juice and tomatoes with some seasoning, then set aside.\n\n2. Put the tortillas on a baking sheet and cook above the vegetables for the final 5 mins of cooking time until crisp.\n\n3. Transfer the crispy tortillas to plates, scatter with rocket and top with the roasted vegetables. Add some of the avocado salsa and sprinkle over the feta", attachment: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--776509_11.jpg?itok=2yNWKRyg")
+        insertRecipe(name: "Roasted vegetable & feta tostada", ingredients: "Frozen grilled vegetables\n\nMexican seasoning\n\nAvocado\n\nLime\n\nCherry tomatoes\n\nFlour tortillas\n\nRocket\n\nFeta cheese", method: "1. Heat oven to 200C/180C fan/gas 6. In a roasting tin, season the frozen vegetables and toss with the Mexican seasoning, then roast in the oven for 15 mins, until hot. Meanwhile, mix the avocado, lime juice and tomatoes with some seasoning, then set aside.\n\n2. Put the tortillas on a baking sheet and cook above the vegetables for the final 5 mins of cooking time until crisp.\n\n3. Transfer the crispy tortillas to plates, scatter with rocket and top with the roasted vegetables. Add some of the avocado salsa and sprinkle over the feta", attachment: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--776509_11.jpg?itok=2yNWKRyg")
         
-        insertRecipe(name: "Vegan banana bread", ingredients: "", method: "1.Heat oven to 200C/180C fan/gas 6. Mash 3 large black peeled bananas with a fork, then mix well with 75g vegetable or sunflower oil and 100g brown sugar.\n\n2. Add 225g plain flour, 3 heaped tsp baking powder and 3 tsp cinnamon or mixed spice, and combine well. Add 50g dried fruit or nuts, if using.\n\n3. Bake in a greased, lined 2lb loaf tin for 20 minutes. Check and cover with foil if the cake is browning.\n\n4. Bake for another 20 minutes, or until a skewer comes out clean.\n\n5. Allow to cool a little before slicing. It's delicious freshly baked, but develops a lovely gooey quality the day after." , attachment: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2017/12/vegan-banana-bread.jpg?itok=UQuKnuov")
+        insertRecipe(name: "Vegan banana bread", ingredients: "Bananas\n\nVegetable oil\n\nBrown sugar\n\nPlain flour\n\nBaking powder\n\nCinnamon\n\nDried fruit/nuts", method: "1.Heat oven to 200C/180C fan/gas 6. Mash 3 large black peeled bananas with a fork, then mix well with 75g vegetable or sunflower oil and 100g brown sugar.\n\n2. Add 225g plain flour, 3 heaped tsp baking powder and 3 tsp cinnamon or mixed spice, and combine well. Add 50g dried fruit or nuts, if using.\n\n3. Bake in a greased, lined 2lb loaf tin for 20 minutes. Check and cover with foil if the cake is browning.\n\n4. Bake for another 20 minutes, or until a skewer comes out clean.\n\n5. Allow to cool a little before slicing. It's delicious freshly baked, but develops a lovely gooey quality the day after." , attachment: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2017/12/vegan-banana-bread.jpg?itok=UQuKnuov")
         
         insertRecipe(name: "Prawn & leek frittata", ingredients: "3 Large Leeks \nKing Prawns 150g \nGarlic and Herb Cream cheese 120g", method: "1. Heat 2 tbsp olive oil in a medium frying pan. Slice the leeks and add to the pan, cooking for 5 mins.\n\n2. Add the prawns and cook for 1 min more.\n\n3. Beat the eggs and whisk through half the cream cheese. Season to taste.\n\n4.Pour the mixture over the prawns and leeks, dot over the remaining cheese and cook on a medium heat for 5-8 mins.\n\n5. Finish under a medium-hot grill for 2 mins until just set with a slight wobble." , attachment: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/10/leek-frittata.jpg?itok=V-h2BoSg")
         
@@ -66,7 +66,7 @@ class DinnergyDB {
         
         insertRecipeIngredients(recipe_id: 2, item: "Avocado", quantity: 1, unit: "small")
         
-        insertRecipeIngredients(recipe_id: 2, item: "lime", quantity: 1, unit: "")
+        insertRecipeIngredients(recipe_id: 2, item: "Lime", quantity: 1, unit: "")
         
         insertRecipeIngredients(recipe_id: 2, item: "Cherry tomatoes", quantity: 75, unit: "g")
         
@@ -88,7 +88,7 @@ class DinnergyDB {
         
         insertRecipeIngredients(recipe_id: 3, item: "Cinnamon", quantity: 3, unit: "tsp")
         
-        insertRecipeIngredients(recipe_id: 3, item: "Dried Fruit/nuts", quantity: 50, unit: "g")
+        insertRecipeIngredients(recipe_id: 3, item: "Dried fruit/nuts", quantity: 50, unit: "g")
         
         insertRecipeIngredients(recipe_id: 4, item: "Leeks", quantity: 3, unit: "large")
         
