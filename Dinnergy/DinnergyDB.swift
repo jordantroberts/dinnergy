@@ -510,6 +510,32 @@ class DinnergyDB {
         
         sqlite3_finalize(deleteStatement)
     }
+    
+    func showRecipes() -> [Recipe] {
+        var recipe = [Recipe]()
+//        recipe.removeAll()
+        
+        let queryString = "SELECT * FROM Recipes"
+        var stmt:OpaquePointer?
+        
+        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("error preparing insert: \(errmsg)")
+            return []
+        }
+        
+        //traversing through all the records
+        while(sqlite3_step(stmt) == SQLITE_ROW){
+            let id = sqlite3_column_int(stmt, 0)
+            let name = String(cString: sqlite3_column_text(stmt, 1))
+            let method = String(cString: sqlite3_column_text(stmt, 2))
+            let attachment = String(cString: sqlite3_column_text(stmt, 3))
+            
+            //adding values to list
+            recipe.append(Recipe(id: Int(id), name: name, method: method, attachment: attachment))
+        }
+        return recipe
+    }
 
 }
 
