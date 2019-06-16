@@ -13,27 +13,23 @@ class IngredientsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     var stmt:OpaquePointer?
-    let stock = instanceDB.checkStock()
-
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        return 1
-//    }
+    var stock = instanceDB.checkStock()
     
-    
-    
-    
+    override func viewWillAppear(_ animated: Bool) {
+        stock = instanceDB.checkStock()
+        self.tableView.reloadData()
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return stock.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
 
         cell.textLabel?.text = stock[indexPath.row].name + ": " + String(stock[indexPath.row].quantity) + " " + stock[indexPath.row].unit
-
+        // might be helpful to add columns to display data more consistanly across the screen and update table header to include: name, quantity, and unit (function below)
         return cell
     }
     

@@ -13,18 +13,6 @@ let instanceDB = DinnergyDB()
 
 class ViewController: UIViewController {
 
- 
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-
-        instanceDB.updateStock(name: "Egg", quantity: 5 )
-        instanceDB.deleteItem(name: "uni")
-        instanceDB.checkStock()
-
-    }
-
     @IBOutlet weak var labelIngredient: UITextField!
     @IBOutlet weak var labelQuantity: UITextField!
     @IBOutlet weak var labelUnit: UITextField!
@@ -37,7 +25,7 @@ class ViewController: UIViewController {
         let unit = labelUnit.text ?? ""
 
         instanceDB.insertIngredients(name: name, quantity: number, unit: unit)
-        
-
+        navigationController?.popViewController(animated: true)
     }
+
 }
