@@ -22,7 +22,7 @@ class DinnergyDB {
         }else{
             print("SUCCESS opening database")
         }
-        dropTable()
+        
         createTable()
         dropRecipeTable()
         createRecipeTable()
