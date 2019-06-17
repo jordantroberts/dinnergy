@@ -18,14 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="o0e-QV-hNT">
-                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Recipes"/>
-                            <connections>
-                                <segue destination="9Vo-XW-gsG" kind="show" id="83O-91-1Na"/>
-                            </connections>
-                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LabelCell" id="nub-QT-08G">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -334,7 +326,4 @@
         <image name="restaurant" width="30" height="30"/>
         <image name="shopping_cart_loaded" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="eg1-iA-qJF"/>
-    </inferredMetricsTieBreakers>
 </document>
