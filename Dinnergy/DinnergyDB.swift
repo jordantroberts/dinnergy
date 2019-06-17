@@ -521,7 +521,7 @@ class DinnergyDB {
         var recipe = [Recipe]()
         recipe.removeAll()
         
-        let queryString = "SELECT * FROM Recipes"
+        let queryString = "SELECT DISTINCT id,name, ingredients, method, attachment FROM Recipes INNER JOIN (SELECT DISTINCT recipe_id, item FROM Recipe_Ingredients INNER JOIN Ingredients ON Recipe_Ingredients.item LIKE '%' || Ingredients.name || '%') ON Recipes.id = recipe_id"
         var stmt:OpaquePointer?
         
         if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
@@ -542,6 +542,8 @@ class DinnergyDB {
             recipe.append(Recipe(id: Int(id), name: name, ingredients: ingredients, method: method, attachment: attachment))
         }
         return recipe
+        
+        
     }
     
 //    func showRecipesIngredients() -> [RecipeIngredients] {
