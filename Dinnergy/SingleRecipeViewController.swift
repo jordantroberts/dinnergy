@@ -23,6 +23,7 @@ class SingleRecipeViewController: UIViewController {
     titleLabel.text = recipe[myIndex].name
     methodLabel.text = recipe[myIndex].method
     ingredientLabel.text = recipe[myIndex].ingredients
+        myImageView.image = UIImage(named: recipe[myIndex].name + ".jpg")
     
     }
 

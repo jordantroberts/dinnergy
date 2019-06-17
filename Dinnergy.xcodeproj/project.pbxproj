@@ -17,6 +17,18 @@
 		571B190F22B3A60F00EE2FC9 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B190E22B3A60F00EE2FC9 /* Recipe.swift */; };
 		571B191122B3A9FE00EE2FC9 /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B191022B3A9FE00EE2FC9 /* RecipeTableViewController.swift */; };
 		571B191322B3F2DC00EE2FC9 /* RecipeIngredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B191222B3F2DC00EE2FC9 /* RecipeIngredients.swift */; };
+		5726883022B7A1BD00AC96C3 /* Butter Bean & Chorizo Stew.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5726882F22B7A1BD00AC96C3 /* Butter Bean & Chorizo Stew.jpg */; };
+		5726883C22B7A5C600AC96C3 /* Curried Cauliflower & Lentil Soup.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5726883122B7A5C400AC96C3 /* Curried Cauliflower & Lentil Soup.jpg */; };
+		5726883D22B7A5C600AC96C3 /* Thai Prawn Curry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5726883222B7A5C500AC96C3 /* Thai Prawn Curry.jpg */; };
+		5726883E22B7A5C600AC96C3 /* Garlic Chicken Parcels.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5726883322B7A5C500AC96C3 /* Garlic Chicken Parcels.jpg */; };
+		5726883F22B7A5C600AC96C3 /* Prawn & Leek Frittata.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5726883422B7A5C500AC96C3 /* Prawn & Leek Frittata.jpg */; };
+		5726884022B7A5C600AC96C3 /* Sausages with Pesto Mash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5726883522B7A5C500AC96C3 /* Sausages with Pesto Mash.jpg */; };
+		5726884122B7A5C600AC96C3 /* Vegan Banana Bread.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5726883622B7A5C500AC96C3 /* Vegan Banana Bread.jpg */; };
+		5726884222B7A5C600AC96C3 /* Vegetable Pasta.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5726883722B7A5C600AC96C3 /* Vegetable Pasta.jpg */; };
+		5726884322B7A5C600AC96C3 /* Curried Cod.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5726883822B7A5C600AC96C3 /* Curried Cod.jpg */; };
+		5726884422B7A5C600AC96C3 /* Courgette Risotto.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5726883922B7A5C600AC96C3 /* Courgette Risotto.jpg */; };
+		5726884522B7A5C600AC96C3 /* Roasted Vegetable & Feta Tostada.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5726883A22B7A5C600AC96C3 /* Roasted Vegetable & Feta Tostada.jpg */; };
+		5726884622B7A5C600AC96C3 /* Satay Sweet Potato Curry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5726883B22B7A5C600AC96C3 /* Satay Sweet Potato Curry.jpg */; };
 		AF13451B22B3DBAC00A5643A /* SingleRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13451A22B3DBAC00A5643A /* SingleRecipeViewController.swift */; };
 		C61526D622B0722C00FF644A /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61526D522B0722C00FF644A /* Ingredient.swift */; };
 		C65FDBCF22B0574A00970C0B /* DinnergyDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */; };
@@ -57,6 +69,18 @@
 		571B190E22B3A60F00EE2FC9 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		571B191022B3A9FE00EE2FC9 /* RecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewController.swift; sourceTree = "<group>"; };
 		571B191222B3F2DC00EE2FC9 /* RecipeIngredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeIngredients.swift; sourceTree = "<group>"; };
+		5726882F22B7A1BD00AC96C3 /* Butter Bean & Chorizo Stew.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Butter Bean & Chorizo Stew.jpg"; sourceTree = "<group>"; };
+		5726883122B7A5C400AC96C3 /* Curried Cauliflower & Lentil Soup.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Curried Cauliflower & Lentil Soup.jpg"; sourceTree = "<group>"; };
+		5726883222B7A5C500AC96C3 /* Thai Prawn Curry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Thai Prawn Curry.jpg"; sourceTree = "<group>"; };
+		5726883322B7A5C500AC96C3 /* Garlic Chicken Parcels.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Garlic Chicken Parcels.jpg"; sourceTree = "<group>"; };
+		5726883422B7A5C500AC96C3 /* Prawn & Leek Frittata.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Prawn & Leek Frittata.jpg"; sourceTree = "<group>"; };
+		5726883522B7A5C500AC96C3 /* Sausages with Pesto Mash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Sausages with Pesto Mash.jpg"; sourceTree = "<group>"; };
+		5726883622B7A5C500AC96C3 /* Vegan Banana Bread.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Vegan Banana Bread.jpg"; sourceTree = "<group>"; };
+		5726883722B7A5C600AC96C3 /* Vegetable Pasta.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Vegetable Pasta.jpg"; sourceTree = "<group>"; };
+		5726883822B7A5C600AC96C3 /* Curried Cod.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Curried Cod.jpg"; sourceTree = "<group>"; };
+		5726883922B7A5C600AC96C3 /* Courgette Risotto.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Courgette Risotto.jpg"; sourceTree = "<group>"; };
+		5726883A22B7A5C600AC96C3 /* Roasted Vegetable & Feta Tostada.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Roasted Vegetable & Feta Tostada.jpg"; sourceTree = "<group>"; };
+		5726883B22B7A5C600AC96C3 /* Satay Sweet Potato Curry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Satay Sweet Potato Curry.jpg"; sourceTree = "<group>"; };
 		AF13451A22B3DBAC00A5643A /* SingleRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRecipeViewController.swift; sourceTree = "<group>"; };
 		C61526D522B0722C00FF644A /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnergyDB.swift; sourceTree = "<group>"; };
@@ -124,6 +148,18 @@
 				571B191022B3A9FE00EE2FC9 /* RecipeTableViewController.swift */,
 				AF13451A22B3DBAC00A5643A /* SingleRecipeViewController.swift */,
 				571B191222B3F2DC00EE2FC9 /* RecipeIngredients.swift */,
+				5726882F22B7A1BD00AC96C3 /* Butter Bean & Chorizo Stew.jpg */,
+				5726883922B7A5C600AC96C3 /* Courgette Risotto.jpg */,
+				5726883122B7A5C400AC96C3 /* Curried Cauliflower & Lentil Soup.jpg */,
+				5726883822B7A5C600AC96C3 /* Curried Cod.jpg */,
+				5726883322B7A5C500AC96C3 /* Garlic Chicken Parcels.jpg */,
+				5726883422B7A5C500AC96C3 /* Prawn & Leek Frittata.jpg */,
+				5726883A22B7A5C600AC96C3 /* Roasted Vegetable & Feta Tostada.jpg */,
+				5726883B22B7A5C600AC96C3 /* Satay Sweet Potato Curry.jpg */,
+				5726883522B7A5C500AC96C3 /* Sausages with Pesto Mash.jpg */,
+				5726883222B7A5C500AC96C3 /* Thai Prawn Curry.jpg */,
+				5726883622B7A5C500AC96C3 /* Vegan Banana Bread.jpg */,
+				5726883722B7A5C600AC96C3 /* Vegetable Pasta.jpg */,
 			);
 			path = Dinnergy;
 			sourceTree = "<group>";
@@ -251,9 +287,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5726884622B7A5C600AC96C3 /* Satay Sweet Potato Curry.jpg in Resources */,
+				5726883C22B7A5C600AC96C3 /* Curried Cauliflower & Lentil Soup.jpg in Resources */,
 				17303AE822AFE9DA0060A4BC /* LaunchScreen.storyboard in Resources */,
+				5726884322B7A5C600AC96C3 /* Curried Cod.jpg in Resources */,
+				5726884422B7A5C600AC96C3 /* Courgette Risotto.jpg in Resources */,
+				5726883D22B7A5C600AC96C3 /* Thai Prawn Curry.jpg in Resources */,
+				5726884022B7A5C600AC96C3 /* Sausages with Pesto Mash.jpg in Resources */,
 				17303AE522AFE9DA0060A4BC /* Assets.xcassets in Resources */,
+				5726883E22B7A5C600AC96C3 /* Garlic Chicken Parcels.jpg in Resources */,
+				5726884522B7A5C600AC96C3 /* Roasted Vegetable & Feta Tostada.jpg in Resources */,
+				5726884222B7A5C600AC96C3 /* Vegetable Pasta.jpg in Resources */,
 				17303AE322AFE9D90060A4BC /* Main.storyboard in Resources */,
+				5726883F22B7A5C600AC96C3 /* Prawn & Leek Frittata.jpg in Resources */,
+				5726883022B7A1BD00AC96C3 /* Butter Bean & Chorizo Stew.jpg in Resources */,
+				5726884122B7A5C600AC96C3 /* Vegan Banana Bread.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
