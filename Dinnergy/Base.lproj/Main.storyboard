@@ -313,6 +313,17 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xiA-Go-MLA">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                             </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AhP-jJ-mcJ">
+                                <rect key="frame" x="88" y="574" width="199" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Food Bank"/>
+                                    <segment title="Supermarket"/>
+                                </segments>
+                                <connections>
+                                    <action selector="searchOnValueChanged:" destination="iCy-2C-VfT" eventType="valueChanged" id="McA-rp-y59"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -327,11 +338,12 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="xiA-Go-MLA" id="Z0k-kf-LUq"/>
+                        <outlet property="segmentedControl" destination="AhP-jJ-mcJ" id="6uB-xv-CwP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WhU-GZ-3Mg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-74" y="2821"/>
+            <point key="canvasLocation" x="-74.400000000000006" y="2820.5397301349326"/>
         </scene>
     </scenes>
     <resources>
