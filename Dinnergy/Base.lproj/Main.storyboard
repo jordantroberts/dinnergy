@@ -252,11 +252,11 @@
             </objects>
             <point key="canvasLocation" x="1780" y="130.88455772113943"/>
         </scene>
-        <!--Item-->
+        <!--Ingredient-->
         <scene sceneID="XEP-yd-FR9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HQQ-h6-V8F" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="1Pj-ig-CMp"/>
+                    <tabBarItem key="tabBarItem" title="Ingredient" id="1Pj-ig-CMp"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="KvX-wf-SOA"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3FA-ny-zUD">
@@ -272,11 +272,11 @@
             </objects>
             <point key="canvasLocation" x="-100" y="129.98500749625188"/>
         </scene>
-        <!--Item-->
+        <!--Recipe-->
         <scene sceneID="Qx0-Wg-iGi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Vo-XW-gsG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="d2I-jW-awj"/>
+                    <tabBarItem key="tabBarItem" title="Recipe" id="d2I-jW-awj"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oiS-xe-IZP">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
