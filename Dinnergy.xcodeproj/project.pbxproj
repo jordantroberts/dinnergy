@@ -33,6 +33,8 @@
 		C61526D622B0722C00FF644A /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61526D522B0722C00FF644A /* Ingredient.swift */; };
 		C65FDBCF22B0574A00970C0B /* DinnergyDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */; };
 		C6A0CCA122B2E0C4004BDBF1 /* IngredientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A0CCA022B2E0C4004BDBF1 /* IngredientsTableViewController.swift */; };
+		C6E32CA222B7D3AC00A97DC3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E32CA122B7D3AC00A97DC3 /* MapViewController.swift */; };
+		C6E32CA522B7DA7600A97DC3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E32CA422B7DA7600A97DC3 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		C61526D522B0722C00FF644A /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnergyDB.swift; sourceTree = "<group>"; };
 		C6A0CCA022B2E0C4004BDBF1 /* IngredientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewController.swift; sourceTree = "<group>"; };
+		C6E32CA122B7D3AC00A97DC3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		C6E32CA422B7DA7600A97DC3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6E32CA522B7DA7600A97DC3 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +124,7 @@
 				17303AF122AFE9DA0060A4BC /* DinnergyTests */,
 				17303AFC22AFE9DA0060A4BC /* DinnergyUITests */,
 				17303ADB22AFE9D90060A4BC /* Products */,
+				C6E32CA322B7DA7600A97DC3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +150,7 @@
 				C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */,
 				C61526D522B0722C00FF644A /* Ingredient.swift */,
 				C6A0CCA022B2E0C4004BDBF1 /* IngredientsTableViewController.swift */,
+				C6E32CA122B7D3AC00A97DC3 /* MapViewController.swift */,
 				571B190E22B3A60F00EE2FC9 /* Recipe.swift */,
 				571B191022B3A9FE00EE2FC9 /* RecipeTableViewController.swift */,
 				AF13451A22B3DBAC00A5643A /* SingleRecipeViewController.swift */,
@@ -180,6 +187,14 @@
 				17303AFF22AFE9DA0060A4BC /* Info.plist */,
 			);
 			path = DinnergyUITests;
+			sourceTree = "<group>";
+		};
+		C6E32CA322B7DA7600A97DC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6E32CA422B7DA7600A97DC3 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +266,11 @@
 				TargetAttributes = {
 					17303AD922AFE9D90060A4BC = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					17303AED22AFE9DA0060A4BC = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -349,6 +369,7 @@
 				AF13451B22B3DBAC00A5643A /* SingleRecipeViewController.swift in Sources */,
 				C61526D622B0722C00FF644A /* Ingredient.swift in Sources */,
 				C65FDBCF22B0574A00970C0B /* DinnergyDB.swift in Sources */,
+				C6E32CA222B7D3AC00A97DC3 /* MapViewController.swift in Sources */,
 				17303AE022AFE9D90060A4BC /* ViewController.swift in Sources */,
 				571B190F22B3A60F00EE2FC9 /* Recipe.swift in Sources */,
 				571B191122B3A9FE00EE2FC9 /* RecipeTableViewController.swift in Sources */,
