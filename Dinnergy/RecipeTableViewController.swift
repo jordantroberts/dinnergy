@@ -13,7 +13,7 @@ var myIndex = 0
 class RecipeTableViewController: UITableViewController {
 
     var stmt:OpaquePointer?
-    let recipe = instanceDB.showRecipes()
+    var recipe = instanceDB.showRecipes()
     
 //    override func numberOfSections(in tableView: UITableView) -> Int {
 //        return 1
@@ -32,6 +32,11 @@ class RecipeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Recipes"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        recipe = instanceDB.showRecipes()
+        self.tableView.reloadData()
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
