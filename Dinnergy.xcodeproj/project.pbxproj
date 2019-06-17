@@ -33,6 +33,7 @@
 		C61526D622B0722C00FF644A /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61526D522B0722C00FF644A /* Ingredient.swift */; };
 		C65FDBCF22B0574A00970C0B /* DinnergyDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */; };
 		C6A0CCA122B2E0C4004BDBF1 /* IngredientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A0CCA022B2E0C4004BDBF1 /* IngredientsTableViewController.swift */; };
+		C6E32CA222B7D3AC00A97DC3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E32CA122B7D3AC00A97DC3 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		C61526D522B0722C00FF644A /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnergyDB.swift; sourceTree = "<group>"; };
 		C6A0CCA022B2E0C4004BDBF1 /* IngredientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewController.swift; sourceTree = "<group>"; };
+		C6E32CA122B7D3AC00A97DC3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				5726883222B7A5C500AC96C3 /* Thai Prawn Curry.jpg */,
 				5726883622B7A5C500AC96C3 /* Vegan Banana Bread.jpg */,
 				5726883722B7A5C600AC96C3 /* Vegetable Pasta.jpg */,
+				C6E32CA122B7D3AC00A97DC3 /* MapViewController.swift */,
 			);
 			path = Dinnergy;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				AF13451B22B3DBAC00A5643A /* SingleRecipeViewController.swift in Sources */,
 				C61526D622B0722C00FF644A /* Ingredient.swift in Sources */,
 				C65FDBCF22B0574A00970C0B /* DinnergyDB.swift in Sources */,
+				C6E32CA222B7D3AC00A97DC3 /* MapViewController.swift in Sources */,
 				17303AE022AFE9D90060A4BC /* ViewController.swift in Sources */,
 				571B190F22B3A60F00EE2FC9 /* Recipe.swift in Sources */,
 				571B191122B3A9FE00EE2FC9 /* RecipeTableViewController.swift in Sources */,
