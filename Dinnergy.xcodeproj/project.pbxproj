@@ -17,7 +17,7 @@
 		571B190F22B3A60F00EE2FC9 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B190E22B3A60F00EE2FC9 /* Recipe.swift */; };
 		571B191122B3A9FE00EE2FC9 /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B191022B3A9FE00EE2FC9 /* RecipeTableViewController.swift */; };
 		571B191322B3F2DC00EE2FC9 /* RecipeIngredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B191222B3F2DC00EE2FC9 /* RecipeIngredients.swift */; };
-		5726883022B7A1BD00AC96C3 /* butter-bean-chorizo-stew.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5726882F22B7A1BD00AC96C3 /* butter-bean-chorizo-stew.jpg */; };
+		5726883022B7A1BD00AC96C3 /* Butter bean & chorizo stew.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5726882F22B7A1BD00AC96C3 /* Butter bean & chorizo stew.jpg */; };
 		AF13451B22B3DBAC00A5643A /* SingleRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13451A22B3DBAC00A5643A /* SingleRecipeViewController.swift */; };
 		C61526D622B0722C00FF644A /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61526D522B0722C00FF644A /* Ingredient.swift */; };
 		C65FDBCF22B0574A00970C0B /* DinnergyDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */; };
@@ -58,7 +58,7 @@
 		571B190E22B3A60F00EE2FC9 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		571B191022B3A9FE00EE2FC9 /* RecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewController.swift; sourceTree = "<group>"; };
 		571B191222B3F2DC00EE2FC9 /* RecipeIngredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeIngredients.swift; sourceTree = "<group>"; };
-		5726882F22B7A1BD00AC96C3 /* butter-bean-chorizo-stew.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "butter-bean-chorizo-stew.jpg"; sourceTree = "<group>"; };
+		5726882F22B7A1BD00AC96C3 /* Butter bean & chorizo stew.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Butter bean & chorizo stew.jpg"; sourceTree = "<group>"; };
 		AF13451A22B3DBAC00A5643A /* SingleRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRecipeViewController.swift; sourceTree = "<group>"; };
 		C61526D522B0722C00FF644A /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnergyDB.swift; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 				571B191022B3A9FE00EE2FC9 /* RecipeTableViewController.swift */,
 				AF13451A22B3DBAC00A5643A /* SingleRecipeViewController.swift */,
 				571B191222B3F2DC00EE2FC9 /* RecipeIngredients.swift */,
-				5726882F22B7A1BD00AC96C3 /* butter-bean-chorizo-stew.jpg */,
+				5726882F22B7A1BD00AC96C3 /* Butter bean & chorizo stew.jpg */,
 			);
 			path = Dinnergy;
 			sourceTree = "<group>";
@@ -257,7 +257,7 @@
 				17303AE822AFE9DA0060A4BC /* LaunchScreen.storyboard in Resources */,
 				17303AE522AFE9DA0060A4BC /* Assets.xcassets in Resources */,
 				17303AE322AFE9D90060A4BC /* Main.storyboard in Resources */,
-				5726883022B7A1BD00AC96C3 /* butter-bean-chorizo-stew.jpg in Resources */,
+				5726883022B7A1BD00AC96C3 /* Butter bean & chorizo stew.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
