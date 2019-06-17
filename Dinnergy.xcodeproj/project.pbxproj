@@ -150,6 +150,7 @@
 				C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */,
 				C61526D522B0722C00FF644A /* Ingredient.swift */,
 				C6A0CCA022B2E0C4004BDBF1 /* IngredientsTableViewController.swift */,
+				C6E32CA122B7D3AC00A97DC3 /* MapViewController.swift */,
 				571B190E22B3A60F00EE2FC9 /* Recipe.swift */,
 				571B191022B3A9FE00EE2FC9 /* RecipeTableViewController.swift */,
 				AF13451A22B3DBAC00A5643A /* SingleRecipeViewController.swift */,
@@ -166,7 +167,6 @@
 				5726883222B7A5C500AC96C3 /* Thai Prawn Curry.jpg */,
 				5726883622B7A5C500AC96C3 /* Vegan Banana Bread.jpg */,
 				5726883722B7A5C600AC96C3 /* Vegetable Pasta.jpg */,
-				C6E32CA122B7D3AC00A97DC3 /* MapViewController.swift */,
 			);
 			path = Dinnergy;
 			sourceTree = "<group>";

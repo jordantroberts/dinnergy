@@ -313,9 +313,11 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xiA-Go-MLA">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                             </mapView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AhP-jJ-mcJ">
-                                <rect key="frame" x="88" y="574" width="199" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AhP-jJ-mcJ">
+                                <rect key="frame" x="87.5" y="570" width="200" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="RIk-GI-plm"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Food Bank"/>
                                     <segment title="Supermarket"/>
@@ -327,9 +329,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="AhP-jJ-mcJ" firstAttribute="centerX" secondItem="xiA-Go-MLA" secondAttribute="centerX" id="5ik-v3-yEC"/>
                             <constraint firstItem="vTM-ye-lH5" firstAttribute="trailing" secondItem="xiA-Go-MLA" secondAttribute="trailing" id="9hN-L6-2sn"/>
                             <constraint firstItem="xiA-Go-MLA" firstAttribute="top" secondItem="vTM-ye-lH5" secondAttribute="top" id="Rz4-8E-7eg"/>
                             <constraint firstItem="xiA-Go-MLA" firstAttribute="leading" secondItem="vTM-ye-lH5" secondAttribute="leading" id="gJP-DC-Mnx"/>
+                            <constraint firstItem="vTM-ye-lH5" firstAttribute="bottom" secondItem="AhP-jJ-mcJ" secondAttribute="bottom" constant="20" id="oHv-7H-H1a"/>
                             <constraint firstItem="vTM-ye-lH5" firstAttribute="bottom" secondItem="xiA-Go-MLA" secondAttribute="bottom" id="uv2-Bx-ukP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vTM-ye-lH5"/>
