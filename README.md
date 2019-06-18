@@ -1,5 +1,7 @@
 # Dinnergy
 
+### [Welcome to Edgy Eats](https://github.com/jordantroberts/dinnergy#Welcome-to-Edgy-Eats) - [Features](https://github.com/jordantroberts/dinnergy#Features) - [Screenshots](https://github.com/jordantroberts/dinnergy#Screenshots) - [Team](https://github.com/jordantroberts/dinnergy#Team) - [Our Process](https://github.com/jordantroberts/dinnergy#Our-Process) - [Quickstart](https://github.com/jordantroberts/dinnergy#Process)
+
 ## Welcome to Edgy Eats
 
 Dinnergy is an iPhone application that allows users to plan a meal depending on available ingredients.
@@ -9,6 +11,9 @@ Dinnergy is an iPhone application that allows users to plan a meal depending on 
 * The app gives you recipes based on your current ingredients and updates each time you add or remove an ingredient
 * Creates a shopping list based on selected recipe and ingredients that are currently unnavailable to the user
 * User can use Apple maps to view nearby food banks or supermarkets
+
+## Screenshots
+
 
 ## Team
 * [Carly Jenkinson](https://github.com/CarlyJ88)
