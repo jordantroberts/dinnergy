@@ -42,7 +42,8 @@ class ShoppingListViewController: UITableViewController {
         instanceDB.dropListTable()
         instanceDB.createListsTable()
         navigationController?.popViewController(animated: true)
-        
+        list = instanceDB.showList()
+        self.tableView.reloadData()
     }
     
     
