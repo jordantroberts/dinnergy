@@ -25,3 +25,17 @@ We agreed to follow an Agile Software Development process using Extreme Programm
 1. The card wall is here: https://github.com/jordantroberts/dinnergy/projects/1
 2. Project Wiki: https://github.com/jordantroberts/dinnergy/wiki
 
+## Quickstart
+
+### Running the app
+
+1. git clone [https://github.com/jordantroberts/dinnergy]
+2. cd dinnergy
+3. xed . (to launch XCode)
+4. cmd + r (to run the app)
+5. The app will launch in the simulator
+
+### Running the tests
+
+1. Repeat steps 1-3 (of running the app)
+2. cmd + u (to run the tests)
