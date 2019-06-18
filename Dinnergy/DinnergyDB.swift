@@ -28,6 +28,7 @@ class DinnergyDB {
         createRecipeTable()
         dropRecipeIngredientTable()
         createRecipeIngredientsTable()
+        createListsTable()
         insertRecipe(name: "Butter Bean & Chorizo Stew", ingredients: "2 Cans of chopped tomatoes\n\n200g Chorizo\n\n2x400g cans of drained butter beans\n\n1 tub Pesto", method: "1. Slice the chorizo and tip into a large saucepan over a medium heat.\n\n2. Fry gently for 5 mins or until starting to turn dark brown.\n\n3. Add the tomatoes and butter beans, bring to the boil, then simmer for 10 mins.\n\n4. Swirl through the pesto, season lightly and ladle into four bowls." , attachment: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/08/butter-bean-chorizo-stew.jpg?itok=8gg1NtD3")
         
         insertRecipe(name: "Roasted Vegetable & Feta Tostada", ingredients: "325g Frozen grilled vegetables\n\n1 tsp Mexican seasoning\n\n1 Small Avocado\n\n1 Lime\n\n75g Cherry tomatoes\n\n2 Small Flour tortillas\n\n2 Handfuls Rocket\n\n2 tbsp Feta cheese", method: "1. Heat oven to 200C/180C fan/gas 6. In a roasting tin, season the frozen vegetables and toss with the Mexican seasoning, then roast in the oven for 15 mins, until hot. Meanwhile, mix the avocado, lime juice and tomatoes with some seasoning, then set aside.\n\n2. Put the tortillas on a baking sheet and cook above the vegetables for the final 5 mins of cooking time until crisp.\n\n3. Transfer the crispy tortillas to plates, scatter with rocket and top with the roasted vegetables. Add some of the avocado salsa and sprinkle over the feta", attachment: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--776509_11.jpg?itok=2yNWKRyg")
@@ -600,25 +601,34 @@ class DinnergyDB {
 //        }
 //        return recipe
 //    }
+
+    func matchRecipeNameWithID(name: String) -> Int {
+        var recipes = [Recipe]()
+        recipes.removeAll()
+        
+        let queryString = "SELECT * FROM Recipes WHERE name = '" + name + "';"
+        var stmt:OpaquePointer?
+        
+        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("error preparing insert: \(errmsg)")
+//            return Recipe(id: Int(1), name: "1",ingredients: "1", method: "1", attachment: "1")
+            return 1
+        }
+        
+        //traversing through all the records
+        while(sqlite3_step(stmt) == SQLITE_ROW){
+            let id = sqlite3_column_int(stmt, 0)
+            let name = String(cString: sqlite3_column_text(stmt, 1))
+            let ingredients = String(cString: sqlite3_column_text(stmt, 2))
+            let method = String(cString: sqlite3_column_text(stmt, 3))
+            let attachment = String(cString: sqlite3_column_text(stmt, 4))
+            
+            //adding values to list
+            recipes.append(Recipe(id: Int(id), name: name,ingredients: ingredients, method: method, attachment: attachment))
+        }
+        return recipes[0].id
+    }
     
-    //    func matchRecipeNameWithID(name: String){
-    //
-    //        let recipeNameQueryString = "SELECT id FROM Recipes WHERE Name = '" + name + "';"
-    ////            "UPDATE Ingredients SET Quantity = " + String(quantity) + " WHERE Name = '" + name + "';"
-    //
-    //        var findStatement: OpaquePointer? = nil
-    //        if sqlite3_prepare_v2(db, recipeNameQueryString, -1, &findStatement, nil) == SQLITE_OK {
-    //            if sqlite3_step(findStatement) == SQLITE_DONE {
-    //                print("Successfully found recipe.")
-    //            } else {
-    //                print("Could not find recipe.")
-    //            }
-    //        } else {
-    //            print("SELECT statement did not work")
-    //        }
-    //        sqlite3_finalize(findStatement)
-    //    }
-
-
 }
 

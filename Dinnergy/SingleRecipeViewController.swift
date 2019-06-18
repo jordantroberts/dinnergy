@@ -11,6 +11,7 @@ import UIKit
 class SingleRecipeViewController: UIViewController {
     
     let recipe = instanceDB.showRecipes()
+    let list = instanceDB
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var myImageView: UIImageView!
@@ -28,8 +29,9 @@ class SingleRecipeViewController: UIViewController {
     }
 
     @IBAction func addtoListButton(_ sender: UIButton) {
-//        var recipeName = titleLabel.text
+        var recipeName = titleLabel.text ?? ""
         
-//        list.insertList(name: , quantity: , unit: )
+        list.matchRecipeNameWithID(name: recipeName)
+        list.insertList()
     }
 }
