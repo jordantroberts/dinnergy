@@ -31,7 +31,7 @@ class SingleRecipeViewController: UIViewController {
     @IBAction func addtoListButton(_ sender: UIButton) {
         var recipeName = titleLabel.text ?? ""
         
-        list.matchRecipeNameWithID(name: recipeName)
-        list.insertList()
+        var ingredientArrayForList = list.matchRecipeNameWithID(name: recipeName)
+        list.insertList(recipeID: ingredientArrayForList)
     }
 }
