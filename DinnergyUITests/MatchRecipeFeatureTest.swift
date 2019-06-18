@@ -16,6 +16,7 @@ class MatchRecipeFeatureTest: XCTestCase {
         addBananas(number: "4")
         app.buttons["Recipe"].tap()
         XCTAssert(app.staticTexts["Vegan Banana Bread"].exists)
+        deleteFourBanana()
     }
 
 }
