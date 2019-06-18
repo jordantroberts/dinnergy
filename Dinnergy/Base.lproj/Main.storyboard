@@ -85,10 +85,14 @@
         <scene sceneID="xXO-Yl-rND">
             <objects>
                 <viewController id="e5V-DQ-QfY" customClass="SingleRecipeViewController" customModule="Dinnergy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9EY-lz-aOH">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="9EY-lz-aOH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4YC-EA-OSP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oz7-A5-gKY">
                                 <rect key="frame" x="0.0" y="64" width="414" height="1500"/>
                                 <subviews>
@@ -114,7 +118,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="25" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71u-go-58p">
-                                                <rect key="frame" x="14" y="904" width="381" height="499"/>
+                                                <rect key="frame" x="14" y="904" width="381" height="388"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -134,6 +138,16 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sM-Oj-fjb">
+                                                <rect key="frame" x="158" y="1387" width="93" height="36"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Add to List"/>
+                                                <connections>
+                                                    <action selector="AddToList:" destination="e5V-DQ-QfY" eventType="touchUpInside" id="k2u-a9-8MI"/>
+                                                    <action selector="AddToListButton:" destination="e5V-DQ-QfY" eventType="touchUpInside" id="mSe-RY-ohl"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -160,8 +174,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vvx-nu-fGW"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="414" height="1500"/>
                     <connections>
+                        <outlet property="AddButton" destination="8sM-Oj-fjb" id="9NF-2p-zmV"/>
                         <outlet property="ingredientLabel" destination="TeB-tC-gEC" id="H5U-b1-xXX"/>
                         <outlet property="methodLabel" destination="71u-go-58p" id="SAU-gV-eXN"/>
                         <outlet property="myImageView" destination="moF-r7-fpx" id="2jd-ae-bNQ"/>

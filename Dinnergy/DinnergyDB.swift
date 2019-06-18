@@ -28,6 +28,7 @@ class DinnergyDB {
         createRecipeTable()
         dropRecipeIngredientTable()
         createRecipeIngredientsTable()
+        createListsTable()
         insertRecipe(name: "Butter Bean & Chorizo Stew", ingredients: "2 Cans of chopped tomatoes\n\n200g Chorizo\n\n2x400g cans of drained butter beans\n\n1 tub Pesto", method: "1. Slice the chorizo and tip into a large saucepan over a medium heat.\n\n2. Fry gently for 5 mins or until starting to turn dark brown.\n\n3. Add the tomatoes and butter beans, bring to the boil, then simmer for 10 mins.\n\n4. Swirl through the pesto, season lightly and ladle into four bowls." , attachment: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/08/butter-bean-chorizo-stew.jpg?itok=8gg1NtD3")
         
         insertRecipe(name: "Roasted Vegetable & Feta Tostada", ingredients: "325g Frozen grilled vegetables\n\n1 tsp Mexican seasoning\n\n1 Small Avocado\n\n1 Lime\n\n75g Cherry tomatoes\n\n2 Small Flour tortillas\n\n2 Handfuls Rocket\n\n2 tbsp Feta cheese", method: "1. Heat oven to 200C/180C fan/gas 6. In a roasting tin, season the frozen vegetables and toss with the Mexican seasoning, then roast in the oven for 15 mins, until hot. Meanwhile, mix the avocado, lime juice and tomatoes with some seasoning, then set aside.\n\n2. Put the tortillas on a baking sheet and cook above the vegetables for the final 5 mins of cooking time until crisp.\n\n3. Transfer the crispy tortillas to plates, scatter with rocket and top with the roasted vegetables. Add some of the avocado salsa and sprinkle over the feta", attachment: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--776509_11.jpg?itok=2yNWKRyg")
@@ -471,40 +472,15 @@ class DinnergyDB {
         print("Recipe Ingredients saved successfully")
     }
     
-    func insertList(name: String, quantity: Double, unit: String) {
+    func insertList() {
         
         var stmt: OpaquePointer?
-        let SQLITETRANSIENT = unsafeBitCast(OpaquePointer(bitPattern: -1), to: sqlite3_destructor_type.self)
         
-        let queryString = "INSERT INTO Lists (name, quantity, unit) VALUES (?,?,?)"
+        let queryString = "INSERT INTO Lists SELECT * FROM (SELECT item, quantity, unit FROM (SELECT * FROM Recipe_Ingredients LEFT JOIN Ingredients ON Recipe_Ingredients.item LIKE '%' || Ingredients.name || '%' WHERE Ingredients.name IS NULL) WHERE recipe_id = 1"
         
         if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("error preparing insert: \(errmsg)")
-            return
-        }
-        
-        if sqlite3_bind_text(stmt, 1, name, -1, SQLITETRANSIENT) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("failure binding name: \(errmsg)")
-            return
-        }
-        
-        if sqlite3_bind_double(stmt, 2, quantity ) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("failure binding quantity: \(errmsg)")
-            return
-        }
-        
-        if sqlite3_bind_text(stmt, 3, unit, -1, SQLITETRANSIENT ) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("failure binding unit \(errmsg)")
-            return
-        }
-        
-        if sqlite3_step(stmt) != SQLITE_DONE {
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("failure inserting hero: \(errmsg)")
             return
         }
         
@@ -600,31 +576,32 @@ class DinnergyDB {
         
     }
     
-//    func showRecipesIngredients() -> [RecipeIngredients] {
-//        var recipeIngredients = [RecipeIngredients]()
-//        recipeIngredients.removeAll()
-//
-//        let queryString = "SELECT * FROM Recipes"
-//        var stmt:OpaquePointer?
-//
-//        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
-//            let errmsg = String(cString: sqlite3_errmsg(db)!)
-//            print("error preparing insert: \(errmsg)")
-//            return []
-//        }
-//
-//        //traversing through all the records
-//        while(sqlite3_step(stmt) == SQLITE_ROW){
-//            let id = sqlite3_column_int(stmt, 0)
-//            let name = String(cString: sqlite3_column_text(stmt, 1))
-//            let method = String(cString: sqlite3_column_text(stmt, 2))
-//            let attachment = String(cString: sqlite3_column_text(stmt, 3))
-//
-//            //adding values to list
-//            recipe.append(Recipe(id: Int(id), name: name, method: method, attachment: attachment))
-//        }
-//        return recipe
-//    }
+    func showRecipesIngredients() -> [RecipeIngredients] {
+        var recipeIngredients = [RecipeIngredients]()
+        recipeIngredients.removeAll()
+
+        let queryString = "SELECT item, quantity, unit FROM (SELECT * FROM Recipe_Ingredients LEFT JOIN Ingredients ON Recipe_Ingredients.item LIKE '%' || Ingredients.name || '%' WHERE Ingredients.name IS NULL) ORDER BY item"
+        var stmt:OpaquePointer?
+
+        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("error preparing insert: \(errmsg)")
+            return []
+        }
+
+        //traversing through all the records
+        while(sqlite3_step(stmt) == SQLITE_ROW){
+            let id = sqlite3_column_int(stmt, 0)
+            let recipe_id = sqlite3_column_int(stmt, 1)
+            let item = String(cString: sqlite3_column_text(stmt, 2))
+            let quantity = sqlite3_column_int(stmt, 3)
+            let unit = String(cString: sqlite3_column_text(stmt, 4))
+
+
+            recipeIngredients.append(RecipeIngredients(id: Int(id), recipe_id: Int(recipe_id), name: item, quantity: Double(quantity), unit: unit))
+        }
+        return recipeIngredients
+    }
 
 }
 

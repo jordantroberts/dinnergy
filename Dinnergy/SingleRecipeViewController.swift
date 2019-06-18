@@ -11,11 +11,13 @@ import UIKit
 class SingleRecipeViewController: UIViewController {
     
     let recipe = instanceDB.showRecipes()
+    let list = instanceDB
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var methodLabel: UILabel!
     @IBOutlet weak var ingredientLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,5 +28,9 @@ class SingleRecipeViewController: UIViewController {
         myImageView.image = UIImage(named: recipe[myIndex].name + ".jpg")
     
     }
+    
+//    @IBAction func AddToList(_ sender: UIButton) {
+//        list.insertList(name: , quantity: , unit: )
+//    }
 
 }
