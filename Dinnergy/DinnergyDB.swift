@@ -472,16 +472,63 @@ class DinnergyDB {
         print("Recipe Ingredients saved successfully")
     }
     
-    func insertList(recipeID: Int) -> [Ingredient] {
+    
+    
+    
+    func insertOneIngredientToList(name: String, quantity: Double, unit: String) {
         
         var stmt: OpaquePointer?
+        let SQLITETRANSIENT = unsafeBitCast(OpaquePointer(bitPattern: -1), to: sqlite3_destructor_type.self)
         
+        let queryString = "INSERT INTO Lists (name, quantity, unit) VALUES (?,?,?)"
+        
+        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("error preparing insert: \(errmsg)")
+            return
+        }
+        
+        if sqlite3_bind_text(stmt, 1, name, -1, SQLITETRANSIENT) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("failure binding name: \(errmsg)")
+            return
+        }
+        
+        if sqlite3_bind_double(stmt, 2, quantity ) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("failure binding quantity: \(errmsg)")
+            return
+        }
+        
+        if sqlite3_bind_text(stmt, 3, unit, -1, SQLITETRANSIENT ) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("failure binding unit \(errmsg)")
+            return
+        }
+        
+        if sqlite3_step(stmt) != SQLITE_DONE {
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("failure inserting hero: \(errmsg)")
+            return
+        }
+        
+        print("Ingredients saved successfully")
+    }
+    
+    
+    func insertList(recipeID: Int) -> [Ingredient] {
+
+        var stmt: OpaquePointer?
+        
+
         var recipeIDString = String(recipeID)
         var ingredientList = [Ingredient]()
         ingredientList.removeAll()
+
+//        let queryString = "INSERT INTO Lists SELECT * FROM (SELECT item, quantity, unit FROM (SELECT * FROM Recipe_Ingredients LEFT JOIN Ingredients ON Recipe_Ingredients.item LIKE '%' || Ingredients.name || '%' WHERE Ingredients.name IS NULL) WHERE recipe_id = " + recipeIDString
         
-        let queryString = "INSERT INTO Lists SELECT * FROM (SELECT item, quantity, unit FROM (SELECT * FROM Recipe_Ingredients LEFT JOIN Ingredients ON Recipe_Ingredients.item LIKE '%' || Ingredients.name || '%' WHERE Ingredients.name IS NULL) WHERE recipe_id = " + recipeIDString
-        
+        let queryString = "SELECT * FROM Recipe_Ingredients WHERE recipe_id = " + recipeIDString
+
         if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("error preparing insert: \(errmsg)")
@@ -489,17 +536,50 @@ class DinnergyDB {
         }
 //        print("List saved successfully")
         
+    
         while(sqlite3_step(stmt) == SQLITE_ROW){
-            let id = sqlite3_column_int(stmt, 0)
-            let name = String(cString: sqlite3_column_text(stmt, 1))
-            let quantity = sqlite3_column_double(stmt, 2)
-            let unit = sqlite3_column_text(stmt, 3)
-            
+            let recipe_gredient_id = sqlite3_column_int(stmt, 0)
+            let name = String(cString: sqlite3_column_text(stmt, 2))
+            let quantity = sqlite3_column_double(stmt, 3)
+            let unit = sqlite3_column_text(stmt, 4)
+
             //adding values to list
-            ingredientList.append(Ingredient(id: Int(id), name: name, quantity: Double(quantity), unit: String(cString: unit!)))
+
+            ingredientList.append(Ingredient(id: Int(recipe_gredient_id), name: name, quantity: Double(quantity), unit: String(cString: unit!)))
         }
+        
+        for ingredient in ingredientList {
+        
+            insertOneIngredientToList(name: ingredient.name, quantity: ingredient.quantity, unit: ingredient.unit)
+        }
+        
         return ingredientList
     }
+//
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     func checkStock() -> [Ingredient] {
         var stock = [Ingredient]()
@@ -583,6 +663,7 @@ class DinnergyDB {
             let attachment = String(cString: sqlite3_column_text(stmt, 4))
             
             //adding values to list
+            
             recipe.append(Recipe(id: Int(id), name: name, ingredients: ingredients, method: method, attachment: attachment))
         }
         return recipe
