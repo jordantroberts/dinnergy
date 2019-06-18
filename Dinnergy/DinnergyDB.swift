@@ -325,6 +325,20 @@ class DinnergyDB {
         
     }
     
+    func createListsTable() {
+        let createTableQuery = "CREATE TABLE IF NOT EXISTS Lists (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, quantity DOUBLE, unit TEXT)"
+        
+        if sqlite3_exec(db,createTableQuery, nil, nil, nil) != SQLITE_OK{
+            print("Error Creating Table")
+            return
+        }
+        print("Table Created")
+        
+        let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        print("App Path: \(dirPaths)")
+        
+    }
+    
     func insertIngredients(name: String, quantity: Double, unit: String) {
         
         var stmt: OpaquePointer?
@@ -455,6 +469,46 @@ class DinnergyDB {
         }
         
         print("Recipe Ingredients saved successfully")
+    }
+    
+    func insertList(name: String, quantity: Double, unit: String) {
+        
+        var stmt: OpaquePointer?
+        let SQLITETRANSIENT = unsafeBitCast(OpaquePointer(bitPattern: -1), to: sqlite3_destructor_type.self)
+        
+        let queryString = "INSERT INTO Lists (name, quantity, unit) VALUES (?,?,?)"
+        
+        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("error preparing insert: \(errmsg)")
+            return
+        }
+        
+        if sqlite3_bind_text(stmt, 1, name, -1, SQLITETRANSIENT) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("failure binding name: \(errmsg)")
+            return
+        }
+        
+        if sqlite3_bind_double(stmt, 2, quantity ) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("failure binding quantity: \(errmsg)")
+            return
+        }
+        
+        if sqlite3_bind_text(stmt, 3, unit, -1, SQLITETRANSIENT ) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("failure binding unit \(errmsg)")
+            return
+        }
+        
+        if sqlite3_step(stmt) != SQLITE_DONE {
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("failure inserting hero: \(errmsg)")
+            return
+        }
+        
+        print("List saved successfully")
     }
     
     func checkStock() -> [Ingredient] {

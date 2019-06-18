@@ -17,13 +17,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var labelQuantity: UITextField!
     @IBOutlet weak var labelUnit: UITextField!
 
+
     @IBAction func buttonTap(_ sender: UIButton) {
 
         let str  = labelQuantity.text ?? ""
         let number = Double(str) ?? 0
         let name = labelIngredient.text ?? ""
         let unit = labelUnit.text ?? ""
-
+        labelQuantity.keyboardType = UIKeyboardType.phonePad
         instanceDB.insertIngredients(name: name, quantity: number, unit: unit)
         navigationController?.popViewController(animated: true)
     }
