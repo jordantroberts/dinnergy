@@ -35,6 +35,8 @@
 		C65FDBCF22B0574A00970C0B /* DinnergyDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */; };
 		C6A0CCA122B2E0C4004BDBF1 /* IngredientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A0CCA022B2E0C4004BDBF1 /* IngredientsTableViewController.swift */; };
 		C6CF0B5D22B8EE3000302C11 /* IngredientAddFeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CF0B5C22B8EE3000302C11 /* IngredientAddFeatureTest.swift */; };
+		C6CF0B5F22B8EFAD00302C11 /* MatchRecipeFeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CF0B5E22B8EFAD00302C11 /* MatchRecipeFeatureTest.swift */; };
+		C6CF0B6122B8F04800302C11 /* BananaHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CF0B6022B8F04800302C11 /* BananaHelper.swift */; };
 		C6E32CA222B7D3AC00A97DC3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E32CA122B7D3AC00A97DC3 /* MapViewController.swift */; };
 		C6E32CA522B7DA7600A97DC3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E32CA422B7DA7600A97DC3 /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -91,6 +93,8 @@
 		C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnergyDB.swift; sourceTree = "<group>"; };
 		C6A0CCA022B2E0C4004BDBF1 /* IngredientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewController.swift; sourceTree = "<group>"; };
 		C6CF0B5C22B8EE3000302C11 /* IngredientAddFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientAddFeatureTest.swift; sourceTree = "<group>"; };
+		C6CF0B5E22B8EFAD00302C11 /* MatchRecipeFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchRecipeFeatureTest.swift; sourceTree = "<group>"; };
+		C6CF0B6022B8F04800302C11 /* BananaHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BananaHelper.swift; sourceTree = "<group>"; };
 		C6E32CA122B7D3AC00A97DC3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C6E32CA422B7DA7600A97DC3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -191,6 +195,8 @@
 				17303AFF22AFE9DA0060A4BC /* Info.plist */,
 				170472AB22B8DA91006310C3 /* IngredientDeleteFeatureTest.swift */,
 				C6CF0B5C22B8EE3000302C11 /* IngredientAddFeatureTest.swift */,
+				C6CF0B5E22B8EFAD00302C11 /* MatchRecipeFeatureTest.swift */,
+				C6CF0B6022B8F04800302C11 /* BananaHelper.swift */,
 			);
 			path = DinnergyUITests;
 			sourceTree = "<group>";
@@ -397,7 +403,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6CF0B5F22B8EFAD00302C11 /* MatchRecipeFeatureTest.swift in Sources */,
 				170472AC22B8DA91006310C3 /* IngredientDeleteFeatureTest.swift in Sources */,
+				C6CF0B6122B8F04800302C11 /* BananaHelper.swift in Sources */,
 				17303AFE22AFE9DA0060A4BC /* DinnergyUITests.swift in Sources */,
 				C6CF0B5D22B8EE3000302C11 /* IngredientAddFeatureTest.swift in Sources */,
 			);
