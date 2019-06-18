@@ -30,6 +30,7 @@
 		5726884522B7A5C600AC96C3 /* Roasted Vegetable & Feta Tostada.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5726883A22B7A5C600AC96C3 /* Roasted Vegetable & Feta Tostada.jpg */; };
 		5726884622B7A5C600AC96C3 /* Satay Sweet Potato Curry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5726883B22B7A5C600AC96C3 /* Satay Sweet Potato Curry.jpg */; };
 		AF13451B22B3DBAC00A5643A /* SingleRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13451A22B3DBAC00A5643A /* SingleRecipeViewController.swift */; };
+		AFBD450322B918370099789E /* RecipeIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBD450222B918370099789E /* RecipeIngredientsViewController.swift */; };
 		C61526D622B0722C00FF644A /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61526D522B0722C00FF644A /* Ingredient.swift */; };
 		C65FDBCF22B0574A00970C0B /* DinnergyDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */; };
 		C6A0CCA122B2E0C4004BDBF1 /* IngredientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A0CCA022B2E0C4004BDBF1 /* IngredientsTableViewController.swift */; };
@@ -84,6 +85,7 @@
 		5726883A22B7A5C600AC96C3 /* Roasted Vegetable & Feta Tostada.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Roasted Vegetable & Feta Tostada.jpg"; sourceTree = "<group>"; };
 		5726883B22B7A5C600AC96C3 /* Satay Sweet Potato Curry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Satay Sweet Potato Curry.jpg"; sourceTree = "<group>"; };
 		AF13451A22B3DBAC00A5643A /* SingleRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRecipeViewController.swift; sourceTree = "<group>"; };
+		AFBD450222B918370099789E /* RecipeIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeIngredientsViewController.swift; sourceTree = "<group>"; };
 		C61526D522B0722C00FF644A /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnergyDB.swift; sourceTree = "<group>"; };
 		C6A0CCA022B2E0C4004BDBF1 /* IngredientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				5726883222B7A5C500AC96C3 /* Thai Prawn Curry.jpg */,
 				5726883622B7A5C500AC96C3 /* Vegan Banana Bread.jpg */,
 				5726883722B7A5C600AC96C3 /* Vegetable Pasta.jpg */,
+				AFBD450222B918370099789E /* RecipeIngredientsViewController.swift */,
 			);
 			path = Dinnergy;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				571B191122B3A9FE00EE2FC9 /* RecipeTableViewController.swift in Sources */,
 				C6A0CCA122B2E0C4004BDBF1 /* IngredientsTableViewController.swift in Sources */,
 				571B191322B3F2DC00EE2FC9 /* RecipeIngredients.swift in Sources */,
+				AFBD450322B918370099789E /* RecipeIngredientsViewController.swift in Sources */,
 				17303ADE22AFE9D90060A4BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

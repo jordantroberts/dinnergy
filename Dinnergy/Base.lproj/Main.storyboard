@@ -85,7 +85,7 @@
         <scene sceneID="xXO-Yl-rND">
             <objects>
                 <viewController id="e5V-DQ-QfY" customClass="SingleRecipeViewController" customModule="Dinnergy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="9EY-lz-aOH">
+                    <view key="view" contentMode="scaleToFill" id="9EY-lz-aOH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -305,7 +305,7 @@
         <!--List-->
         <scene sceneID="Nwt-7L-AAO">
             <objects>
-                <viewController id="y5r-CS-ApF" sceneMemberID="viewController">
+                <viewController id="y5r-CS-ApF" customClass="RecipeIngredientsViewController" customModule="Dinnergy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KtQ-En-Mlk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
