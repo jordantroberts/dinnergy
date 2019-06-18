@@ -38,3 +38,9 @@ func addBananas (number: String){
     gKey.tap()
     app.buttons["Add"].tap()
 }
+
+func deleteFourBanana() {
+    XCUIApplication().tables.staticTexts["banana: 4.0 kg"].swipeLeft()
+    XCUIApplication().tables.buttons["Delete"].tap()
+}
+

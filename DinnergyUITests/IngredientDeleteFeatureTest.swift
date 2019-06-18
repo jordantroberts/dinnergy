@@ -16,9 +16,10 @@ class IngredientDeleteFeatureTest: XCTestCase {
     func testDeleteIngredient(){
         
         addBananas(number: "4")
+        deleteFourBanana()
 
-        XCUIApplication().tables.staticTexts["banana: 4.0 kg"].swipeLeft()
-        XCUIApplication().tables.buttons["Delete"].tap()
+//        XCUIApplication().tables.staticTexts["banana: 4.0 kg"].swipeLeft()
+//        XCUIApplication().tables.buttons["Delete"].tap()
         XCTAssertFalse(app.staticTexts["banana: 4.0 kg"].exists)
     }
 }

@@ -12,8 +12,10 @@ import XCTest
 class MatchRecipeFeatureTest: XCTestCase {
     
     func testMatchBananaRecipe() {
-    
-        addFourBananas ()
+        let app = XCUIApplication()
+        addBananas(number: "4")
+        app.buttons["Recipe"].tap()
+        XCTAssert(app.staticTexts["Vegan Banana Bread"].exists)
     }
 
 }
