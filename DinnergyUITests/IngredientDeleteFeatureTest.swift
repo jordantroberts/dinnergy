@@ -6,8 +6,9 @@
 //  Copyright © 2019 Edgy Eats. All rights reserved.
 //
 
-import XCTest
+
 import Foundation
+import XCTest
 
 class IngredientDeleteFeatureTest: XCTestCase {
     
