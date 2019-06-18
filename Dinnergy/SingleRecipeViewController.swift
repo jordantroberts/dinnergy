@@ -27,4 +27,9 @@ class SingleRecipeViewController: UIViewController {
     
     }
 
+    @IBAction func addtoListButton(_ sender: UIButton) {
+//        var recipeName = titleLabel.text
+        
+//        list.insertList(name: , quantity: , unit: )
+    }
 }
