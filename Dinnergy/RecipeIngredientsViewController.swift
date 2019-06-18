@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecipeIngredientsViewController: UITableViewController {
+class List: UITableViewController {
 
     var stmt:OpaquePointer?
     var list = instanceDB.showRecipeIngredients()

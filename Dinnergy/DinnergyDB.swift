@@ -67,7 +67,7 @@ class DinnergyDB {
         
         insertRecipeIngredients(recipe_id: 2, item: "Avocado", quantity: 1, unit: "small")
         
-        insertRecipeIngredients(recipe_id: 2, item: "Lime", quantity: 1, unit: "")
+        insertRecipeIngredients(recipe_id: 2, item: "Lime", quantity: 1, unit: "-")
         
         insertRecipeIngredients(recipe_id: 2, item: "Cherry tomatoes", quantity: 75, unit: "g")
         
@@ -143,7 +143,7 @@ class DinnergyDB {
         
         insertRecipeIngredients(recipe_id: 7, item: "Oil", quantity: 1, unit: "tbsp")
         
-        insertRecipeIngredients(recipe_id: 7, item: "Onion", quantity: 1, unit: "")
+        insertRecipeIngredients(recipe_id: 7, item: "Onion", quantity: 1, unit: "-")
         
         insertRecipeIngredients(recipe_id: 7, item: "Curry powder", quantity: 2, unit: "tbsp")
         
@@ -155,19 +155,19 @@ class DinnergyDB {
         
         insertRecipeIngredients(recipe_id: 7, item: "Can of chickpeas", quantity: 400, unit: "g")
         
-        insertRecipeIngredients(recipe_id: 7, item: "Cod fillets", quantity: 4, unit: "")
+        insertRecipeIngredients(recipe_id: 7, item: "Cod fillets", quantity: 4, unit: "-")
         
-        insertRecipeIngredients(recipe_id: 7, item: "Lemon zest", quantity: 1, unit: "")
+        insertRecipeIngredients(recipe_id: 7, item: "Lemon zest", quantity: 1, unit: "-")
         
         insertRecipeIngredients(recipe_id: 7, item: "Coriander", quantity: 1, unit: "handful")
         
         insertRecipeIngredients(recipe_id: 8, item: "Olive oil", quantity: 1, unit: "tbsp")
         
-        insertRecipeIngredients(recipe_id: 8, item: "Onion", quantity: 1, unit: "")
+        insertRecipeIngredients(recipe_id: 8, item: "Onion", quantity: 1, unit: "-")
         
         insertRecipeIngredients(recipe_id: 8, item: "Garlic", quantity: 2, unit: "cloves")
         
-        insertRecipeIngredients(recipe_id: 8, item: "Chopped ripe tomatoes", quantity: 3, unit: "")
+        insertRecipeIngredients(recipe_id: 8, item: "Chopped ripe tomatoes", quantity: 3, unit: "-")
         
         insertRecipeIngredients(recipe_id: 8, item: "Risotto rice", quantity: 350, unit: "g")
         
@@ -175,7 +175,7 @@ class DinnergyDB {
         
         insertRecipeIngredients(recipe_id: 8, item: "Hot vegetable stock", quantity: 1.5, unit: "litres")
         
-        insertRecipeIngredients(recipe_id: 8, item: "Courgettes", quantity: 3, unit: "")
+        insertRecipeIngredients(recipe_id: 8, item: "Courgettes", quantity: 3, unit: "-")
         
         insertRecipeIngredients(recipe_id: 8, item: "Peas", quantity: 140, unit: "g")
         
@@ -183,7 +183,7 @@ class DinnergyDB {
         
         insertRecipeIngredients(recipe_id: 9, item: "Coconut oil", quantity: 1, unit: "tbsp")
         
-        insertRecipeIngredients(recipe_id: 9, item: "Onion", quantity: 1, unit: "")
+        insertRecipeIngredients(recipe_id: 9, item: "Onion", quantity: 1, unit: "-")
         
         insertRecipeIngredients(recipe_id: 9, item: "Garlic", quantity: 2, unit: "cloves")
         
@@ -199,9 +199,9 @@ class DinnergyDB {
         
         insertRecipeIngredients(recipe_id: 9, item: "Spinach", quantity: 200, unit: "g")
         
-        insertRecipeIngredients(recipe_id: 9, item: "Juiced lime", quantity: 1, unit: "")
+        insertRecipeIngredients(recipe_id: 9, item: "Juiced lime", quantity: 1, unit: "-")
         
-        insertRecipeIngredients(recipe_id: 10, item: "Cauliflower", quantity: 1, unit: "")
+        insertRecipeIngredients(recipe_id: 10, item: "Cauliflower", quantity: 1, unit: "-")
         
         insertRecipeIngredients(recipe_id: 10, item: "Oil", quantity: 1.5, unit: "tbsp")
         
@@ -211,23 +211,23 @@ class DinnergyDB {
         
         insertRecipeIngredients(recipe_id: 10, item: "Curry paste", quantity: 3, unit: "tbsp")
         
-        insertRecipeIngredients(recipe_id: 10, item: "Juiced lemon", quantity: 0.5, unit: "")
+        insertRecipeIngredients(recipe_id: 10, item: "Juiced lemon", quantity: 0.5, unit: "-")
         
-        insertRecipeIngredients(recipe_id: 11, item: "Chicken breasts", quantity: 2, unit: "")
+        insertRecipeIngredients(recipe_id: 11, item: "Chicken breasts", quantity: 2, unit: "-")
         
         insertRecipeIngredients(recipe_id: 11, item: "All butter puff pastry", quantity: 320, unit: "g")
         
         insertRecipeIngredients(recipe_id: 11, item: "Garlic and herb cream cheese", quantity: 150, unit: "g")
         
-        insertRecipeIngredients(recipe_id: 11, item: "Lemon zest", quantity: 0.5, unit: "")
+        insertRecipeIngredients(recipe_id: 11, item: "Lemon zest", quantity: 0.5, unit: "-")
         
         insertRecipeIngredients(recipe_id: 11, item: "Olive oil", quantity: 1, unit: "tbsp")
         
         insertRecipeIngredients(recipe_id: 11, item: "Mixed pack green beans and broccoli", quantity: 200, unit: "g")
         
-        insertRecipeIngredients(recipe_id: 12, item: "White potatoes", quantity: 3, unit: "")
+        insertRecipeIngredients(recipe_id: 12, item: "White potatoes", quantity: 3, unit: "-")
         
-        insertRecipeIngredients(recipe_id: 12, item: "Pork sausages", quantity: 4, unit: "")
+        insertRecipeIngredients(recipe_id: 12, item: "Pork sausages", quantity: 4, unit: "-")
         
         insertRecipeIngredients(recipe_id: 12, item: "Olive oil (for frying)", quantity: 4, unit: "tbsp")
         
