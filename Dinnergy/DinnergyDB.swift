@@ -28,7 +28,9 @@ class DinnergyDB {
         createRecipeTable()
         dropRecipeIngredientTable()
         createRecipeIngredientsTable()
+        dropListTable()
         createListsTable()
+       
         insertRecipe(name: "Butter Bean & Chorizo Stew", ingredients: "2 Cans of chopped tomatoes\n\n200g Chorizo\n\n2x400g cans of drained butter beans\n\n1 tub Pesto", method: "1. Slice the chorizo and tip into a large saucepan over a medium heat.\n\n2. Fry gently for 5 mins or until starting to turn dark brown.\n\n3. Add the tomatoes and butter beans, bring to the boil, then simmer for 10 mins.\n\n4. Swirl through the pesto, season lightly and ladle into four bowls." , attachment: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/08/butter-bean-chorizo-stew.jpg?itok=8gg1NtD3")
         
         insertRecipe(name: "Roasted Vegetable & Feta Tostada", ingredients: "325g Frozen grilled vegetables\n\n1 tsp Mexican seasoning\n\n1 Small Avocado\n\n1 Lime\n\n75g Cherry tomatoes\n\n2 Small Flour tortillas\n\n2 Handfuls Rocket\n\n2 tbsp Feta cheese", method: "1. Heat oven to 200C/180C fan/gas 6. In a roasting tin, season the frozen vegetables and toss with the Mexican seasoning, then roast in the oven for 15 mins, until hot. Meanwhile, mix the avocado, lime juice and tomatoes with some seasoning, then set aside.\n\n2. Put the tortillas on a baking sheet and cook above the vegetables for the final 5 mins of cooking time until crisp.\n\n3. Transfer the crispy tortillas to plates, scatter with rocket and top with the roasted vegetables. Add some of the avocado salsa and sprinkle over the feta", attachment: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--776509_11.jpg?itok=2yNWKRyg")
@@ -281,8 +283,6 @@ class DinnergyDB {
     }
     
     
-    
-    
     func dropRecipeTable(){
         let dropQuery = "DROP TABLE Recipes"
         
@@ -299,6 +299,20 @@ class DinnergyDB {
     
     func dropRecipeIngredientTable(){
         let dropQuery = "DROP TABLE Recipe_Ingredients"
+        
+        if sqlite3_exec(db,dropQuery, nil, nil, nil) != SQLITE_OK{
+            print("Error Creating Table")
+            return
+        }
+        print("Table Created")
+        
+        let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        print("App Path: \(dirPaths)")
+        
+    }
+    
+    func dropListTable(){
+        let dropQuery = "DROP TABLE Lists"
         
         if sqlite3_exec(db,dropQuery, nil, nil, nil) != SQLITE_OK{
             print("Error Creating Table")
@@ -471,8 +485,6 @@ class DinnergyDB {
         
         print("Recipe Ingredients saved successfully")
     }
-    
-    
     
     
     func insertOneIngredientToList(name: String, quantity: Double, unit: String) {
