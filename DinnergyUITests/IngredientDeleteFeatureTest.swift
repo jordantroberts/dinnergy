@@ -63,9 +63,9 @@ class IngredientDeleteFeatureTest: XCTestCase {
         gKey.tap()
         app.buttons["Add"].tap()
 
-        XCUIApplication().tables/*@START_MENU_TOKEN@*/.staticTexts["banana: 4.0 kg"]/*[[".cells.staticTexts[\"banana: 4.0 kg\"]",".staticTexts[\"banana: 4.0 kg\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeLeft()
+        XCUIApplication().tables.staticTexts["banana: 4.0 kg"].swipeLeft()
+        XCUIApplication().tables.buttons["Delete"].tap()
         XCTAssertFalse(app.staticTexts["banana: 4.0 kg"].exists)
     }
-    
 }
 
