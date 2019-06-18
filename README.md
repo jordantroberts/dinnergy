@@ -18,3 +18,10 @@ Dinnergy is an iPhone application that allows users to plan a meal depending on 
 * [Jordan Roberts](https://github.com/jordantroberts)
 * [Simon Chenbo Yi](https://github.com/SimonChenboYi)
 
+## Our Process
+
+We agreed to follow an Agile Software Development process using Extreme Programming framework at the start of the 2-week development period. We carried this out via daily standups - one in the morning and one in the afternoon, regular retrospectives (at least 2-3 per week), and planned our 2-day sprints as a team, making sure each team member was clear on our collective aim.
+
+1. The card wall is here: https://github.com/jordantroberts/dinnergy/projects/1
+2. Project Wiki: https://github.com/jordantroberts/dinnergy/wiki
+
