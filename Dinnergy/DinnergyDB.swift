@@ -325,6 +325,20 @@ class DinnergyDB {
         
     }
     
+    func createListsTable() {
+        let createTableQuery = "CREATE TABLE IF NOT EXISTS Lists (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, quantity DOUBLE, unit TEXT)"
+        
+        if sqlite3_exec(db,createTableQuery, nil, nil, nil) != SQLITE_OK{
+            print("Error Creating Table")
+            return
+        }
+        print("Table Created")
+        
+        let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        print("App Path: \(dirPaths)")
+        
+    }
+    
     func insertIngredients(name: String, quantity: Double, unit: String) {
         
         var stmt: OpaquePointer?
@@ -457,6 +471,21 @@ class DinnergyDB {
         print("Recipe Ingredients saved successfully")
     }
     
+    func insertList() {
+        
+        var stmt: OpaquePointer?
+        
+        let queryString = "INSERT INTO Lists SELECT * FROM (SELECT item, quantity, unit FROM (SELECT * FROM Recipe_Ingredients LEFT JOIN Ingredients ON Recipe_Ingredients.item LIKE '%' || Ingredients.name || '%' WHERE Ingredients.name IS NULL) WHERE recipe_id = 1"
+        
+        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("error preparing insert: \(errmsg)")
+            return
+        }
+        
+        print("List saved successfully")
+    }
+    
     func checkStock() -> [Ingredient] {
         var stock = [Ingredient]()
         stock.removeAll()
@@ -571,6 +600,25 @@ class DinnergyDB {
 //        }
 //        return recipe
 //    }
+    
+    //    func matchRecipeNameWithID(name: String){
+    //
+    //        let recipeNameQueryString = "SELECT id FROM Recipes WHERE Name = '" + name + "';"
+    ////            "UPDATE Ingredients SET Quantity = " + String(quantity) + " WHERE Name = '" + name + "';"
+    //
+    //        var findStatement: OpaquePointer? = nil
+    //        if sqlite3_prepare_v2(db, recipeNameQueryString, -1, &findStatement, nil) == SQLITE_OK {
+    //            if sqlite3_step(findStatement) == SQLITE_DONE {
+    //                print("Successfully found recipe.")
+    //            } else {
+    //                print("Could not find recipe.")
+    //            }
+    //        } else {
+    //            print("SELECT statement did not work")
+    //        }
+    //        sqlite3_finalize(findStatement)
+    //    }
+
 
 }
 
