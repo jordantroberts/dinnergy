@@ -37,6 +37,16 @@ class ShoppingListViewController: UITableViewController {
         return "Shopping List:"
     }
     
+    
+    @IBAction func clearList(_ sender: Any) {
+        instanceDB.dropListTable()
+        instanceDB.createListsTable()
+        navigationController?.popViewController(animated: true)
+        
+    }
+    
+    
+    
 //    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 //
 //        if (editingStyle == .delete) {
