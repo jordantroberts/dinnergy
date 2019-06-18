@@ -201,8 +201,8 @@
                     <connections>
                         <segue destination="HQQ-h6-V8F" kind="relationship" relationship="viewControllers" id="8K2-j1-7Hu"/>
                         <segue destination="9Vo-XW-gsG" kind="relationship" relationship="viewControllers" id="eg1-iA-qJF"/>
-                        <segue destination="y5r-CS-ApF" kind="relationship" relationship="viewControllers" id="hqT-Mn-QUh"/>
                         <segue destination="iCy-2C-VfT" kind="relationship" relationship="viewControllers" id="w6b-XN-e32"/>
+                        <segue destination="dYR-jW-Vd1" kind="relationship" relationship="viewControllers" id="z6Y-8j-Wgk"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1vJ-Qo-tYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -303,21 +303,34 @@
             <point key="canvasLocation" x="-100" y="975.56221889055485"/>
         </scene>
         <!--List-->
-        <scene sceneID="Nwt-7L-AAO">
+        <scene sceneID="NVP-in-nIZ">
             <objects>
-                <viewController id="y5r-CS-ApF" customClass="RecipeIngredientsViewController" customModule="Dinnergy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KtQ-En-Mlk">
+                <tableViewController id="dYR-jW-Vd1" customClass="RecipeIngredientsViewController" customModule="Dinnergy" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="b5i-u7-cti">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="luW-IK-N2W"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="List" image="shopping_cart_loaded" id="CfF-O7-lAU"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="oEF-sd-o0e">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oEF-sd-o0e" id="tLy-fO-BfL">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dYR-jW-Vd1" id="ih1-ko-8Md"/>
+                            <outlet property="delegate" destination="dYR-jW-Vd1" id="jQl-Q2-kON"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="List" image="shopping_cart_loaded" id="7sy-TF-zTE"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kvM-EY-epf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mfN-YJ-f3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-74" y="1925"/>
+            <point key="canvasLocation" x="-100" y="1766"/>
         </scene>
         <!--Foodbank-->
         <scene sceneID="qpP-TA-y7x">

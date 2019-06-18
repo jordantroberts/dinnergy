@@ -576,7 +576,7 @@ class DinnergyDB {
         
     }
     
-    func showRecipesIngredients() -> [RecipeIngredients] {
+    func showRecipeIngredients() -> [RecipeIngredients] {
         var recipeIngredients = [RecipeIngredients]()
         recipeIngredients.removeAll()
 
