@@ -48,7 +48,7 @@
             </objects>
             <point key="canvasLocation" x="839.20000000000005" y="129.98500749625188"/>
         </scene>
-        <!--Recipe Table View Controller-->
+        <!--Recipes-->
         <scene sceneID="Ihs-I4-ZHe">
             <objects>
                 <tableViewController id="BsX-xX-lcu" customClass="RecipeTableViewController" customModule="Dinnergy" customModuleProvider="target" sceneMemberID="viewController">
@@ -71,7 +71,7 @@
                             <outlet property="delegate" destination="BsX-xX-lcu" id="ZSt-Cr-eMc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="NQe-gb-rXZ"/>
+                    <navigationItem key="navigationItem" title="Recipes" id="NQe-gb-rXZ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="e5V-DQ-QfY" kind="show" identifier="single" id="0eT-KP-wwl"/>
@@ -129,6 +129,14 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQL-3u-iIf">
+                                                <rect key="frame" x="170" y="1356" width="74" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Add to List"/>
+                                                <connections>
+                                                    <action selector="addtoListButton:" destination="e5V-DQ-QfY" eventType="touchUpInside" id="4kh-sx-grz"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -259,11 +267,11 @@
             </objects>
             <point key="canvasLocation" x="1780" y="130.88455772113943"/>
         </scene>
-        <!--Ingredient-->
+        <!--Ingredients-->
         <scene sceneID="XEP-yd-FR9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HQQ-h6-V8F" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Ingredient" image="restaurant" id="1Pj-ig-CMp"/>
+                    <tabBarItem key="tabBarItem" title="Ingredients" image="restaurant" id="1Pj-ig-CMp"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="KvX-wf-SOA"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3FA-ny-zUD">
@@ -279,11 +287,11 @@
             </objects>
             <point key="canvasLocation" x="-100" y="129.98500749625188"/>
         </scene>
-        <!--Recipe-->
+        <!--Recipes-->
         <scene sceneID="Qx0-Wg-iGi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Vo-XW-gsG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Recipe" image="book" id="d2I-jW-awj"/>
+                    <tabBarItem key="tabBarItem" title="Recipes" image="book" id="d2I-jW-awj"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oiS-xe-IZP">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -298,24 +306,46 @@
             </objects>
             <point key="canvasLocation" x="-100" y="975.56221889055485"/>
         </scene>
-        <!--List-->
+        <!--Shopping-->
         <scene sceneID="Nwt-7L-AAO">
             <objects>
-                <viewController id="y5r-CS-ApF" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KtQ-En-Mlk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <viewController id="y5r-CS-ApF" customClass="ShoppingListViewController" customModule="Dinnergy" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1fS-Kt-BfZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="luW-IK-N2W"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="List" image="shopping_cart_loaded" id="CfF-O7-lAU"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="AF3-C6-HqN">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem id="8cU-fe-AGF">
+                                    <barButtonItem key="rightBarButtonItem" title="Clear" id="0NB-2g-O3W">
+                                        <connections>
+                                            <action selector="clearList:" destination="y5r-CS-ApF" id="rNl-EE-VmD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListLabelCell" id="syE-TX-ilg">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="syE-TX-ilg" id="elw-x5-iIC">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Shopping" image="shopping_cart_loaded" id="CfF-O7-lAU"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kvM-EY-epf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-74" y="1925"/>
+            <point key="canvasLocation" x="-74.400000000000006" y="1924.5877061469266"/>
         </scene>
-        <!--Foodbank-->
+        <!--Nearby-->
         <scene sceneID="qpP-TA-y7x">
             <objects>
                 <viewController id="iCy-2C-VfT" customClass="MapViewController" customModule="Dinnergy" customModuleProvider="target" sceneMemberID="viewController">
@@ -328,6 +358,7 @@
                             </mapView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AhP-jJ-mcJ">
                                 <rect key="frame" x="87.666666666666686" y="681" width="200" height="29"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="RIk-GI-plm"/>
                                 </constraints>
@@ -351,7 +382,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vTM-ye-lH5"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Foodbank" image="map" id="eip-w0-qAY"/>
+                    <tabBarItem key="tabBarItem" title="Nearby" image="map" id="eip-w0-qAY"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="xiA-Go-MLA" id="Z0k-kf-LUq"/>
