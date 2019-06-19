@@ -31,11 +31,12 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="My Ingredients" id="4jp-AV-v7u">
                         <barButtonItem key="backBarButtonItem" title="Back" id="IZR-8P-hAY"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="6Jz-a5-fOe">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pbw-Pt-mYf">
-                                <rect key="frame" x="272" y="7" width="87" height="30"/>
+                        <barButtonItem key="rightBarButtonItem" title="+" style="plain" id="6Jz-a5-fOe">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pbw-Pt-mYf">
+                                <rect key="frame" x="272" y="0.0" width="87" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="New"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="+"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="H4J-Rf-uXq"/>
                                 </connections>
@@ -205,7 +206,7 @@
                     <connections>
                         <segue destination="HQQ-h6-V8F" kind="relationship" relationship="viewControllers" id="8K2-j1-7Hu"/>
                         <segue destination="9Vo-XW-gsG" kind="relationship" relationship="viewControllers" id="eg1-iA-qJF"/>
-                        <segue destination="y5r-CS-ApF" kind="relationship" relationship="viewControllers" id="hqT-Mn-QUh"/>
+                        <segue destination="sgD-mZ-ynR" kind="relationship" relationship="viewControllers" id="hqT-Mn-QUh"/>
                         <segue destination="iCy-2C-VfT" kind="relationship" relationship="viewControllers" id="w6b-XN-e32"/>
                     </connections>
                 </tabBarController>
@@ -221,37 +222,87 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter ingredient name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sAl-gQ-6id">
-                                <rect key="frame" x="39" y="206" width="294" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Quantity" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q0R-WW-kHJ">
-                                <rect key="frame" x="39" y="267" width="294" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Units" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xTR-IY-RsF">
-                                <rect key="frame" x="39" y="330" width="294" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSd-nz-78E">
-                                <rect key="frame" x="171" y="387" width="30" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add"/>
-                                <connections>
-                                    <action selector="buttonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IJK-Ir-uCf"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="aM9-kz-0Gw">
+                                <rect key="frame" x="30" y="108" width="315" height="290"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter ingredient name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sAl-gQ-6id">
+                                        <rect key="frame" x="10" y="0.0" width="295" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="DMn-sR-Evp"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                <color key="value" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Quantity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q0R-WW-kHJ">
+                                        <rect key="frame" x="10" y="80" width="295" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="8Zj-9K-aHz"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                <color key="value" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Units" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xTR-IY-RsF">
+                                        <rect key="frame" x="10" y="160" width="295" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Mx1-aa-TCQ"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                <color key="value" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSd-nz-78E">
+                                        <rect key="frame" x="10" y="240" width="295" height="50"/>
+                                        <color key="backgroundColor" red="0.32549019607843138" green="0.46274509803921571" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Dxb-1B-qWb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                        <state key="normal" title="Add">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IJK-Ir-uCf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Q0R-WW-kHJ" firstAttribute="leading" secondItem="aM9-kz-0Gw" secondAttribute="leading" constant="10" id="3Jj-mZ-hde"/>
+                                    <constraint firstItem="YSd-nz-78E" firstAttribute="leading" secondItem="aM9-kz-0Gw" secondAttribute="leading" constant="10" id="Cj2-zn-3S8"/>
+                                    <constraint firstAttribute="trailing" secondItem="YSd-nz-78E" secondAttribute="trailing" constant="10" id="ODd-io-SYP"/>
+                                    <constraint firstAttribute="trailing" secondItem="sAl-gQ-6id" secondAttribute="trailing" constant="10" id="eNr-LQ-VN1"/>
+                                    <constraint firstItem="xTR-IY-RsF" firstAttribute="leading" secondItem="aM9-kz-0Gw" secondAttribute="leading" constant="10" id="l7k-hW-2ym"/>
+                                    <constraint firstAttribute="trailing" secondItem="xTR-IY-RsF" secondAttribute="trailing" constant="10" id="lue-h2-itS"/>
+                                    <constraint firstAttribute="trailing" secondItem="Q0R-WW-kHJ" secondAttribute="trailing" constant="10" id="stP-Qw-Yxl"/>
+                                    <constraint firstItem="sAl-gQ-6id" firstAttribute="leading" secondItem="aM9-kz-0Gw" secondAttribute="leading" constant="10" id="zZH-03-Xrv"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.95483026649746194" green="0.95483026649746194" blue="0.95483026649746194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aM9-kz-0Gw" secondAttribute="trailing" constant="30" id="2OL-5Q-QOa"/>
+                            <constraint firstItem="aM9-kz-0Gw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Sx7-ZK-ET1"/>
+                            <constraint firstItem="aM9-kz-0Gw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="czs-AS-uaz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <toolbarItems/>
@@ -277,6 +328,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3FA-ny-zUD">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.32549019610000002" green="0.46274509800000002" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -296,6 +348,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oiS-xe-IZP">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.32549019610000002" green="0.46274509800000002" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -306,44 +359,38 @@
             </objects>
             <point key="canvasLocation" x="-100" y="975.56221889055485"/>
         </scene>
-        <!--Shopping-->
+        <!--Shopping List View Controller-->
         <scene sceneID="Nwt-7L-AAO">
             <objects>
                 <viewController id="y5r-CS-ApF" customClass="ShoppingListViewController" customModule="Dinnergy" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1fS-Kt-BfZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="AF3-C6-HqN">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <items>
-                                <navigationItem id="8cU-fe-AGF">
-                                    <barButtonItem key="rightBarButtonItem" title="Clear" id="0NB-2g-O3W">
-                                        <connections>
-                                            <action selector="clearList:" destination="y5r-CS-ApF" id="rNl-EE-VmD"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </navigationItem>
-                            </items>
-                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListLabelCell" id="syE-TX-ilg">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="syE-TX-ilg" id="elw-x5-iIC">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Shopping" image="shopping_cart_loaded" id="CfF-O7-lAU"/>
+                    <navigationItem key="navigationItem" id="zAh-kB-jU4">
+                        <barButtonItem key="rightBarButtonItem" title="Clear" id="0NB-2g-O3W">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="clearList:" destination="y5r-CS-ApF" id="rNl-EE-VmD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kvM-EY-epf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-74.400000000000006" y="1924.5877061469266"/>
+            <point key="canvasLocation" x="868" y="1924.1379310344828"/>
         </scene>
         <!--Nearby-->
         <scene sceneID="qpP-TA-y7x">
@@ -392,6 +439,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WhU-GZ-3Mg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-74.400000000000006" y="2820.5397301349326"/>
+        </scene>
+        <!--Shopping-->
+        <scene sceneID="CzF-sm-ay3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sgD-mZ-ynR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Shopping" image="shopping_cart_loaded" id="CfF-O7-lAU"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kX7-jg-4YK">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.32549019607843138" green="0.46274509803921571" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="0.0"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="0.0"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="y5r-CS-ApF" kind="relationship" relationship="rootViewController" id="GEZ-Oe-Hsa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zKa-JY-LfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-74.400000000000006" y="1924.1379310344828"/>
         </scene>
     </scenes>
     <resources>

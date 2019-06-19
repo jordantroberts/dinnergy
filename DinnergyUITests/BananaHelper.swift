@@ -12,7 +12,7 @@ import XCTest
 func addBananas (number: String){
     // helper function add banana to list (Simon's test)
     let app = XCUIApplication()
-    app.navigationBars["My Ingredients"].buttons["New"].tap()
+    app.navigationBars["My Ingredients"].buttons["+"].tap()
     app.textFields["Enter ingredient name"].tap()
     let bKey = app.keys["b"]
     let aKey = app.keys["a"]

@@ -18,6 +18,7 @@ class ShoppingListViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         list = instanceDB.showList()
         self.tableView.reloadData()
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
