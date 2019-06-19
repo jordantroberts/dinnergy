@@ -15,6 +15,7 @@
 		17303AE822AFE9DA0060A4BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17303AE622AFE9DA0060A4BC /* LaunchScreen.storyboard */; };
 		17303AF322AFE9DA0060A4BC /* DinnergyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17303AF222AFE9DA0060A4BC /* DinnergyTests.swift */; };
 		17303AFE22AFE9DA0060A4BC /* DinnergyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17303AFD22AFE9DA0060A4BC /* DinnergyUITests.swift */; };
+		17E1084A22BA633000288EDF /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E1084922BA633000288EDF /* NavigationViewController.swift */; };
 		571B190F22B3A60F00EE2FC9 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B190E22B3A60F00EE2FC9 /* Recipe.swift */; };
 		571B191122B3A9FE00EE2FC9 /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B191022B3A9FE00EE2FC9 /* RecipeTableViewController.swift */; };
 		635D3E6922B95816007403ED /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635D3E6822B95816007403ED /* ShoppingListViewController.swift */; };
@@ -63,6 +64,7 @@
 		17303AF922AFE9DA0060A4BC /* DinnergyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DinnergyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17303AFD22AFE9DA0060A4BC /* DinnergyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnergyUITests.swift; sourceTree = "<group>"; };
 		17303AFF22AFE9DA0060A4BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17E1084922BA633000288EDF /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		571B190E22B3A60F00EE2FC9 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		571B191022B3A9FE00EE2FC9 /* RecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewController.swift; sourceTree = "<group>"; };
 		571B191222B3F2DC00EE2FC9 /* RecipeIngredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeIngredients.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				AF13451A22B3DBAC00A5643A /* SingleRecipeViewController.swift */,
 				571B191222B3F2DC00EE2FC9 /* RecipeIngredients.swift */,
 				635D3E6822B95816007403ED /* ShoppingListViewController.swift */,
+				17E1084922BA633000288EDF /* NavigationViewController.swift */,
 			);
 			path = Dinnergy;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF13451B22B3DBAC00A5643A /* SingleRecipeViewController.swift in Sources */,
+				17E1084A22BA633000288EDF /* NavigationViewController.swift in Sources */,
 				C61526D622B0722C00FF644A /* Ingredient.swift in Sources */,
 				635D3E6922B95816007403ED /* ShoppingListViewController.swift in Sources */,
 				C65FDBCF22B0574A00970C0B /* DinnergyDB.swift in Sources */,

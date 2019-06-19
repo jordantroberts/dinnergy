@@ -14,9 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let attributes = [NSAttributedString.Key.font: UIFont(name: "AvenirNext-Bold", size: 17)!]
+        UINavigationBar.appearance().titleTextAttributes = attributes
+        UIBarButtonItem.appearance().setTitleTextAttributes(attributes, for: .normal)
         return true
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
