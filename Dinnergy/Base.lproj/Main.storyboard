@@ -31,11 +31,12 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="My Ingredients" id="4jp-AV-v7u">
                         <barButtonItem key="backBarButtonItem" title="Back" id="IZR-8P-hAY"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="6Jz-a5-fOe">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pbw-Pt-mYf">
-                                <rect key="frame" x="272" y="7" width="87" height="30"/>
+                        <barButtonItem key="rightBarButtonItem" title="+" style="plain" id="6Jz-a5-fOe">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pbw-Pt-mYf">
+                                <rect key="frame" x="272" y="0.0" width="87" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="New"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="+"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="H4J-Rf-uXq"/>
                                 </connections>
