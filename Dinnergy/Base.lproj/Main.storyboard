@@ -285,7 +285,7 @@
                                         </state>
                                         <connections>
                                             <action selector="buttonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IJK-Ir-uCf"/>
-                                            <action selector="showAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K9z-ly-TXO"/>
+                                            <action selector="showAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AY3-rj-Z24"/>
                                         </connections>
                                     </button>
                                 </subviews>
