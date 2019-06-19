@@ -28,6 +28,13 @@ class SingleRecipeViewController: UIViewController {
     
     }
 
+    @IBAction func showAlert(_ sender: Any) {
+        let alertController = UIAlertController(title: "Added to List", message:
+            "The ingredients for this recipe have been added to your shopping list", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
     @IBAction func addtoListButton(_ sender: UIButton) {
         var recipeName = titleLabel.text ?? ""
         
