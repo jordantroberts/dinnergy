@@ -47,18 +47,16 @@ class ShoppingListViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
-    
-    
-//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//
-//        if (editingStyle == .delete) {
-//            let name = list[indexPath.row].name
-//            instanceDB.deleteItem(name: name)
-//
-//            list.remove(at: indexPath.row)
-//            tableView.deleteRows(at: [indexPath], with: .fade)
-//            tableView.reloadData()
-//        }
-//    }
-
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if (editingStyle == .delete) {
+            let name = list[indexPath.row].name
+            instanceDB.deleteListItem(name: name)
+            
+            list.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.reloadData()
+            
+        }
+    }
 }
