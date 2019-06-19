@@ -10,6 +10,12 @@ import Foundation
 import XCTest
 
 class SingleRecipeViewFeatureTest: XCTestCase {
+        override func setUp() {
+            super.setUp()
+            
+            continueAfterFailure = false
+            XCUIApplication().launch()
+        }
 
         func testMatchBananaRecipe() {
             let app = XCUIApplication()
