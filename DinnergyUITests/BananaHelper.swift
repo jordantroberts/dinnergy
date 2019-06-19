@@ -41,7 +41,7 @@ func addBananas (number: String){
 
 func deleteFourBanana() {
     let app = XCUIApplication()
-    app.buttons["Ingredient"].tap()
+    app.buttons["Ingredients"].tap()
     XCUIApplication().tables.staticTexts["banana: 4.0 kg"].swipeLeft()
     XCUIApplication().tables.buttons["Delete"].tap()
 }
