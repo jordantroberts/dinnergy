@@ -1,10 +1,4 @@
-
- //  DinnergyUITest
- //
- //  Created by Oliver Cripps on 17/06/2019.
- //  Copyright © 2019 Edgy Eats. All rights reserved.
- //
- import Foundation
+import Foundation
  import XCTest
  class IngredientAddUITests: XCTestCase {
     
