@@ -19,12 +19,10 @@ class ViewController: UIViewController {
         self.labelIngredient.text = ""
         self.labelQuantity.text = ""
         self.labelUnit.text = ""
-        
     }
+    
     @IBAction func buttonTap(_ sender: UIButton) {
 
         instanceDB.insertIngredients(name: labelIngredient.text ?? "", quantity: Double(labelQuantity.text ?? "") ?? 0, unit: labelUnit.text ?? "")
-
     }
-
 }

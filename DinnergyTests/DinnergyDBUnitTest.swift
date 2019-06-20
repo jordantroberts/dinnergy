@@ -31,6 +31,22 @@ class DinnergyDBUnitTest: XCTestCase {
         XCTAssertEqual(ingredient!.name, "Egg")
         instanceDB.deleteItem(name: "Egg")
     }
-   
+    
+    func testMatchRecipeNameWithID() {
+        let recipeID = instanceDB.matchRecipeNameWithID(name: "Vegan Banana Bread")
+        XCTAssertEqual(recipeID, 3)
+    }
+    
+    func testListfunctions() {
+        instanceDB.dropListTable()
+        instanceDB.createListsTable()
+        instanceDB.insertList(recipeID: 3)
+        XCTAssertEqual(instanceDB.showList().count, 7)
+        instanceDB.deleteListItem(name: "Dried fruit/nuts")
+        XCTAssertEqual(instanceDB.showList().last?.name, "Cinnamon")
+        instanceDB.dropListTable()
+        instanceDB.createListsTable()
+    }
+    
     
 }

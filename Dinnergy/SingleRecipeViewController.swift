@@ -13,9 +13,9 @@ class SingleRecipeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    titleLabel.text = recipe[myIndex].name
-    methodLabel.text = recipe[myIndex].method
-    ingredientLabel.text = recipe[myIndex].ingredients
+        titleLabel.text = recipe[myIndex].name
+        methodLabel.text = recipe[myIndex].method
+        ingredientLabel.text = recipe[myIndex].ingredients
         myImageView.image = UIImage(named: recipe[myIndex].name + ".jpg")
     
     }
@@ -27,10 +27,9 @@ class SingleRecipeViewController: UIViewController {
         
         self.present(alertController, animated: true, completion: nil)
     }
+    
     @IBAction func addtoListButton(_ sender: UIButton) {
-        let recipeName = titleLabel.text ?? ""
-        
-        let ingredientArrayForList = list.matchRecipeNameWithID(name: recipeName)
+        let ingredientArrayForList = list.matchRecipeNameWithID(name: titleLabel.text ?? "")
         list.insertList(recipeID: ingredientArrayForList)
     }
 }

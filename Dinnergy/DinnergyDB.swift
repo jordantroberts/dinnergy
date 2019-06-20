@@ -238,7 +238,6 @@ class DinnergyDB {
         
     }
     
-    
     func dropRecipeTable(){
         let dropQuery = "DROP TABLE Recipes"
         
@@ -281,7 +280,6 @@ class DinnergyDB {
         
     }
 
-    
     func createRecipeIngredientsTable(){
         let createTableQuery = "CREATE TABLE IF NOT EXISTS Recipe_Ingredients (id INTEGER PRIMARY KEY AUTOINCREMENT, recipe_id REFERENCES Recipes(id), item TEXT, quantity DOUBLE , unit TEXT)"
         
@@ -442,7 +440,6 @@ class DinnergyDB {
         print("Recipe Ingredients saved successfully")
     }
     
-    
     func insertOneIngredientToList(name: String, quantity: Double, unit: String) {
         
         var stmt: OpaquePointer?
@@ -487,8 +484,6 @@ class DinnergyDB {
     func insertList(recipeID: Int) -> [Ingredient] {
 
         var stmt: OpaquePointer?
-        
-
         var recipeIDString = String(recipeID)
         var ingredientList = [Ingredient]()
         ingredientList.removeAll()
@@ -567,7 +562,6 @@ class DinnergyDB {
         return stock
     }
     
-    
 //    func updateStock(name: String, quantity: Double){
 //        
 //        let updateStatementString = "UPDATE Ingredients SET Quantity = " + String(quantity) + " WHERE Name = '" + name + "';"
@@ -638,13 +632,10 @@ class DinnergyDB {
             let method = String(cString: sqlite3_column_text(stmt, 3))
             let attachment = String(cString: sqlite3_column_text(stmt, 4))
             
-            //adding values to list
-            
             recipe.append(Recipe(id: Int(id), name: name, ingredients: ingredients, method: method, attachment: attachment))
         }
+        
         return recipe
-        
-        
     }
 
     func matchRecipeNameWithID(name: String) -> Int {
@@ -657,7 +648,6 @@ class DinnergyDB {
         if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("error preparing insert: \(errmsg)")
-//            return Recipe(id: Int(1), name: "1",ingredients: "1", method: "1", attachment: "1")
             return 1
         }
         
@@ -672,6 +662,4 @@ class DinnergyDB {
         }
         return recipes[0].id
     }
-    
 }
-
