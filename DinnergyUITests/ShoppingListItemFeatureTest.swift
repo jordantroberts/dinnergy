@@ -30,6 +30,7 @@ class ShoppingListItemFeatureTest: XCTestCase {
         veganBananaBreadElement.swipeUp()
         
         app.buttons["Add to List"].tap()
+        app.alerts["Added to List"].buttons["Dismiss"].tap()
         app.tabBars.buttons["Shopping"].tap()
         XCTAssertTrue(app.staticTexts["Bananas: 3.0 large"].exists)
         
@@ -37,7 +38,10 @@ class ShoppingListItemFeatureTest: XCTestCase {
         XCUIApplication().tables.buttons["Delete"].tap()
         
         XCTAssertFalse(app.staticTexts["Bananas: 3.0 large"].exists)
+        
+        
     }
+    
 
 
 }

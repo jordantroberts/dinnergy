@@ -138,14 +138,17 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="addtoListButton:" destination="e5V-DQ-QfY" eventType="touchUpInside" id="4kh-sx-grz"/>
+                                                    <action selector="showAlert:" destination="e5V-DQ-QfY" eventType="touchUpInside" id="5Gs-2P-fU1"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="NQL-3u-iIf" firstAttribute="leading" secondItem="r2F-jv-pHR" secondAttribute="leading" constant="14" id="3lZ-QX-T7I"/>
                                             <constraint firstItem="H4u-og-BBI" firstAttribute="leading" secondItem="r2F-jv-pHR" secondAttribute="leading" constant="14" id="70V-Dv-GT1"/>
                                             <constraint firstAttribute="trailing" secondItem="CLw-gu-U0s" secondAttribute="trailing" constant="14" id="KwY-c3-gfH"/>
                                             <constraint firstItem="CLw-gu-U0s" firstAttribute="leading" secondItem="r2F-jv-pHR" secondAttribute="leading" constant="14" id="Or6-bI-YOt"/>
+                                            <constraint firstItem="NQL-3u-iIf" firstAttribute="top" secondItem="71u-go-58p" secondAttribute="bottom" constant="50" id="OzX-Mm-A4h"/>
                                             <constraint firstItem="71u-go-58p" firstAttribute="leading" secondItem="r2F-jv-pHR" secondAttribute="leading" constant="14" id="Tff-i5-LR6"/>
                                             <constraint firstItem="H4u-og-BBI" firstAttribute="top" secondItem="r2F-jv-pHR" secondAttribute="top" constant="15" id="U6y-0c-fxd"/>
                                             <constraint firstItem="71u-go-58p" firstAttribute="top" secondItem="NV1-t0-4Bo" secondAttribute="bottom" constant="20" id="U7i-Na-2Ge"/>
@@ -161,6 +164,7 @@
                                             <constraint firstAttribute="trailing" secondItem="71u-go-58p" secondAttribute="trailing" constant="14" id="nUz-PR-nQ7"/>
                                             <constraint firstItem="TeB-tC-gEC" firstAttribute="leading" secondItem="r2F-jv-pHR" secondAttribute="leading" constant="14" id="pQz-Z4-NrX"/>
                                             <constraint firstItem="NV1-t0-4Bo" firstAttribute="leading" secondItem="r2F-jv-pHR" secondAttribute="leading" constant="14" id="pXf-MQ-lxh"/>
+                                            <constraint firstAttribute="trailing" secondItem="NQL-3u-iIf" secondAttribute="trailing" constant="14" id="qv8-40-qjZ"/>
                                             <constraint firstItem="moF-r7-fpx" firstAttribute="leading" secondItem="r2F-jv-pHR" secondAttribute="leading" constant="14" id="xdM-Eb-q9f"/>
                                         </constraints>
                                     </view>
@@ -286,6 +290,7 @@
                                         </state>
                                         <connections>
                                             <action selector="buttonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IJK-Ir-uCf"/>
+                                            <action selector="showAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AY3-rj-Z24"/>
                                         </connections>
                                     </button>
                                 </subviews>

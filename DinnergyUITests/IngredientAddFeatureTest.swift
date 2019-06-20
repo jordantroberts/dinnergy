@@ -13,6 +13,8 @@
         addBananas(number: "3")
         
         XCTAssert(app.staticTexts["banana: 3.0 kg"].exists)
+        
+        
     }
     
  }

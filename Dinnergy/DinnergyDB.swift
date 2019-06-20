@@ -28,7 +28,6 @@ class DinnergyDB {
          createRecipeTable()
          dropRecipeIngredientTable()
          createRecipeIngredientsTable()
-         dropListTable()
          createListsTable()
        
     insertRecipe(name: "Butter Bean & Chorizo Stew", ingredients: "2 Cans of chopped tomatoes\n\n200g Chorizo\n\n2x400g cans of drained butter beans\n\n1 tub Pesto", method: "1. Slice the chorizo and tip into a large saucepan over a medium heat.\n\n2. Fry gently for 5 mins or until starting to turn dark brown.\n\n3. Add the tomatoes and butter beans, bring to the boil, then simmer for 10 mins.\n\n4. Swirl through the pesto, season lightly and ladle into four bowls.", attachment: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/08/butter-bean-chorizo-stew.jpg?itok=8gg1NtD3")
