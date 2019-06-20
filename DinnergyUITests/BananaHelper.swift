@@ -1,16 +1,7 @@
-//
-//  BananaHelper.swift
-//  DinnergyUITests
-//
-//  Created by Simon 易 on 18/06/2019.
-//  Copyright © 2019 Edgy Eats. All rights reserved.
-//
-
 import Foundation
 import XCTest
 
 func addBananas (number: String){
-    // helper function add banana to list (Simon's test)
     let app = XCUIApplication()
     app.navigationBars["My Ingredients"].buttons["+"].tap()
     app.textFields["Enter ingredient name"].tap()
@@ -39,8 +30,6 @@ func addBananas (number: String){
     app.buttons["Add"].tap()
     app.alerts["Successfully Added"].buttons["OK"].tap()
     app.buttons["Back"].tap()
-
-
 }
 
 func deleteFourBanana() {
