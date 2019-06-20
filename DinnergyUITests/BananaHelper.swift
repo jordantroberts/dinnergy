@@ -37,6 +37,10 @@ func addBananas (number: String){
     kKey.tap()
     gKey.tap()
     app.buttons["Add"].tap()
+    app.alerts["Successfully Added"].buttons["OK"].tap()
+    app.buttons["Back"].tap()
+
+
 }
 
 func deleteFourBanana() {
