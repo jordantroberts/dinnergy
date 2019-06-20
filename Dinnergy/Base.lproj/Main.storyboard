@@ -91,27 +91,27 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oz7-A5-gKY">
-                                <rect key="frame" x="0.0" y="88" width="414" height="1700"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="1750"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r2F-jv-pHR">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1700"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1750"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4u-og-BBI">
                                                 <rect key="frame" x="14" y="15" width="386" height="33.666666666666664"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                                <color key="textColor" red="0.32549019610000002" green="0.46274509800000002" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLw-gu-U0s">
                                                 <rect key="frame" x="14" y="402" width="386" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                                <color key="textColor" red="0.32549019610000002" green="0.46274509800000002" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NV1-t0-4Bo">
                                                 <rect key="frame" x="14" y="507" width="386" height="40"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                                <color key="textColor" red="0.32549019610000002" green="0.46274509800000002" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="251" horizontalCompressionResistancePriority="748" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeB-tC-gEC">
@@ -130,11 +130,15 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQL-3u-iIf">
-                                                <rect key="frame" x="170" y="1356" width="74" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQL-3u-iIf">
+                                                <rect key="frame" x="14" y="691" width="386" height="50"/>
+                                                <color key="backgroundColor" red="0.32549019610000002" green="0.46274509800000002" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="c68-3J-zvS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                                 <state key="normal" title="Add to List">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="addtoListButton:" destination="e5V-DQ-QfY" eventType="touchUpInside" id="4kh-sx-grz"/>
@@ -153,7 +157,7 @@
                                             <constraint firstItem="H4u-og-BBI" firstAttribute="top" secondItem="r2F-jv-pHR" secondAttribute="top" constant="15" id="U6y-0c-fxd"/>
                                             <constraint firstItem="71u-go-58p" firstAttribute="top" secondItem="NV1-t0-4Bo" secondAttribute="bottom" constant="20" id="U7i-Na-2Ge"/>
                                             <constraint firstItem="NV1-t0-4Bo" firstAttribute="top" secondItem="TeB-tC-gEC" secondAttribute="bottom" constant="35" id="UMG-dD-rny"/>
-                                            <constraint firstAttribute="height" constant="1700" id="Xnc-aB-pDu"/>
+                                            <constraint firstAttribute="height" constant="1750" id="Xnc-aB-pDu"/>
                                             <constraint firstItem="moF-r7-fpx" firstAttribute="top" secondItem="H4u-og-BBI" secondAttribute="bottom" constant="10" id="ZnW-FA-MlC"/>
                                             <constraint firstItem="CLw-gu-U0s" firstAttribute="top" secondItem="moF-r7-fpx" secondAttribute="bottom" constant="10" id="aSK-rh-EI4"/>
                                             <constraint firstItem="TeB-tC-gEC" firstAttribute="top" secondItem="CLw-gu-U0s" secondAttribute="bottom" constant="20" id="bI0-28-t58"/>
@@ -174,7 +178,7 @@
                                     <constraint firstAttribute="trailing" secondItem="r2F-jv-pHR" secondAttribute="trailing" id="CkV-K8-Ymh"/>
                                     <constraint firstItem="r2F-jv-pHR" firstAttribute="top" secondItem="oz7-A5-gKY" secondAttribute="top" id="Mdg-zC-wu3"/>
                                     <constraint firstItem="r2F-jv-pHR" firstAttribute="leading" secondItem="oz7-A5-gKY" secondAttribute="leading" id="Vey-Wh-XC4"/>
-                                    <constraint firstAttribute="height" constant="1700" id="so1-Gf-hUu"/>
+                                    <constraint firstAttribute="height" constant="1750" id="so1-Gf-hUu"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
