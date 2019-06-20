@@ -63,5 +63,4 @@ import XCTest
         app.alerts["Successfully Added"].buttons["OK"].tap()
         app.buttons["Back"].tap()
     }
-
  }

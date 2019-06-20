@@ -18,5 +18,4 @@ class MapViewFeatureTest: XCTestCase {
         app.buttons["Supermarket"].tap()
         app.buttons["Ingredients"].tap()
     }
-    
 }

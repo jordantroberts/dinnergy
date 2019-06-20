@@ -199,113 +199,70 @@ class DinnergyDB {
     func createTable() {
         let createTableQuery = "CREATE TABLE IF NOT EXISTS Ingredients (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, quantity DOUBLE, unit TEXT)"
 
-        if sqlite3_exec(db,createTableQuery, nil, nil, nil) != SQLITE_OK{
-            print("Error Creating Table")
-            return
-        }
-        print("Table Created")
-
-        let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        print("App Path: \(dirPaths)")
-        
+        if sqlite3_exec(db, createTableQuery, nil, nil, nil) == SQLITE_OK {
+            print("Table Created")
+            let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+            
+            print("App Path: \(dirPaths)")
+        } else { return}
+    
     }
     
-    func createRecipeTable(){
+    func createRecipeTable() {
         let createTableQuery = "CREATE TABLE IF NOT EXISTS Recipes (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, ingredients TEXT, method TEXT , attachment TEXT)"
         
-        if sqlite3_exec(db,createTableQuery, nil, nil, nil) != SQLITE_OK{
-            print("Error Creating Table")
+        if sqlite3_exec(db, createTableQuery, nil, nil, nil) == SQLITE_OK {
+            print("Table Created")
             return
-        }
-        print("Table Created")
-        
-        let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        print("App Path: \(dirPaths)")
-        
+        } else {return}
     }
     
-    func dropTable(){
+    func dropTable() {
         let dropQuery = "DROP TABLE Ingredients"
         
-        if sqlite3_exec(db,dropQuery, nil, nil, nil) != SQLITE_OK{
-            print("Error Creating Table")
-            return
-        }
-        print("Table Created")
-        
-        let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        print("App Path: \(dirPaths)")
-        
+        if sqlite3_exec(db,dropQuery, nil, nil, nil) == SQLITE_OK{
+             print("Table Droped")
+        } else {return}
     }
     
-    func dropRecipeTable(){
+    func dropRecipeTable() {
         let dropQuery = "DROP TABLE Recipes"
         
-        if sqlite3_exec(db,dropQuery, nil, nil, nil) != SQLITE_OK{
-            print("Error Creating Table")
-            return
-        }
-        print("Table Created")
-        
-        let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        print("App Path: \(dirPaths)")
-        
+        if sqlite3_exec(db, dropQuery, nil, nil, nil) == SQLITE_OK {
+           print("Table Droped")
+        } else {return}
     }
     
-    func dropRecipeIngredientTable(){
+    func dropRecipeIngredientTable() {
         let dropQuery = "DROP TABLE Recipe_Ingredients"
         
-        if sqlite3_exec(db,dropQuery, nil, nil, nil) != SQLITE_OK{
-            print("Error Creating Table")
-            return
-        }
-        print("Table Created")
-        
-        let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        print("App Path: \(dirPaths)")
-        
+        if sqlite3_exec(db, dropQuery, nil, nil, nil) == SQLITE_OK {
+          print("Table Droped")
+        } else {return}
     }
     
-    func dropListTable(){
+    func dropListTable() {
         let dropQuery = "DROP TABLE Lists"
         
-        if sqlite3_exec(db,dropQuery, nil, nil, nil) != SQLITE_OK{
-            print("Error Creating Table")
-            return
-        }
-        print("Table Created")
-        
-        let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        print("App Path: \(dirPaths)")
-        
+        if sqlite3_exec(db, dropQuery, nil, nil, nil) == SQLITE_OK {
+           print("Table Droped")
+        } else {return}
     }
 
-    func createRecipeIngredientsTable(){
+    func createRecipeIngredientsTable() {
         let createTableQuery = "CREATE TABLE IF NOT EXISTS Recipe_Ingredients (id INTEGER PRIMARY KEY AUTOINCREMENT, recipe_id REFERENCES Recipes(id), item TEXT, quantity DOUBLE , unit TEXT)"
         
-        if sqlite3_exec(db,createTableQuery, nil, nil, nil) != SQLITE_OK{
-            print("Error Creating Table")
-            return
-        }
-        print("Table Created")
-        
-        let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        print("App Path: \(dirPaths)")
-        
+        if sqlite3_exec(db, createTableQuery, nil, nil, nil) == SQLITE_OK {
+             print("Table Created")
+        } else {return}
     }
     
     func createListsTable() {
         let createTableQuery = "CREATE TABLE IF NOT EXISTS Lists (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, quantity DOUBLE, unit TEXT)"
         
-        if sqlite3_exec(db,createTableQuery, nil, nil, nil) != SQLITE_OK{
-            print("Error Creating Table")
-            return
-        }
-        print("Table Created")
-        
-        let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        print("App Path: \(dirPaths)")
-        
+        if sqlite3_exec(db, createTableQuery, nil, nil, nil) == SQLITE_OK {
+            print("Table Created")
+        } else {return}
     }
     
     func insertIngredients(name: String, quantity: Double, unit: String) {
@@ -315,37 +272,9 @@ class DinnergyDB {
         
         let queryString = "INSERT INTO Ingredients (name, quantity, unit) VALUES (?,?,?)"
         
-        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("error preparing insert: \(errmsg)")
-            return
-        }
-        
-        if sqlite3_bind_text(stmt, 1, name, -1, SQLITETRANSIENT) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("failure binding name: \(errmsg)")
-            return
-        }
-        
-        if sqlite3_bind_double(stmt, 2, quantity ) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("failure binding quantity: \(errmsg)")
-            return
-        }
-        
-        if sqlite3_bind_text(stmt, 3, unit, -1, SQLITETRANSIENT ) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("failure binding unit \(errmsg)")
-            return
-        }
-        
-        if sqlite3_step(stmt) != SQLITE_DONE {
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("failure inserting hero: \(errmsg)")
-            return
-        }
-        
-        print("Ingredients saved successfully")
+        if sqlite3_prepare(db, queryString, -1, &stmt, nil) == SQLITE_OK && sqlite3_bind_text(stmt, 1, name, -1, SQLITETRANSIENT) == SQLITE_OK && sqlite3_bind_double(stmt, 2, quantity ) == SQLITE_OK && sqlite3_bind_text(stmt, 3, unit, -1, SQLITETRANSIENT ) == SQLITE_OK && sqlite3_step(stmt) == SQLITE_DONE {
+            print("Ingredients saved successfully")
+        } else {return}
     }
     
     func insertRecipe(name: String, ingredients: String, method: String, attachment: String) {
@@ -355,43 +284,9 @@ class DinnergyDB {
         
         let queryString = "INSERT INTO Recipes (name, ingredients, method, attachment) VALUES (?,?,?,?)"
         
-        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("error preparing insert: \(errmsg)")
-            return
-        }
-        
-        if sqlite3_bind_text(stmt, 1, name, -1, SQLITETRANSIENT) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("failure binding name: \(errmsg)")
-            return
-        }
-        
-        if sqlite3_bind_text(stmt, 2, ingredients, -1, SQLITETRANSIENT) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("failure binding quantity: \(errmsg)")
-            return
-        }
-        
-        if sqlite3_bind_text(stmt, 3, method, -1, SQLITETRANSIENT) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("failure binding quantity: \(errmsg)")
-            return
-        }
-        
-        if sqlite3_bind_text(stmt, 4, attachment, -1, SQLITETRANSIENT ) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("failure binding unit \(errmsg)")
-            return
-        }
-        
-        if sqlite3_step(stmt) != SQLITE_DONE {
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("failure inserting hero: \(errmsg)")
-            return
-        }
-        
-        print("Recipe saved successfully")
+        if sqlite3_prepare(db, queryString, -1, &stmt, nil) == SQLITE_OK && sqlite3_bind_text(stmt, 1, name, -1, SQLITETRANSIENT) == SQLITE_OK && sqlite3_bind_text(stmt, 2, ingredients, -1, SQLITETRANSIENT) == SQLITE_OK && sqlite3_bind_text(stmt, 3, method, -1, SQLITETRANSIENT) == SQLITE_OK && sqlite3_bind_text(stmt, 4, attachment, -1, SQLITETRANSIENT ) == SQLITE_OK && sqlite3_step(stmt) == SQLITE_DONE {
+            print("Recipe saved successfully")
+        } else {return}
     }
     
     func insertRecipeIngredients(recipe_id: Int32, item: String, quantity: Double, unit: String) {
@@ -401,43 +296,9 @@ class DinnergyDB {
         
         let queryString = "INSERT INTO Recipe_Ingredients (recipe_id, item, quantity, unit) VALUES (?,?,?,?)"
         
-        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("error preparing insert: \(errmsg)")
-            return
-        }
-        
-        if sqlite3_bind_int(stmt, 1, recipe_id ) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("failure binding quantity: \(errmsg)")
-            return
-        }
-        
-        if sqlite3_bind_text(stmt, 2, item, -1, SQLITETRANSIENT) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("failure binding name: \(errmsg)")
-            return
-        }
-        
-        if sqlite3_bind_double(stmt, 3, quantity ) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("failure binding quantity: \(errmsg)")
-            return
-        }
-        
-        if sqlite3_bind_text(stmt, 4, unit, -1, SQLITETRANSIENT ) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("failure binding unit \(errmsg)")
-            return
-        }
-        
-        if sqlite3_step(stmt) != SQLITE_DONE {
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("failure inserting hero: \(errmsg)")
-            return
-        }
-        
-        print("Recipe Ingredients saved successfully")
+        if sqlite3_prepare(db, queryString, -1, &stmt, nil) == SQLITE_OK && sqlite3_bind_int(stmt, 1, recipe_id ) == SQLITE_OK && sqlite3_bind_text(stmt, 2, item, -1, SQLITETRANSIENT) == SQLITE_OK && sqlite3_bind_double(stmt, 3, quantity ) == SQLITE_OK && sqlite3_bind_text(stmt, 4, unit, -1, SQLITETRANSIENT ) == SQLITE_OK && sqlite3_step(stmt) == SQLITE_DONE {
+            print("Recipe Ingredients saved successfully")
+        } else {return}
     }
     
     func insertOneIngredientToList(name: String, quantity: Double, unit: String) {
@@ -447,56 +308,26 @@ class DinnergyDB {
         
         let queryString = "INSERT INTO Lists (name, quantity, unit) VALUES (?,?,?)"
         
-        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("error preparing insert: \(errmsg)")
-            return
-        }
-        
-        if sqlite3_bind_text(stmt, 1, name, -1, SQLITETRANSIENT) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("failure binding name: \(errmsg)")
-            return
-        }
-        
-        if sqlite3_bind_double(stmt, 2, quantity ) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("failure binding quantity: \(errmsg)")
-            return
-        }
-        
-        if sqlite3_bind_text(stmt, 3, unit, -1, SQLITETRANSIENT ) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("failure binding unit \(errmsg)")
-            return
-        }
-        
-        if sqlite3_step(stmt) != SQLITE_DONE {
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("failure inserting hero: \(errmsg)")
-            return
-        }
-        
-        print("Ingredients saved successfully")
+        if sqlite3_prepare(db, queryString, -1, &stmt, nil) == SQLITE_OK && sqlite3_bind_text(stmt, 1, name, -1, SQLITETRANSIENT) == SQLITE_OK && sqlite3_bind_double(stmt, 2, quantity ) == SQLITE_OK && sqlite3_bind_text(stmt, 3, unit, -1, SQLITETRANSIENT ) == SQLITE_OK && sqlite3_step(stmt) != SQLITE_DONE {
+            print("Ingredients saved successfully")
+        } else {return}
     }
-    
     
     func insertList(recipeID: Int) -> [Ingredient] {
 
         var stmt: OpaquePointer?
-        var recipeIDString = String(recipeID)
+        let recipeIDString = String(recipeID)
         var ingredientList = [Ingredient]()
         ingredientList.removeAll()
 
         let queryString = "SELECT * FROM Recipe_Ingredients WHERE recipe_id = " + recipeIDString
 
-        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("error preparing insert: \(errmsg)")
+        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK {
+            print("error preparing insert")
             return []
         }
 
-        while(sqlite3_step(stmt) == SQLITE_ROW){
+        while sqlite3_step(stmt) == SQLITE_ROW {
             let recipe_gredient_id = sqlite3_column_int(stmt, 0)
             let name = String(cString: sqlite3_column_text(stmt, 2))
             let quantity = sqlite3_column_double(stmt, 3)
@@ -513,21 +344,18 @@ class DinnergyDB {
         return ingredientList
     }
 
-    
     func showList() -> [Ingredient] {
         var list = [Ingredient]()
         list.removeAll()
-        
         let queryString = "SELECT * FROM Lists"
         var stmt:OpaquePointer?
         
-        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("error preparing insert: \(errmsg)")
+        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK {
+            print("error preparing insert")
             return []
         }
         
-        while(sqlite3_step(stmt) == SQLITE_ROW){
+        while sqlite3_step(stmt) == SQLITE_ROW {
             let id = sqlite3_column_int(stmt, 0)
             let name = String(cString: sqlite3_column_text(stmt, 1))
             let quantity = sqlite3_column_double(stmt, 2)
@@ -541,17 +369,16 @@ class DinnergyDB {
     func checkStock() -> [Ingredient] {
         var stock = [Ingredient]()
         stock.removeAll()
-        
         let queryString = "SELECT * FROM Ingredients"
         var stmt:OpaquePointer?
         
-        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
+        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK {
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("error preparing insert: \(errmsg)")
             return []
         }
         
-        while(sqlite3_step(stmt) == SQLITE_ROW){
+        while sqlite3_step(stmt) == SQLITE_ROW {
             let id = sqlite3_column_int(stmt, 0)
             let name = String(cString: sqlite3_column_text(stmt, 1))
             let quantity = sqlite3_column_double(stmt, 2)
@@ -561,23 +388,6 @@ class DinnergyDB {
         }
         return stock
     }
-    
-//    func updateStock(name: String, quantity: Double){
-//        
-//        let updateStatementString = "UPDATE Ingredients SET Quantity = " + String(quantity) + " WHERE Name = '" + name + "';"
-//        
-//        var updateStatement: OpaquePointer? = nil
-//        if sqlite3_prepare_v2(db, updateStatementString, -1, &updateStatement, nil) == SQLITE_OK {
-//            if sqlite3_step(updateStatement) == SQLITE_DONE {
-//                print("Successfully updated row.")
-//            } else {
-//                print("Could not update row.")
-//            }
-//        } else {
-//            print("UPDATE statement could not be prepared")
-//        }
-//        sqlite3_finalize(updateStatement)
-//    }
     
     func deleteItem(name: String) {
         let deleteStatementStirng = "DELETE FROM Ingredients WHERE Name = '" + name + "';"
@@ -591,7 +401,6 @@ class DinnergyDB {
         } else {
             print("DELETE statement could not be prepared")
         }
-        
         sqlite3_finalize(deleteStatement)
     }
     
@@ -607,7 +416,6 @@ class DinnergyDB {
         } else {
             print("DELETE statement could not be prepared")
         }
-        
         sqlite3_finalize(deleteStatement)
     }
     
@@ -616,16 +424,17 @@ class DinnergyDB {
         recipe.removeAll()
         
         let queryString = "SELECT DISTINCT id,name, ingredients, method, attachment FROM Recipes INNER JOIN (SELECT DISTINCT recipe_id, item FROM Recipe_Ingredients INNER JOIN Ingredients ON Recipe_Ingredients.item LIKE '%' || Ingredients.name || '%') ON Recipes.id = recipe_id"
+        
         var stmt:OpaquePointer?
         
-        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
+        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK {
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("error preparing insert: \(errmsg)")
             return []
         }
         
         //traversing through all the records
-        while(sqlite3_step(stmt) == SQLITE_ROW){
+        while sqlite3_step(stmt) == SQLITE_ROW {
             let id = sqlite3_column_int(stmt, 0)
             let name = String(cString: sqlite3_column_text(stmt, 1))
             let ingredients = String(cString: sqlite3_column_text(stmt, 2))
@@ -645,20 +454,19 @@ class DinnergyDB {
         let queryString = "SELECT * FROM Recipes WHERE name = '" + name + "';"
         var stmt:OpaquePointer?
         
-        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
-            let errmsg = String(cString: sqlite3_errmsg(db)!)
-            print("error preparing insert: \(errmsg)")
+        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK {
+            print("error preparing insert s")
             return 1
         }
         
-        while(sqlite3_step(stmt) == SQLITE_ROW){
+        while sqlite3_step(stmt) == SQLITE_ROW {
             let id = sqlite3_column_int(stmt, 0)
             let name = String(cString: sqlite3_column_text(stmt, 1))
             let ingredients = String(cString: sqlite3_column_text(stmt, 2))
             let method = String(cString: sqlite3_column_text(stmt, 3))
             let attachment = String(cString: sqlite3_column_text(stmt, 4))
             
-            recipes.append(Recipe(id: Int(id), name: name,ingredients: ingredients, method: method, attachment: attachment))
+            recipes.append(Recipe(id: Int(id), name: name, ingredients: ingredients, method: method, attachment: attachment))
         }
         return recipes[0].id
     }

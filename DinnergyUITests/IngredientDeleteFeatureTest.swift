@@ -1,12 +1,11 @@
 import Foundation
 import XCTest
 
-
 class IngredientDeleteFeatureTest: XCTestCase {
     
     let app = XCUIApplication()
 
-    func testDeleteIngredient(){
+    func testDeleteIngredient() {
         
         addBananas(number: "4")
         deleteFourBanana()
@@ -14,4 +13,3 @@ class IngredientDeleteFeatureTest: XCTestCase {
         XCTAssertFalse(app.staticTexts["banana: 4.0 kg"].exists)
     }
 }
-

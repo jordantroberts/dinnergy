@@ -10,5 +10,4 @@ class MatchRecipeFeatureTest: XCTestCase {
         XCTAssert(app.staticTexts["Vegan Banana Bread"].exists)
         deleteFourBanana()
     }
-
 }

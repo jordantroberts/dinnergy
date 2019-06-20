@@ -8,7 +8,7 @@ class Recipe {
     var method: String
     var attachment: String
     
-    init(id: Int, name: String, ingredients: String, method: String, attachment: String){
+    init(id: Int, name: String, ingredients: String, method: String, attachment: String) {
         self.id = id
         self.name = name
         self.ingredients = ingredients

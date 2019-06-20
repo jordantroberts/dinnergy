@@ -26,7 +26,7 @@ class DinnergyDBUnitTest: XCTestCase {
         instanceDB.insertIngredients(name: "Banana", quantity: 300.0, unit: "g")
         instanceDB.dropTable()
         instanceDB.createTable()
-        instanceDB.insertIngredients(name: "Egg", quantity: 5 , unit: "")
+        instanceDB.insertIngredients(name: "Egg", quantity: 5, unit: "")
         let ingredient = instanceDB.checkStock().first
         XCTAssertEqual(ingredient!.name, "Egg")
         instanceDB.deleteItem(name: "Egg")
@@ -47,6 +47,4 @@ class DinnergyDBUnitTest: XCTestCase {
         instanceDB.dropListTable()
         instanceDB.createListsTable()
     }
-    
-    
 }
