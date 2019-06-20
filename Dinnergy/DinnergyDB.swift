@@ -1,10 +1,4 @@
-//
-//  DinnergyDB .swift
-//  Dinnergy
-//
-//  Created by Simon 易 on 11/06/2019.
-//  Copyright © 2019 Edgy Eats. All rights reserved.
-//
+
 import UIKit
 import SQLite3
 
@@ -500,8 +494,6 @@ class DinnergyDB {
         var ingredientList = [Ingredient]()
         ingredientList.removeAll()
 
-//        let queryString = "INSERT INTO Lists SELECT * FROM (SELECT item, quantity, unit FROM (SELECT * FROM Recipe_Ingredients LEFT JOIN Ingredients ON Recipe_Ingredients.item LIKE '%' || Ingredients.name || '%' WHERE Ingredients.name IS NULL) WHERE recipe_id = " + recipeIDString
-        
         let queryString = "SELECT * FROM Recipe_Ingredients WHERE recipe_id = " + recipeIDString
 
         if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
@@ -509,16 +501,12 @@ class DinnergyDB {
             print("error preparing insert: \(errmsg)")
             return []
         }
-//        print("List saved successfully")
-        
-    
+
         while(sqlite3_step(stmt) == SQLITE_ROW){
             let recipe_gredient_id = sqlite3_column_int(stmt, 0)
             let name = String(cString: sqlite3_column_text(stmt, 2))
             let quantity = sqlite3_column_double(stmt, 3)
             let unit = sqlite3_column_text(stmt, 4)
-
-            //adding values to list
 
             ingredientList.append(Ingredient(id: Int(recipe_gredient_id), name: name, quantity: Double(quantity), unit: String(cString: unit!)))
         }
@@ -530,7 +518,7 @@ class DinnergyDB {
         
         return ingredientList
     }
-//
+
     
     func showList() -> [Ingredient] {
         var list = [Ingredient]()
@@ -545,24 +533,16 @@ class DinnergyDB {
             return []
         }
         
-        //traversing through all the records
         while(sqlite3_step(stmt) == SQLITE_ROW){
             let id = sqlite3_column_int(stmt, 0)
             let name = String(cString: sqlite3_column_text(stmt, 1))
             let quantity = sqlite3_column_double(stmt, 2)
             let unit = sqlite3_column_text(stmt, 3)
             
-            //adding values to list
             list.append(Ingredient(id: Int(id), name: name, quantity: Double(quantity), unit: String(cString: unit!)))
         }
         return list
     }
-    
-    
-    
-    
-    
-    
     
     func checkStock() -> [Ingredient] {
         var stock = [Ingredient]()
@@ -577,14 +557,12 @@ class DinnergyDB {
             return []
         }
         
-        //traversing through all the records
         while(sqlite3_step(stmt) == SQLITE_ROW){
             let id = sqlite3_column_int(stmt, 0)
             let name = String(cString: sqlite3_column_text(stmt, 1))
             let quantity = sqlite3_column_double(stmt, 2)
             let unit = sqlite3_column_text(stmt, 3)
             
-            //adding values to list
             stock.append(Ingredient(id: Int(id), name: name, quantity: Double(quantity), unit: String(cString: unit!)))
         }
         return stock
@@ -669,32 +647,6 @@ class DinnergyDB {
         
         
     }
-    
-//    func showRecipesIngredients() -> [RecipeIngredients] {
-//        var recipeIngredients = [RecipeIngredients]()
-//        recipeIngredients.removeAll()
-//
-//        let queryString = "SELECT * FROM Recipes"
-//        var stmt:OpaquePointer?
-//
-//        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
-//            let errmsg = String(cString: sqlite3_errmsg(db)!)
-//            print("error preparing insert: \(errmsg)")
-//            return []
-//        }
-//
-//        //traversing through all the records
-//        while(sqlite3_step(stmt) == SQLITE_ROW){
-//            let id = sqlite3_column_int(stmt, 0)
-//            let name = String(cString: sqlite3_column_text(stmt, 1))
-//            let method = String(cString: sqlite3_column_text(stmt, 2))
-//            let attachment = String(cString: sqlite3_column_text(stmt, 3))
-//
-//            //adding values to list
-//            recipe.append(Recipe(id: Int(id), name: name, method: method, attachment: attachment))
-//        }
-//        return recipe
-//    }
 
     func matchRecipeNameWithID(name: String) -> Int {
         var recipes = [Recipe]()
@@ -710,7 +662,6 @@ class DinnergyDB {
             return 1
         }
         
-        //traversing through all the records
         while(sqlite3_step(stmt) == SQLITE_ROW){
             let id = sqlite3_column_int(stmt, 0)
             let name = String(cString: sqlite3_column_text(stmt, 1))
@@ -718,7 +669,6 @@ class DinnergyDB {
             let method = String(cString: sqlite3_column_text(stmt, 3))
             let attachment = String(cString: sqlite3_column_text(stmt, 4))
             
-            //adding values to list
             recipes.append(Recipe(id: Int(id), name: name,ingredients: ingredients, method: method, attachment: attachment))
         }
         return recipes[0].id
