@@ -29,19 +29,7 @@ import XCTest
         XCUIApplication().tables.staticTexts[": 0.0 "].swipeLeft()
         XCUIApplication().tables.buttons["Delete"].tap()
     }
-    
-    func testAddIngredientwithNoInput() {
-        let app = XCUIApplication()
-        app.navigationBars["My Ingredients"].buttons["+"].tap()
-        app.buttons["Add"].tap()
-        app.alerts["Successfully Added"].buttons["OK"].tap()
-        app.buttons["Back"].tap()
-        XCTAssert(app.staticTexts[": 0.0 "].exists)
-        app.buttons["Ingredients"].tap()
-        XCUIApplication().tables.staticTexts[": 0.0 "].swipeLeft()
-        XCUIApplication().tables.buttons["Delete"].tap()
-    }
-    
+
     func testAddIngredientMessage() {
         let app = XCUIApplication()
         app.navigationBars["My Ingredients"].buttons["+"].tap()
