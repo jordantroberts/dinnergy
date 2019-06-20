@@ -1,4 +1,4 @@
-# Dinnergy
+# Dinnergy [![Build Status](https://travis-ci.org/jordantroberts/dinnergy.png?branch=master)](https://travis-ci.org/jordantroberts/dinnergy)
 
 ### [Welcome to Edgy Eats](https://github.com/jordantroberts/dinnergy#Welcome-to-Edgy-Eats) - [Features](https://github.com/jordantroberts/dinnergy#Features) - [Screenshots](https://github.com/jordantroberts/dinnergy#Screenshots) - [Team](https://github.com/jordantroberts/dinnergy#Team) - [Our Process](https://github.com/jordantroberts/dinnergy#Our-Process) - [Quickstart](https://github.com/jordantroberts/dinnergy#Process)
 
