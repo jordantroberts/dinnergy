@@ -34,7 +34,7 @@ We agreed to follow an Agile Software Development process using Extreme Programm
 
 ### Running the app
 
-1. git clone [https://github.com/jordantroberts/dinnergy]
+1. git clone https://github.com/jordantroberts/dinnergy
 2. cd dinnergy
 3. xed . (to launch XCode)
 4. cmd + r (to run the app)
