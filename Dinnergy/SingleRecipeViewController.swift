@@ -29,7 +29,7 @@ class SingleRecipeViewController: UIViewController {
     }
     
     @IBAction func addtoListButton(_ sender: UIButton) {
-        let ingredientArrayForList = list.matchRecipeNameWithID(name: titleLabel.text ?? "")
+        let ingredientArrayForList = list.matchRecipeNameWithID(name: titleLabel.text!)
         list.insertList(recipeID: ingredientArrayForList)
     }
 }
