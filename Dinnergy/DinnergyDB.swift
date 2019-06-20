@@ -568,22 +568,22 @@ class DinnergyDB {
     }
     
     
-    func updateStock(name: String, quantity: Double){
-        
-        let updateStatementString = "UPDATE Ingredients SET Quantity = " + String(quantity) + " WHERE Name = '" + name + "';"
-        
-        var updateStatement: OpaquePointer? = nil
-        if sqlite3_prepare_v2(db, updateStatementString, -1, &updateStatement, nil) == SQLITE_OK {
-            if sqlite3_step(updateStatement) == SQLITE_DONE {
-                print("Successfully updated row.")
-            } else {
-                print("Could not update row.")
-            }
-        } else {
-            print("UPDATE statement could not be prepared")
-        }
-        sqlite3_finalize(updateStatement)
-    }
+//    func updateStock(name: String, quantity: Double){
+//        
+//        let updateStatementString = "UPDATE Ingredients SET Quantity = " + String(quantity) + " WHERE Name = '" + name + "';"
+//        
+//        var updateStatement: OpaquePointer? = nil
+//        if sqlite3_prepare_v2(db, updateStatementString, -1, &updateStatement, nil) == SQLITE_OK {
+//            if sqlite3_step(updateStatement) == SQLITE_DONE {
+//                print("Successfully updated row.")
+//            } else {
+//                print("Could not update row.")
+//            }
+//        } else {
+//            print("UPDATE statement could not be prepared")
+//        }
+//        sqlite3_finalize(updateStatement)
+//    }
     
     func deleteItem(name: String) {
         let deleteStatementStirng = "DELETE FROM Ingredients WHERE Name = '" + name + "';"
