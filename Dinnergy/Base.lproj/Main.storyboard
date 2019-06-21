@@ -31,7 +31,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="My Ingredients" id="4jp-AV-v7u">
                         <barButtonItem key="backBarButtonItem" title="Back" id="IZR-8P-hAY"/>
-                        <barButtonItem key="rightBarButtonItem" title="+" style="plain" id="6Jz-a5-fOe">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="6Jz-a5-fOe">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pbw-Pt-mYf">
                                 <rect key="frame" x="272" y="0.0" width="87" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

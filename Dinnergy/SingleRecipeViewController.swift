@@ -30,6 +30,6 @@ class SingleRecipeViewController: UIViewController {
     
     @IBAction func addtoListButton(_ sender: UIButton) {
         let ingredientArrayForList = list.matchRecipeNameWithID(name: titleLabel.text!)
-        list.insertList(recipeID: ingredientArrayForList)
+        _ = list.insertList(recipeID: ingredientArrayForList)
     }
 }

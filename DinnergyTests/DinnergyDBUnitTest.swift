@@ -40,7 +40,7 @@ class DinnergyDBUnitTest: XCTestCase {
     func testListfunctions() {
         instanceDB.dropListTable()
         instanceDB.createListsTable()
-        instanceDB.insertList(recipeID: 3)
+        _ = instanceDB.insertList(recipeID: 3)
         XCTAssertEqual(instanceDB.showList().count, 7)
         instanceDB.deleteListItem(name: "Dried fruit/nuts")
         XCTAssertEqual(instanceDB.showList().last?.name, "Cinnamon")

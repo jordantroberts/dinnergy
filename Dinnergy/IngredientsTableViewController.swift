@@ -2,7 +2,7 @@ import UIKit
 
 class IngredientsTableViewController: UITableViewController {
     
-    var stmt:OpaquePointer?
+    var stmt: OpaquePointer?
     var stock = instanceDB.checkStock()
     
     override func viewWillAppear(_ animated: Bool) {

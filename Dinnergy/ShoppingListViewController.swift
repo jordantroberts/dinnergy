@@ -2,7 +2,7 @@ import UIKit
 
 class ShoppingListViewController: UITableViewController {
 
-    var stmt:OpaquePointer?
+    var stmt: OpaquePointer?
     var list = instanceDB.showList()
     
     override func viewWillAppear(_ animated: Bool) {

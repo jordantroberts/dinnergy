@@ -4,7 +4,7 @@ var myIndex = 0
 
 class RecipeTableViewController: UITableViewController {
 
-    var stmt:OpaquePointer?
+    var stmt: OpaquePointer?
     var recipe = instanceDB.showRecipes()
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
