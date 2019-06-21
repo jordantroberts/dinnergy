@@ -10,12 +10,10 @@ Dinnergy is an iPhone application that allows users to plan a meal depending on 
 * User can add or remove ingredients to their current stock.
 * The app gives you recipes based on your current ingredients and updates each time you add or remove an ingredient.
 * Creates a shopping list based on selected recipe and ingredients that are currently unavailable to the user.
-* User can use Apple maps to view nearby food banks or supermarkets
+* User can use Apple maps to view nearby food banks or supermarkets.
 
 ## Screenshots
-<div align="center">
-    <img src="Screenshots/LaunchScreenScreenshot.png" width="400px"</img>
-</div>
+
 
 ## Team
 * [Carly Jenkinson](https://github.com/CarlyJ88)
