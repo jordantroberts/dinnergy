@@ -1,7 +1,7 @@
 import Foundation
 import XCTest
 
-func addBananas (number: String){
+func addBananas(number: String) {
     let app = XCUIApplication()
     app.navigationBars["My Ingredients"].buttons["+"].tap()
     app.textFields["Enter ingredient name"].tap()
@@ -38,4 +38,3 @@ func deleteFourBanana() {
     XCUIApplication().tables.staticTexts["banana: 4.0 kg"].swipeLeft()
     XCUIApplication().tables.buttons["Delete"].tap()
 }
-

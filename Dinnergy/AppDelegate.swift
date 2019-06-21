@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let attributes = [NSAttributedString.Key.font: UIFont(name: "AvenirNext-Bold", size: 17)!]
         UINavigationBar.appearance().titleTextAttributes = attributes
         UIBarButtonItem.appearance().setTitleTextAttributes(attributes, for: .normal)
-        var navigationBarAppearance = UINavigationBar.appearance()
+        let navigationBarAppearance = UINavigationBar.appearance()
         navigationBarAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         return true
     }

@@ -18,7 +18,7 @@ class ShoppingListItemFeatureTest: XCTestCase {
         app.tables.element(boundBy: 0).cells.element(boundBy: 0).tap()
         
         let scrollViewsQuery = app.scrollViews
-        let veganBananaBreadElement = scrollViewsQuery.otherElements.containing(.staticText, identifier:"Vegan Banana Bread").element
+        let veganBananaBreadElement = scrollViewsQuery.otherElements.containing(.staticText, identifier: "Vegan Banana Bread").element
         veganBananaBreadElement.swipeUp()
         
         app.buttons["Add to List"].tap()
@@ -31,7 +31,6 @@ class ShoppingListItemFeatureTest: XCTestCase {
         
         XCTAssertFalse(app.staticTexts["Bananas: 3.0 large"].exists)
         
-        
     }
     
     func testClearItem() {
@@ -42,7 +41,7 @@ class ShoppingListItemFeatureTest: XCTestCase {
         app.tables.element(boundBy: 0).cells.element(boundBy: 0).tap()
         
         let scrollViewsQuery = app.scrollViews
-        let veganBananaBreadElement = scrollViewsQuery.otherElements.containing(.staticText, identifier:"Vegan Banana Bread").element
+        let veganBananaBreadElement = scrollViewsQuery.otherElements.containing(.staticText, identifier: "Vegan Banana Bread").element
         veganBananaBreadElement.swipeUp()
         
         app.buttons["Add to List"].tap()
