@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		170472AC22B8DA91006310C3 /* IngredientDeleteFeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170472AB22B8DA91006310C3 /* IngredientDeleteFeatureTest.swift */; };
 		17303ADE22AFE9D90060A4BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17303ADD22AFE9D90060A4BC /* AppDelegate.swift */; };
 		17303AE022AFE9D90060A4BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17303ADF22AFE9D90060A4BC /* ViewController.swift */; };
 		17303AE322AFE9D90060A4BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17303AE122AFE9D90060A4BC /* Main.storyboard */; };
@@ -14,6 +15,22 @@
 		17303AE822AFE9DA0060A4BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17303AE622AFE9DA0060A4BC /* LaunchScreen.storyboard */; };
 		17303AF322AFE9DA0060A4BC /* DinnergyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17303AF222AFE9DA0060A4BC /* DinnergyTests.swift */; };
 		17303AFE22AFE9DA0060A4BC /* DinnergyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17303AFD22AFE9DA0060A4BC /* DinnergyUITests.swift */; };
+		571B190F22B3A60F00EE2FC9 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B190E22B3A60F00EE2FC9 /* Recipe.swift */; };
+		571B191122B3A9FE00EE2FC9 /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B191022B3A9FE00EE2FC9 /* RecipeTableViewController.swift */; };
+		635D3E6922B95816007403ED /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635D3E6822B95816007403ED /* ShoppingListViewController.swift */; };
+		AF13451B22B3DBAC00A5643A /* SingleRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13451A22B3DBAC00A5643A /* SingleRecipeViewController.swift */; };
+		C61526D622B0722C00FF644A /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61526D522B0722C00FF644A /* Ingredient.swift */; };
+		C62F233022BA7BB500D43118 /* ShoppingListItemFeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62F232F22BA7BB500D43118 /* ShoppingListItemFeatureTest.swift */; };
+		C65FDBCF22B0574A00970C0B /* DinnergyDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */; };
+		C6A0CCA122B2E0C4004BDBF1 /* IngredientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A0CCA022B2E0C4004BDBF1 /* IngredientsTableViewController.swift */; };
+		C6C31AAB22BBCA3D00C2459A /* DinnergyDBUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C31AAA22BBCA3D00C2459A /* DinnergyDBUnitTest.swift */; };
+		C6CF0B5D22B8EE3000302C11 /* IngredientAddFeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CF0B5C22B8EE3000302C11 /* IngredientAddFeatureTest.swift */; };
+		C6CF0B5F22B8EFAD00302C11 /* MatchRecipeFeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CF0B5E22B8EFAD00302C11 /* MatchRecipeFeatureTest.swift */; };
+		C6CF0B6122B8F04800302C11 /* BananaHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CF0B6022B8F04800302C11 /* BananaHelper.swift */; };
+		C6CF0B6322B8FA7C00302C11 /* SingleRecipeViewFeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CF0B6222B8FA7C00302C11 /* SingleRecipeViewFeatureTest.swift */; };
+		C6CF0B6522B9065D00302C11 /* MapViewFeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CF0B6422B9065D00302C11 /* MapViewFeatureTest.swift */; };
+		C6E32CA222B7D3AC00A97DC3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E32CA122B7D3AC00A97DC3 /* MapViewController.swift */; };
+		C6E32CA522B7DA7600A97DC3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E32CA422B7DA7600A97DC3 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		170472AB22B8DA91006310C3 /* IngredientDeleteFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDeleteFeatureTest.swift; sourceTree = "<group>"; };
 		17303ADA22AFE9D90060A4BC /* Dinnergy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dinnergy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17303ADD22AFE9D90060A4BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17303ADF22AFE9D90060A4BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +65,23 @@
 		17303AF922AFE9DA0060A4BC /* DinnergyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DinnergyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17303AFD22AFE9DA0060A4BC /* DinnergyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnergyUITests.swift; sourceTree = "<group>"; };
 		17303AFF22AFE9DA0060A4BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		571B190E22B3A60F00EE2FC9 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		571B191022B3A9FE00EE2FC9 /* RecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewController.swift; sourceTree = "<group>"; };
+		571B191222B3F2DC00EE2FC9 /* RecipeIngredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeIngredients.swift; sourceTree = "<group>"; };
+		635D3E6822B95816007403ED /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
+		AF13451A22B3DBAC00A5643A /* SingleRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRecipeViewController.swift; sourceTree = "<group>"; };
+		C61526D522B0722C00FF644A /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		C62F232F22BA7BB500D43118 /* ShoppingListItemFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListItemFeatureTest.swift; sourceTree = "<group>"; };
+		C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnergyDB.swift; sourceTree = "<group>"; };
+		C6A0CCA022B2E0C4004BDBF1 /* IngredientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewController.swift; sourceTree = "<group>"; };
+		C6C31AAA22BBCA3D00C2459A /* DinnergyDBUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnergyDBUnitTest.swift; sourceTree = "<group>"; };
+		C6CF0B5C22B8EE3000302C11 /* IngredientAddFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientAddFeatureTest.swift; sourceTree = "<group>"; };
+		C6CF0B5E22B8EFAD00302C11 /* MatchRecipeFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchRecipeFeatureTest.swift; sourceTree = "<group>"; };
+		C6CF0B6022B8F04800302C11 /* BananaHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BananaHelper.swift; sourceTree = "<group>"; };
+		C6CF0B6222B8FA7C00302C11 /* SingleRecipeViewFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRecipeViewFeatureTest.swift; sourceTree = "<group>"; };
+		C6CF0B6422B9065D00302C11 /* MapViewFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewFeatureTest.swift; sourceTree = "<group>"; };
+		C6E32CA122B7D3AC00A97DC3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		C6E32CA422B7DA7600A97DC3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6E32CA522B7DA7600A97DC3 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +117,7 @@
 				17303AF122AFE9DA0060A4BC /* DinnergyTests */,
 				17303AFC22AFE9DA0060A4BC /* DinnergyUITests */,
 				17303ADB22AFE9D90060A4BC /* Products */,
+				C6E32CA322B7DA7600A97DC3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +140,15 @@
 				17303AE422AFE9DA0060A4BC /* Assets.xcassets */,
 				17303AE622AFE9DA0060A4BC /* LaunchScreen.storyboard */,
 				17303AE922AFE9DA0060A4BC /* Info.plist */,
+				C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */,
+				C61526D522B0722C00FF644A /* Ingredient.swift */,
+				C6A0CCA022B2E0C4004BDBF1 /* IngredientsTableViewController.swift */,
+				C6E32CA122B7D3AC00A97DC3 /* MapViewController.swift */,
+				571B190E22B3A60F00EE2FC9 /* Recipe.swift */,
+				571B191022B3A9FE00EE2FC9 /* RecipeTableViewController.swift */,
+				AF13451A22B3DBAC00A5643A /* SingleRecipeViewController.swift */,
+				571B191222B3F2DC00EE2FC9 /* RecipeIngredients.swift */,
+				635D3E6822B95816007403ED /* ShoppingListViewController.swift */,
 			);
 			path = Dinnergy;
 			sourceTree = "<group>";
@@ -112,6 +158,7 @@
 			children = (
 				17303AF222AFE9DA0060A4BC /* DinnergyTests.swift */,
 				17303AF422AFE9DA0060A4BC /* Info.plist */,
+				C6C31AAA22BBCA3D00C2459A /* DinnergyDBUnitTest.swift */,
 			);
 			path = DinnergyTests;
 			sourceTree = "<group>";
@@ -121,8 +168,23 @@
 			children = (
 				17303AFD22AFE9DA0060A4BC /* DinnergyUITests.swift */,
 				17303AFF22AFE9DA0060A4BC /* Info.plist */,
+				170472AB22B8DA91006310C3 /* IngredientDeleteFeatureTest.swift */,
+				C6CF0B5C22B8EE3000302C11 /* IngredientAddFeatureTest.swift */,
+				C6CF0B5E22B8EFAD00302C11 /* MatchRecipeFeatureTest.swift */,
+				C6CF0B6022B8F04800302C11 /* BananaHelper.swift */,
+				C6CF0B6222B8FA7C00302C11 /* SingleRecipeViewFeatureTest.swift */,
+				C6CF0B6422B9065D00302C11 /* MapViewFeatureTest.swift */,
+				C62F232F22BA7BB500D43118 /* ShoppingListItemFeatureTest.swift */,
 			);
 			path = DinnergyUITests;
+			sourceTree = "<group>";
+		};
+		C6E32CA322B7DA7600A97DC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6E32CA422B7DA7600A97DC3 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +197,7 @@
 				17303AD622AFE9D90060A4BC /* Sources */,
 				17303AD722AFE9D90060A4BC /* Frameworks */,
 				17303AD822AFE9D90060A4BC /* Resources */,
+				17303B0B22B001080060A4BC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -193,6 +256,11 @@
 				TargetAttributes = {
 					17303AD922AFE9D90060A4BC = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					17303AED22AFE9DA0060A4BC = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -251,12 +319,40 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		17303B0B22B001080060A4BC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		17303AD622AFE9D90060A4BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF13451B22B3DBAC00A5643A /* SingleRecipeViewController.swift in Sources */,
+				C61526D622B0722C00FF644A /* Ingredient.swift in Sources */,
+				635D3E6922B95816007403ED /* ShoppingListViewController.swift in Sources */,
+				C65FDBCF22B0574A00970C0B /* DinnergyDB.swift in Sources */,
+				C6E32CA222B7D3AC00A97DC3 /* MapViewController.swift in Sources */,
 				17303AE022AFE9D90060A4BC /* ViewController.swift in Sources */,
+				571B190F22B3A60F00EE2FC9 /* Recipe.swift in Sources */,
+				571B191122B3A9FE00EE2FC9 /* RecipeTableViewController.swift in Sources */,
+				C6A0CCA122B2E0C4004BDBF1 /* IngredientsTableViewController.swift in Sources */,
 				17303ADE22AFE9D90060A4BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17303AF322AFE9DA0060A4BC /* DinnergyTests.swift in Sources */,
+				C6C31AAB22BBCA3D00C2459A /* DinnergyDBUnitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +370,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6CF0B5F22B8EFAD00302C11 /* MatchRecipeFeatureTest.swift in Sources */,
+				C62F233022BA7BB500D43118 /* ShoppingListItemFeatureTest.swift in Sources */,
+				170472AC22B8DA91006310C3 /* IngredientDeleteFeatureTest.swift in Sources */,
+				C6CF0B6122B8F04800302C11 /* BananaHelper.swift in Sources */,
+				C6CF0B6522B9065D00302C11 /* MapViewFeatureTest.swift in Sources */,
+				C6CF0B6322B8FA7C00302C11 /* SingleRecipeViewFeatureTest.swift in Sources */,
 				17303AFE22AFE9DA0060A4BC /* DinnergyUITests.swift in Sources */,
+				C6CF0B5D22B8EE3000302C11 /* IngredientAddFeatureTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,15 +537,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HDEUE9E2U9;
 				INFOPLIST_FILE = Dinnergy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Edgy-Eats.Dinnergy";
+				PRODUCT_BUNDLE_IDENTIFIER = "Edgy-Eats.Dinnergy5467";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -450,15 +556,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HDEUE9E2U9;
 				INFOPLIST_FILE = Dinnergy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Edgy-Eats.Dinnergy";
+				PRODUCT_BUNDLE_IDENTIFIER = "Edgy-Eats.Dinnergy5467";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
