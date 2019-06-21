@@ -13,7 +13,12 @@ Dinnergy is an iPhone application that allows users to plan a meal depending on 
 * User can use Apple maps to view nearby food banks or supermarkets.
 
 ## Screenshots
-
+![Launch](https://imgur.com/eXqxlaf.png)
+![Add Ingredient](https://imgur.com/JClX4AP.png)
+![Success Alert](https://imgur.com/7Byi1yo.png)
+![Shopping List](https://imgur.com/amwxXLa.png)
+![Recipe](https://imgur.com/cYfCyoz.png)
+![Map](https://imgur.com/nzXTJA3.png)
 
 ## Team
 * [Carly Jenkinson](https://github.com/CarlyJ88)
