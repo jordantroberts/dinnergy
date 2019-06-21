@@ -28,7 +28,7 @@ class IngredientsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
-        if (editingStyle == .delete) {
+        if editingStyle == .delete {
             let name = stock[indexPath.row].name
             instanceDB.deleteItem(name: name)
             

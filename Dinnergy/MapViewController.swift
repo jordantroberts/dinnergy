@@ -3,7 +3,6 @@ import MapKit
 
 class MapViewController: ViewController, MKMapViewDelegate {
 
-    
     @IBOutlet weak var mapView: MKMapView!
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!

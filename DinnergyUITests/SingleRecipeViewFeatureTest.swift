@@ -18,6 +18,3 @@ class SingleRecipeViewFeatureTest: XCTestCase {
             deleteFourBanana()
         }
     }
-
-
-

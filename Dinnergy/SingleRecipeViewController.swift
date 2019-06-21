@@ -13,24 +13,23 @@ class SingleRecipeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    titleLabel.text = recipe[myIndex].name
-    methodLabel.text = recipe[myIndex].method
-    ingredientLabel.text = recipe[myIndex].ingredients
+        titleLabel.text = recipe[myIndex].name
+        methodLabel.text = recipe[myIndex].method
+        ingredientLabel.text = recipe[myIndex].ingredients
         myImageView.image = UIImage(named: recipe[myIndex].name + ".jpg")
     
     }
 
     @IBAction func showAlert(_ sender: Any) {
         let alertController = UIAlertController(title: "Added to List", message:
-            "The ingredients for this recipe have been added to your shopping list", preferredStyle: .alert)
+        "The ingredients for this recipe have been added to your shopping list", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
         
         self.present(alertController, animated: true, completion: nil)
     }
+    
     @IBAction func addtoListButton(_ sender: UIButton) {
-        var recipeName = titleLabel.text ?? ""
-        
-        var ingredientArrayForList = list.matchRecipeNameWithID(name: recipeName)
+        let ingredientArrayForList = list.matchRecipeNameWithID(name: titleLabel.text!)
         list.insertList(recipeID: ingredientArrayForList)
     }
 }

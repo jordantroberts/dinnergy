@@ -50,9 +50,5 @@ class ShoppingListItemFeatureTest: XCTestCase {
         app.tabBars.buttons["Shopping"].tap()
         app.buttons["Clear"].tap()
         XCTAssertFalse(app.staticTexts["Bananas: 3.0 large"].exists)
-
-        
     }
-
-
 }

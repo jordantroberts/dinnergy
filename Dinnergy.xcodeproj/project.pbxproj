@@ -15,7 +15,6 @@
 		17303AE822AFE9DA0060A4BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17303AE622AFE9DA0060A4BC /* LaunchScreen.storyboard */; };
 		17303AF322AFE9DA0060A4BC /* DinnergyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17303AF222AFE9DA0060A4BC /* DinnergyTests.swift */; };
 		17303AFE22AFE9DA0060A4BC /* DinnergyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17303AFD22AFE9DA0060A4BC /* DinnergyUITests.swift */; };
-		17E1084A22BA633000288EDF /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E1084922BA633000288EDF /* NavigationViewController.swift */; };
 		571B190F22B3A60F00EE2FC9 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B190E22B3A60F00EE2FC9 /* Recipe.swift */; };
 		571B191122B3A9FE00EE2FC9 /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B191022B3A9FE00EE2FC9 /* RecipeTableViewController.swift */; };
 		635D3E6922B95816007403ED /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635D3E6822B95816007403ED /* ShoppingListViewController.swift */; };
@@ -24,6 +23,7 @@
 		C62F233022BA7BB500D43118 /* ShoppingListItemFeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62F232F22BA7BB500D43118 /* ShoppingListItemFeatureTest.swift */; };
 		C65FDBCF22B0574A00970C0B /* DinnergyDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */; };
 		C6A0CCA122B2E0C4004BDBF1 /* IngredientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A0CCA022B2E0C4004BDBF1 /* IngredientsTableViewController.swift */; };
+		C6C31AAB22BBCA3D00C2459A /* DinnergyDBUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C31AAA22BBCA3D00C2459A /* DinnergyDBUnitTest.swift */; };
 		C6CF0B5D22B8EE3000302C11 /* IngredientAddFeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CF0B5C22B8EE3000302C11 /* IngredientAddFeatureTest.swift */; };
 		C6CF0B5F22B8EFAD00302C11 /* MatchRecipeFeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CF0B5E22B8EFAD00302C11 /* MatchRecipeFeatureTest.swift */; };
 		C6CF0B6122B8F04800302C11 /* BananaHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CF0B6022B8F04800302C11 /* BananaHelper.swift */; };
@@ -65,7 +65,6 @@
 		17303AF922AFE9DA0060A4BC /* DinnergyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DinnergyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17303AFD22AFE9DA0060A4BC /* DinnergyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnergyUITests.swift; sourceTree = "<group>"; };
 		17303AFF22AFE9DA0060A4BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		17E1084922BA633000288EDF /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		571B190E22B3A60F00EE2FC9 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		571B191022B3A9FE00EE2FC9 /* RecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewController.swift; sourceTree = "<group>"; };
 		571B191222B3F2DC00EE2FC9 /* RecipeIngredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeIngredients.swift; sourceTree = "<group>"; };
@@ -75,6 +74,7 @@
 		C62F232F22BA7BB500D43118 /* ShoppingListItemFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListItemFeatureTest.swift; sourceTree = "<group>"; };
 		C65FDBCE22B0574A00970C0B /* DinnergyDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnergyDB.swift; sourceTree = "<group>"; };
 		C6A0CCA022B2E0C4004BDBF1 /* IngredientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewController.swift; sourceTree = "<group>"; };
+		C6C31AAA22BBCA3D00C2459A /* DinnergyDBUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinnergyDBUnitTest.swift; sourceTree = "<group>"; };
 		C6CF0B5C22B8EE3000302C11 /* IngredientAddFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientAddFeatureTest.swift; sourceTree = "<group>"; };
 		C6CF0B5E22B8EFAD00302C11 /* MatchRecipeFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchRecipeFeatureTest.swift; sourceTree = "<group>"; };
 		C6CF0B6022B8F04800302C11 /* BananaHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BananaHelper.swift; sourceTree = "<group>"; };
@@ -149,7 +149,6 @@
 				AF13451A22B3DBAC00A5643A /* SingleRecipeViewController.swift */,
 				571B191222B3F2DC00EE2FC9 /* RecipeIngredients.swift */,
 				635D3E6822B95816007403ED /* ShoppingListViewController.swift */,
-				17E1084922BA633000288EDF /* NavigationViewController.swift */,
 			);
 			path = Dinnergy;
 			sourceTree = "<group>";
@@ -159,6 +158,7 @@
 			children = (
 				17303AF222AFE9DA0060A4BC /* DinnergyTests.swift */,
 				17303AF422AFE9DA0060A4BC /* Info.plist */,
+				C6C31AAA22BBCA3D00C2459A /* DinnergyDBUnitTest.swift */,
 			);
 			path = DinnergyTests;
 			sourceTree = "<group>";
@@ -345,7 +345,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF13451B22B3DBAC00A5643A /* SingleRecipeViewController.swift in Sources */,
-				17E1084A22BA633000288EDF /* NavigationViewController.swift in Sources */,
 				C61526D622B0722C00FF644A /* Ingredient.swift in Sources */,
 				635D3E6922B95816007403ED /* ShoppingListViewController.swift in Sources */,
 				C65FDBCF22B0574A00970C0B /* DinnergyDB.swift in Sources */,
@@ -363,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17303AF322AFE9DA0060A4BC /* DinnergyTests.swift in Sources */,
+				C6C31AAB22BBCA3D00C2459A /* DinnergyDBUnitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
